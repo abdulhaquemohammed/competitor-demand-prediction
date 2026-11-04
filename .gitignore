@@ -1,0 +1,8 @@
+# Raw job descriptions are copyrighted; kept local only (see docs/TASK1)
+data/raw/*
+!data/raw/.gitkeep
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+.env
