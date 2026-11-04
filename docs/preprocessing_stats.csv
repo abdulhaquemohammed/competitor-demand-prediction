@@ -1,0 +1,5 @@
+company_name,postings,boilerplate_sentences_found,median_chars_before,median_chars_after,median_tokens,non_english,empty_after_cleaning,in_duplicate_groups,pct_text_removed
+Anthropic,682,34,8000.5,4064.5,358.5,12,0,20,49.2
+Databricks,926,24,5368.0,3193.5,283.0,2,0,152,40.5
+NVIDIA,2755,19,3742.0,2831.0,253.0,0,0,176,24.3
+OpenAI,818,12,6545.5,3986.0,348.0,0,0,48,39.1

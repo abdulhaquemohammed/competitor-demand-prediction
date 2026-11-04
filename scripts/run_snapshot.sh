@@ -7,6 +7,7 @@ mkdir -p logs
   echo "=== $(date -u '+%Y-%m-%d %H:%M UTC') ==="
   .venv/bin/python -u src/collect.py; status=$?
   .venv/bin/python -u src/build_dataset.py || status=1
+  .venv/bin/python -u src/preprocess.py || status=1
   echo "exit status: $status"
 } >> logs/snapshots.log 2>&1
 exit $status
