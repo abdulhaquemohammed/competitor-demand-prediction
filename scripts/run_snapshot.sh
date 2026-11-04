@@ -5,6 +5,8 @@ cd "$(dirname "$0")/.." || exit 1
 mkdir -p logs
 {
   echo "=== $(date -u '+%Y-%m-%d %H:%M UTC') ==="
-  .venv/bin/python src/collect.py
-  .venv/bin/python src/build_dataset.py
+  .venv/bin/python -u src/collect.py; status=$?
+  .venv/bin/python -u src/build_dataset.py || status=1
+  echo "exit status: $status"
 } >> logs/snapshots.log 2>&1
+exit $status
