@@ -174,11 +174,14 @@ def workday_nvidia(company="NVIDIA", delay=1.0):
 
     first = search({}, 0)
     families = next(f["values"] for f in first["facets"] if f["facetParameter"] == "jobFamilyGroup")
-    listing = {}
+    listing, skipped = {}, 0
     for fam in families:
         n = min(fam["count"], 2000)
         for offset in range(0, n, 20):
             for p in search({"jobFamilyGroup": [fam["id"]]}, offset).get("jobPostings", []):
+                if not p.get("title") or not p.get("externalPath"):
+                    skipped += 1  # Workday occasionally returns incomplete entries
+                    continue
                 jid = (p.get("bulletFields") or [p["externalPath"].rsplit("_", 1)[-1]])[0]
                 p["_family"] = fam["descriptor"]
                 listing[jid] = p
@@ -211,7 +214,8 @@ def workday_nvidia(company="NVIDIA", delay=1.0):
             job_url=info.get("externalUrl") or f"{WD_BASE}/NVIDIAExternalCareerSite{p['externalPath']}",
             employment_type=info.get("timeType"), department=p["_family"], source="workday"))
     log_check(company, list_url, ok,
-              note + f"; Workday reported {total_reported}; {fetched} new detail pages", len(out))
+              note + f"; Workday reported {total_reported}; {fetched} new detail pages; "
+                     f"{skipped} incomplete list entries skipped", len(out))
     return out
 
 
@@ -225,13 +229,15 @@ COMPANIES = {
 # ---------------------------------------------------------------- main
 
 def main(names):
+    failed = []
     for name in names:
         try:
             rows = COMPANIES[name]()
-        except requests.RequestException as e:
-            # stop on errors, no retry loop (Task 1, 3.5)
-            print(f"[{name}] FAILED: {e}")
-            log_check(name, "-", "-", f"request failed: {e}")
+        except Exception as e:
+            # one company failing must not stop the others; no retry loop (Task 1, 3.5)
+            print(f"[{name}] FAILED: {e.__class__.__name__}: {e}")
+            log_check(name, "-", "-", f"failed: {e.__class__.__name__}: {e}")
+            failed.append(name)
             continue
         if rows is None:
             print(f"[{name}] skipped: robots.txt disallows")
@@ -241,7 +247,9 @@ def main(names):
         path.write_text(json.dumps(rows, ensure_ascii=False, indent=1))
         print(f"[{name}] {len(rows)} postings -> {path.relative_to(ROOT)}")
         time.sleep(1)
+    return failed
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:] or list(COMPANIES))
+    failed = main(sys.argv[1:] or list(COMPANIES))
+    sys.exit(1 if failed else 0)  # non-zero so the scheduler shows the failure
