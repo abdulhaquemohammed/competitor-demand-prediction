@@ -14,9 +14,12 @@ Predicts competitor hiring demand, skill trends and market direction from public
 
 ## Structure
 - `docs/` task write-ups and legal checks
-- `src/` collection and processing code
+- `src/collect.py` takes one snapshot of all four job boards (checks robots.txt, removes personal data)
+- `src/build_dataset.py` merges snapshots and tracks each job over time (first/last seen, open/closed)
+- `scripts/` twice-weekly snapshot schedule (macOS launchd)
 - `notebooks/` analysis
-- `data/raw/` raw snapshots (git-ignored: copyrighted job text, kept local)
+- `data/raw/`, `data/interim/` raw snapshots and merged table (git-ignored: copyrighted job text, kept local; available to the mentor on request)
+- `data/sample/` 20-row sample per company (descriptions cut to 300 characters) and snapshot counts
 - `data/processed/` derived features
 - `weekly_logs/` weekly progress notes
 
@@ -24,5 +27,14 @@ Predicts competitor hiring demand, skill trends and market direction from public
 | Task | Status |
 |---|---|
 | 1. Data Sources & Legal | Done ([docs](docs/TASK1_data_sources_and_legal.md)) |
-| 2. Data Collection | Next |
-| 3-10 | Not started |
+| 2. Data Collection | Done ([report](docs/TASK2_data_collection_report.md)), snapshots ongoing Mon/Thu |
+| 3. NLP Preprocessing | Next |
+| 4-10 | Not started |
+
+## Run
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python src/collect.py          # one snapshot (first NVIDIA run ~80 min, later runs only fetch new jobs)
+python src/build_dataset.py    # merge snapshots, print data-quality checks
+```

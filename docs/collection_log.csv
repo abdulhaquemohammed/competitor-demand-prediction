@@ -1,0 +1,12 @@
+timestamp_utc,company,url,robots_allowed,note,jobs_collected
+2026-11-04T15:52:20+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",818
+2026-11-04T15:52:20+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,681
+2026-11-04T15:52:20+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,921
+2026-11-04T15:53:08+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",818
+2026-11-04T15:53:08+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,681
+2026-11-04T15:53:08+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,921
+2026-11-04T16:04:46+00:00,NVIDIA,https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs,True,"robots.txt HTTP 406: unavailable, no restrictions (RFC 9309); Workday reported 2756; 2756 new detail pages",2756
+2026-11-04T17:24:56+00:00,NVIDIA,https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs,True,RE-CHECK after fixing Accept header (earlier 406 was a script bug): robots.txt HTTP 200: allowed for /wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs,
+2026-11-04T17:25:56+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,926
+2026-11-04T17:25:56+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,682
+2026-11-04T17:25:56+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",818
