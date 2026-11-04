@@ -10,6 +10,7 @@
 - Completed Task 2: collection script, first snapshot on 4 Nov (5,182 postings: OpenAI 818, Anthropic 682, Databricks 926, NVIDIA 2,756), Data Collection Report.
 
 - Completed Task 3: preprocessing pipeline and notebook. 24-49% of each description was boilerplate; after cleaning all four companies are at a comparable length.
+- Completed Task 4: shared 158-skill taxonomy (14 categories), role categories and feature tables. Hand-checked ambiguous matches and fixed 6 false-positive patterns.
 
 ## Decisions
 - Cover four companies myself (OpenAI main; Anthropic, Databricks, NVIDIA comparison) so Tasks 6 and 8 are possible solo.
@@ -22,6 +23,7 @@
 
 - Boilerplate = any sentence in 10%+ of a company's postings, plus a phrase list for reworded variants.
 - Two text outputs: case-kept for skill matching (Task 4), lowercased/lemmatised for TF-IDF (Tasks 6, 8).
+- Regex taxonomy rather than an ML model: explainable, no labelled data needed, identical rules for all four companies.
 
 ## Blockers
 - Live feeds only show open roles, so history must be built from repeated snapshots. Kaggle dataset added as historical baseline.
@@ -30,4 +32,4 @@
 ## Next steps
 - Start the Mon/Thu snapshot schedule.
 - Ask CadetX how they want the raw dataset submitted (it can't go in the public repo).
-- Task 4: skill extraction and shared skill taxonomy.
+- Task 5 from 23 Nov, once about 7 snapshots exist.

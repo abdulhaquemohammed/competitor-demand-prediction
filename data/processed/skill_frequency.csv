@@ -1,0 +1,495 @@
+company_name,skill,postings,share,category,rank
+Anthropic,LLMs,247,0.3687,ML & AI Concepts,1
+Anthropic,Python,202,0.3015,Programming Languages,2
+Anthropic,Go-to-market,178,0.2657,Business & GTM,3
+Anthropic,Machine learning,112,0.1672,ML & AI Concepts,4
+Anthropic,AI agents,101,0.1507,ML & AI Concepts,5
+Anthropic,SQL,92,0.1373,Programming Languages,6
+Anthropic,Inference,79,0.1179,ML & AI Concepts,7
+Anthropic,AI safety / alignment,76,0.1134,ML & AI Concepts,8
+Anthropic,Distributed systems,75,0.1119,DevOps & Infrastructure,9
+Anthropic,AWS,73,0.109,Cloud,10
+Anthropic,GCP,71,0.106,Cloud,11
+Anthropic,Evals,55,0.0821,ML & AI Concepts,12
+Anthropic,Rust,54,0.0806,Programming Languages,13
+Anthropic,Enterprise sales,53,0.0791,Business & GTM,14
+Anthropic,Kubernetes,52,0.0776,DevOps & Infrastructure,15
+Anthropic,Observability,51,0.0761,DevOps & Infrastructure,16
+Anthropic,Reinforcement learning,49,0.0731,ML & AI Concepts,17
+Anthropic,ETL / ELT,48,0.0716,Data Engineering & Analytics,18
+Anthropic,Incident response,44,0.0657,Security,19
+Anthropic,GPU,43,0.0642,GPU & HPC,20
+Anthropic,Go,37,0.0552,Programming Languages,21
+Anthropic,Azure,36,0.0537,Cloud,22
+Anthropic,Security engineering,33,0.0493,Security,23
+Anthropic,MCP,31,0.0463,LLM & Inference Tools,24
+Anthropic,Generative AI,30,0.0448,ML & AI Concepts,25
+Anthropic,TypeScript,30,0.0448,Programming Languages,25
+Anthropic,"Compliance (SOC 2, FedRAMP, ISO)",29,0.0433,Security,27
+Anthropic,Distributed training,26,0.0388,ML & AI Concepts,28
+Anthropic,Salesforce,26,0.0388,Business & GTM,28
+Anthropic,Stakeholder management,25,0.0373,Business & GTM,30
+Anthropic,CI/CD,24,0.0358,DevOps & Infrastructure,31
+Anthropic,IAM,20,0.0299,Security,32
+Anthropic,Product management,19,0.0284,Business & GTM,33
+Anthropic,C++,17,0.0254,Programming Languages,34
+Anthropic,Fine-tuning,17,0.0254,ML & AI Concepts,34
+Anthropic,BigQuery,15,0.0224,Data Engineering & Analytics,36
+Anthropic,Java,15,0.0224,Programming Languages,36
+Anthropic,PyTorch,15,0.0224,ML Frameworks,36
+Anthropic,Statistics,15,0.0224,ML & AI Concepts,36
+Anthropic,Linux,14,0.0209,DevOps & Infrastructure,40
+Anthropic,HPC,13,0.0194,GPU & HPC,41
+Anthropic,Interpretability,13,0.0194,ML & AI Concepts,41
+Anthropic,Threat modelling,13,0.0194,Security,41
+Anthropic,Firmware,12,0.0179,Hardware & Semiconductor,44
+Anthropic,GitHub,12,0.0179,DevOps & Infrastructure,44
+Anthropic,React,12,0.0179,Web & APIs,44
+Anthropic,Bash / Shell,11,0.0164,Programming Languages,47
+Anthropic,Data warehousing,11,0.0164,Data Engineering & Analytics,47
+Anthropic,JAX,11,0.0164,ML Frameworks,47
+Anthropic,Terraform,11,0.0164,DevOps & Infrastructure,47
+Anthropic,Cryptography,10,0.0149,Security,51
+Anthropic,Excel,10,0.0149,Data Engineering & Analytics,51
+Anthropic,OAuth,10,0.0149,Security,51
+Anthropic,Deep learning,9,0.0134,ML & AI Concepts,54
+Anthropic,R,9,0.0134,Programming Languages,54
+Anthropic,Airflow,8,0.0119,Data Engineering & Analytics,56
+Anthropic,Transformers,8,0.0119,ML & AI Concepts,56
+Anthropic,dbt,8,0.0119,Data Engineering & Analytics,56
+Anthropic,Grafana,7,0.0104,DevOps & Infrastructure,59
+Anthropic,RLHF,7,0.0104,ML & AI Concepts,59
+Anthropic,DNS,6,0.009,Networking,61
+Anthropic,Prometheus,6,0.009,DevOps & Infrastructure,61
+Anthropic,Spark,6,0.009,Data Engineering & Analytics,61
+Anthropic,Tableau,6,0.009,Data Engineering & Analytics,61
+Anthropic,C,5,0.0075,Programming Languages,65
+Anthropic,Looker,5,0.0075,Data Engineering & Analytics,65
+Anthropic,Power BI,5,0.0075,Data Engineering & Analytics,65
+Anthropic,Compilers,4,0.006,GPU & HPC,68
+Anthropic,Docker,4,0.006,DevOps & Infrastructure,68
+Anthropic,Git,4,0.006,DevOps & Infrastructure,68
+Anthropic,HTML / CSS,4,0.006,Web & APIs,68
+Anthropic,JavaScript,4,0.006,Programming Languages,68
+Anthropic,Kafka,4,0.006,Data Engineering & Analytics,68
+Anthropic,NLP,4,0.006,ML & AI Concepts,68
+Anthropic,SRE,4,0.006,DevOps & Infrastructure,68
+Anthropic,Vector databases,4,0.006,LLM & Inference Tools,68
+Anthropic,ASIC,3,0.0045,Hardware & Semiconductor,77
+Anthropic,CUDA,3,0.0045,GPU & HPC,77
+Anthropic,DFT,3,0.0045,Hardware & Semiconductor,77
+Anthropic,Embedded systems,3,0.0045,Hardware & Semiconductor,77
+Anthropic,Physical design,3,0.0045,Hardware & Semiconductor,77
+Anthropic,PostgreSQL,3,0.0045,Databases,77
+Anthropic,TensorFlow,3,0.0045,ML Frameworks,77
+Anthropic,pandas,3,0.0045,ML Frameworks,77
+Anthropic,BGP,2,0.003,Networking,85
+Anthropic,Computer vision,2,0.003,ML & AI Concepts,85
+Anthropic,Ethernet,2,0.003,Networking,85
+Anthropic,InfiniBand,2,0.003,GPU & HPC,85
+Anthropic,Kernel optimisation,2,0.003,GPU & HPC,85
+Anthropic,NCCL,2,0.003,GPU & HPC,85
+Anthropic,Node.js,2,0.003,Web & APIs,85
+Anthropic,RDMA,2,0.003,GPU & HPC,85
+Anthropic,RTL,2,0.003,Hardware & Semiconductor,85
+Anthropic,Redis,2,0.003,Databases,85
+Anthropic,Signal integrity,2,0.003,Hardware & Semiconductor,85
+Anthropic,Snowflake,2,0.003,Data Engineering & Analytics,85
+Anthropic,Swift,2,0.003,Programming Languages,85
+Anthropic,Triton,2,0.003,LLM & Inference Tools,85
+Anthropic,Databricks,1,0.0015,Data Engineering & Analytics,99
+Anthropic,DynamoDB,1,0.0015,Databases,99
+Anthropic,EDA tools,1,0.0015,Hardware & Semiconductor,99
+Anthropic,FPGA,1,0.0015,Hardware & Semiconductor,99
+Anthropic,GraphQL,1,0.0015,Web & APIs,99
+Anthropic,Julia,1,0.0015,Programming Languages,99
+Anthropic,Kotlin,1,0.0015,Programming Languages,99
+Anthropic,MLOps,1,0.0015,ML & AI Concepts,99
+Anthropic,MySQL,1,0.0015,Databases,99
+Anthropic,OLTP,1,0.0015,Databases,99
+Anthropic,PCB design,1,0.0015,Hardware & Semiconductor,99
+Anthropic,PCIe,1,0.0015,Hardware & Semiconductor,99
+Anthropic,RAG,1,0.0015,ML & AI Concepts,99
+Anthropic,REST APIs,1,0.0015,Web & APIs,99
+Anthropic,TCP/IP,1,0.0015,Networking,99
+Anthropic,UVM,1,0.0015,Hardware & Semiconductor,99
+Databricks,AWS,389,0.421,Cloud,1
+Databricks,Azure,375,0.4058,Cloud,2
+Databricks,Python,372,0.4026,Programming Languages,3
+Databricks,GCP,342,0.3701,Cloud,4
+Databricks,Spark,292,0.316,Data Engineering & Analytics,5
+Databricks,SQL,254,0.2749,Programming Languages,6
+Databricks,Data warehousing,252,0.2727,Data Engineering & Analytics,7
+Databricks,Scala,252,0.2727,Programming Languages,7
+Databricks,Distributed systems,206,0.2229,DevOps & Infrastructure,9
+Databricks,ETL / ELT,190,0.2056,Data Engineering & Analytics,10
+Databricks,Java,165,0.1786,Programming Languages,11
+Databricks,Go-to-market,140,0.1515,Business & GTM,12
+Databricks,Machine learning,131,0.1418,ML & AI Concepts,13
+Databricks,AI agents,121,0.131,ML & AI Concepts,14
+Databricks,CI/CD,116,0.1255,DevOps & Infrastructure,15
+Databricks,Product management,116,0.1255,Business & GTM,15
+Databricks,MLOps,103,0.1115,ML & AI Concepts,17
+Databricks,Generative AI,91,0.0985,ML & AI Concepts,18
+Databricks,JavaScript,89,0.0963,Programming Languages,19
+Databricks,TypeScript,85,0.092,Programming Languages,20
+Databricks,LLMs,80,0.0866,ML & AI Concepts,21
+Databricks,Salesforce,79,0.0855,Business & GTM,22
+Databricks,Delta Lake,75,0.0812,Data Engineering & Analytics,23
+Databricks,C++,74,0.0801,Programming Languages,24
+Databricks,Kubernetes,70,0.0758,DevOps & Infrastructure,25
+Databricks,Observability,65,0.0703,DevOps & Infrastructure,26
+Databricks,Snowflake,65,0.0703,Data Engineering & Analytics,26
+Databricks,Enterprise sales,58,0.0628,Business & GTM,28
+Databricks,MEDDPICC / MEDDIC,56,0.0606,Business & GTM,29
+Databricks,OLTP,53,0.0574,Databases,30
+Databricks,MLflow,52,0.0563,ML Frameworks,31
+Databricks,Hadoop,47,0.0509,Data Engineering & Analytics,32
+Databricks,RAG,44,0.0476,ML & AI Concepts,33
+Databricks,Stakeholder management,41,0.0444,Business & GTM,34
+Databricks,Docker,35,0.0379,DevOps & Infrastructure,35
+Databricks,Fine-tuning,35,0.0379,ML & AI Concepts,35
+Databricks,Microservices,35,0.0379,DevOps & Infrastructure,35
+Databricks,Kafka,33,0.0357,Data Engineering & Analytics,38
+Databricks,PostgreSQL,33,0.0357,Databases,38
+Databricks,Statistics,31,0.0335,ML & AI Concepts,40
+Databricks,Go,29,0.0314,Programming Languages,41
+Databricks,MySQL,28,0.0303,Databases,42
+Databricks,Vector databases,28,0.0303,LLM & Inference Tools,42
+Databricks,PyTorch,27,0.0292,ML Frameworks,44
+Databricks,Terraform,27,0.0292,DevOps & Infrastructure,44
+Databricks,Security engineering,25,0.0271,Security,46
+Databricks,GPU,22,0.0238,GPU & HPC,47
+Databricks,Incident response,22,0.0238,Security,47
+Databricks,LangChain,22,0.0238,LLM & Inference Tools,47
+Databricks,scikit-learn,21,0.0227,ML Frameworks,50
+Databricks,R,20,0.0216,Programming Languages,51
+Databricks,pandas,20,0.0216,ML Frameworks,51
+Databricks,Inference,18,0.0195,ML & AI Concepts,53
+Databricks,React,18,0.0195,Web & APIs,53
+Databricks,Hugging Face,17,0.0184,ML Frameworks,55
+Databricks,IAM,17,0.0184,Security,55
+Databricks,Cryptography,15,0.0162,Security,57
+Databricks,Rust,14,0.0152,Programming Languages,58
+Databricks,GitHub,13,0.0141,DevOps & Infrastructure,59
+Databricks,"Compliance (SOC 2, FedRAMP, ISO)",12,0.013,Security,60
+Databricks,HTML / CSS,12,0.013,Web & APIs,60
+Databricks,MCP,12,0.013,LLM & Inference Tools,60
+Databricks,Evals,11,0.0119,ML & AI Concepts,63
+Databricks,Linux,11,0.0119,DevOps & Infrastructure,63
+Databricks,SRE,11,0.0119,DevOps & Infrastructure,63
+Databricks,Deep learning,10,0.0108,ML & AI Concepts,66
+Databricks,Excel,10,0.0108,Data Engineering & Analytics,66
+Databricks,Node.js,10,0.0108,Web & APIs,66
+Databricks,Distributed training,9,0.0097,ML & AI Concepts,69
+Databricks,OAuth,8,0.0087,Security,70
+Databricks,Prometheus,7,0.0076,DevOps & Infrastructure,71
+Databricks,Tableau,7,0.0076,Data Engineering & Analytics,71
+Databricks,Bash / Shell,6,0.0065,Programming Languages,73
+Databricks,C#,6,0.0065,Programming Languages,73
+Databricks,Cassandra,6,0.0065,Databases,73
+Databricks,Git,6,0.0065,DevOps & Infrastructure,73
+Databricks,REST APIs,6,0.0065,Web & APIs,73
+Databricks,TensorFlow,6,0.0065,ML Frameworks,73
+Databricks,EDA tools,5,0.0054,Hardware & Semiconductor,79
+Databricks,Elasticsearch,5,0.0054,Databases,79
+Databricks,Grafana,5,0.0054,DevOps & Infrastructure,79
+Databricks,Recommender systems,5,0.0054,ML & AI Concepts,79
+Databricks,Airflow,4,0.0043,Data Engineering & Analytics,83
+Databricks,BigQuery,4,0.0043,Data Engineering & Analytics,83
+Databricks,GraphQL,4,0.0043,Web & APIs,83
+Databricks,HPC,4,0.0043,GPU & HPC,83
+Databricks,NLP,4,0.0043,ML & AI Concepts,83
+Databricks,Ray,4,0.0043,ML Frameworks,83
+Databricks,Compilers,2,0.0022,GPU & HPC,89
+Databricks,Kernel optimisation,2,0.0022,GPU & HPC,89
+Databricks,Looker,2,0.0022,Data Engineering & Analytics,89
+Databricks,Reinforcement learning,2,0.0022,ML & AI Concepts,89
+Databricks,AI safety / alignment,1,0.0011,ML & AI Concepts,93
+Databricks,CUDA,1,0.0011,GPU & HPC,93
+Databricks,DNS,1,0.0011,Networking,93
+Databricks,NCCL,1,0.0011,GPU & HPC,93
+Databricks,SGLang,1,0.0011,LLM & Inference Tools,93
+Databricks,Slurm,1,0.0011,DevOps & Infrastructure,93
+Databricks,Threat modelling,1,0.0011,Security,93
+Databricks,cuDNN,1,0.0011,GPU & HPC,93
+Databricks,dbt,1,0.0011,Data Engineering & Analytics,93
+Databricks,gRPC,1,0.0011,Web & APIs,93
+Databricks,vLLM,1,0.0011,LLM & Inference Tools,93
+NVIDIA,GPU,1604,0.5822,GPU & HPC,1
+NVIDIA,Python,1185,0.4301,Programming Languages,2
+NVIDIA,C++,803,0.2915,Programming Languages,3
+NVIDIA,Deep learning,717,0.2603,ML & AI Concepts,4
+NVIDIA,HPC,680,0.2468,GPU & HPC,5
+NVIDIA,Linux,641,0.2327,DevOps & Infrastructure,6
+NVIDIA,CUDA,478,0.1735,GPU & HPC,7
+NVIDIA,AI agents,468,0.1699,ML & AI Concepts,8
+NVIDIA,LLMs,445,0.1615,ML & AI Concepts,9
+NVIDIA,Firmware,407,0.1477,Hardware & Semiconductor,10
+NVIDIA,C,394,0.143,Programming Languages,11
+NVIDIA,Inference,389,0.1412,ML & AI Concepts,12
+NVIDIA,Machine learning,331,0.1201,ML & AI Concepts,13
+NVIDIA,Kubernetes,330,0.1198,DevOps & Infrastructure,14
+NVIDIA,ASIC,327,0.1187,Hardware & Semiconductor,15
+NVIDIA,SoC,282,0.1024,Hardware & Semiconductor,16
+NVIDIA,InfiniBand,260,0.0944,GPU & HPC,17
+NVIDIA,Ethernet,258,0.0936,Networking,18
+NVIDIA,PyTorch,246,0.0893,ML Frameworks,19
+NVIDIA,Perl,242,0.0878,Programming Languages,20
+NVIDIA,RTL,228,0.0828,Hardware & Semiconductor,21
+NVIDIA,CI/CD,227,0.0824,DevOps & Infrastructure,22
+NVIDIA,Observability,223,0.0809,DevOps & Infrastructure,23
+NVIDIA,Embedded systems,221,0.0802,Hardware & Semiconductor,24
+NVIDIA,Generative AI,218,0.0791,ML & AI Concepts,25
+NVIDIA,Distributed systems,202,0.0733,DevOps & Infrastructure,26
+NVIDIA,Verilog / SystemVerilog,192,0.0697,Hardware & Semiconductor,27
+NVIDIA,Product management,188,0.0682,Business & GTM,28
+NVIDIA,Bash / Shell,181,0.0657,Programming Languages,29
+NVIDIA,PCIe,174,0.0632,Hardware & Semiconductor,30
+NVIDIA,Docker,167,0.0606,DevOps & Infrastructure,31
+NVIDIA,Compilers,162,0.0588,GPU & HPC,32
+NVIDIA,NVLink,157,0.057,GPU & HPC,33
+NVIDIA,Physical design,149,0.0541,Hardware & Semiconductor,34
+NVIDIA,EDA tools,147,0.0534,Hardware & Semiconductor,35
+NVIDIA,DFT,135,0.049,Hardware & Semiconductor,36
+NVIDIA,Go-to-market,132,0.0479,Business & GTM,37
+NVIDIA,Signal integrity,132,0.0479,Hardware & Semiconductor,37
+NVIDIA,TensorRT,129,0.0468,LLM & Inference Tools,39
+NVIDIA,DGX,123,0.0446,GPU & HPC,40
+NVIDIA,Go,121,0.0439,Programming Languages,41
+NVIDIA,RDMA,121,0.0439,GPU & HPC,41
+NVIDIA,Network protocols,120,0.0436,Networking,43
+NVIDIA,ETL / ELT,115,0.0417,Data Engineering & Analytics,44
+NVIDIA,NCCL,113,0.041,GPU & HPC,45
+NVIDIA,Slurm,113,0.041,DevOps & Infrastructure,45
+NVIDIA,VLSI,110,0.0399,Hardware & Semiconductor,47
+NVIDIA,PCB design,108,0.0392,Hardware & Semiconductor,48
+NVIDIA,Reinforcement learning,106,0.0385,ML & AI Concepts,49
+NVIDIA,Statistics,105,0.0381,ML & AI Concepts,50
+NVIDIA,RAG,104,0.0377,ML & AI Concepts,51
+NVIDIA,Computer vision,103,0.0374,ML & AI Concepts,52
+NVIDIA,RoCE,103,0.0374,Networking,52
+NVIDIA,Git,102,0.037,DevOps & Infrastructure,54
+NVIDIA,UVM,102,0.037,Hardware & Semiconductor,54
+NVIDIA,Distributed training,99,0.0359,ML & AI Concepts,56
+NVIDIA,Fine-tuning,98,0.0356,ML & AI Concepts,57
+NVIDIA,vLLM,95,0.0345,LLM & Inference Tools,58
+NVIDIA,NeMo,94,0.0341,LLM & Inference Tools,59
+NVIDIA,Ansible,92,0.0334,DevOps & Infrastructure,60
+NVIDIA,TCP/IP,92,0.0334,Networking,60
+NVIDIA,TensorFlow,90,0.0327,ML Frameworks,62
+NVIDIA,Triton,90,0.0327,LLM & Inference Tools,62
+NVIDIA,Tcl,87,0.0316,Programming Languages,64
+NVIDIA,Rust,84,0.0305,Programming Languages,65
+NVIDIA,AWS,81,0.0294,Cloud,66
+NVIDIA,MPI,79,0.0287,GPU & HPC,67
+NVIDIA,NIM,76,0.0276,LLM & Inference Tools,68
+NVIDIA,SRE,73,0.0265,DevOps & Infrastructure,69
+NVIDIA,SQL,71,0.0258,Programming Languages,70
+NVIDIA,JAX,70,0.0254,ML Frameworks,71
+NVIDIA,Azure,67,0.0243,Cloud,72
+NVIDIA,Static timing analysis,66,0.024,Hardware & Semiconductor,73
+NVIDIA,SGLang,64,0.0232,LLM & Inference Tools,74
+NVIDIA,GCP,63,0.0229,Cloud,75
+NVIDIA,Grafana,63,0.0229,DevOps & Infrastructure,75
+NVIDIA,Java,63,0.0229,Programming Languages,75
+NVIDIA,Incident response,60,0.0218,Security,78
+NVIDIA,FPGA,58,0.0211,Hardware & Semiconductor,79
+NVIDIA,Kernel optimisation,55,0.02,GPU & HPC,80
+NVIDIA,Microservices,55,0.02,DevOps & Infrastructure,80
+NVIDIA,BGP,54,0.0196,Networking,82
+NVIDIA,Prometheus,54,0.0196,DevOps & Infrastructure,82
+NVIDIA,VXLAN / EVPN,53,0.0192,Networking,84
+NVIDIA,GitHub,47,0.0171,DevOps & Infrastructure,85
+NVIDIA,MCP,47,0.0171,LLM & Inference Tools,85
+NVIDIA,Spark,45,0.0163,Data Engineering & Analytics,87
+NVIDIA,OpenCL,43,0.0156,GPU & HPC,88
+NVIDIA,Transformers,42,0.0152,ML & AI Concepts,89
+NVIDIA,Terraform,41,0.0149,DevOps & Infrastructure,90
+NVIDIA,MLOps,39,0.0142,ML & AI Concepts,91
+NVIDIA,Excel,37,0.0134,Data Engineering & Analytics,92
+NVIDIA,MATLAB,37,0.0134,Programming Languages,92
+NVIDIA,LangChain,35,0.0127,LLM & Inference Tools,94
+NVIDIA,OSPF,35,0.0127,Networking,94
+NVIDIA,JavaScript,32,0.0116,Programming Languages,96
+NVIDIA,NLP,32,0.0116,ML & AI Concepts,96
+NVIDIA,Hugging Face,30,0.0109,ML Frameworks,98
+NVIDIA,Threat modelling,30,0.0109,Security,98
+NVIDIA,OpenMP,29,0.0105,GPU & HPC,100
+NVIDIA,DNS,28,0.0102,Networking,101
+NVIDIA,Cryptography,27,0.0098,Security,102
+NVIDIA,REST APIs,26,0.0094,Web & APIs,103
+NVIDIA,Security engineering,26,0.0094,Security,103
+NVIDIA,Vector databases,25,0.0091,LLM & Inference Tools,105
+NVIDIA,cuDNN,24,0.0087,GPU & HPC,106
+NVIDIA,Databricks,23,0.0083,Data Engineering & Analytics,107
+NVIDIA,Evals,23,0.0083,ML & AI Concepts,107
+NVIDIA,Power BI,23,0.0083,Data Engineering & Analytics,107
+NVIDIA,React,23,0.0083,Web & APIs,107
+NVIDIA,TypeScript,21,0.0076,Programming Languages,111
+NVIDIA,Recommender systems,18,0.0065,ML & AI Concepts,112
+NVIDIA,IAM,17,0.0062,Security,113
+NVIDIA,Tableau,17,0.0062,Data Engineering & Analytics,113
+NVIDIA,gRPC,17,0.0062,Web & APIs,113
+NVIDIA,RLHF,16,0.0058,ML & AI Concepts,116
+NVIDIA,Salesforce,16,0.0058,Business & GTM,116
+NVIDIA,C#,15,0.0054,Programming Languages,118
+NVIDIA,AI safety / alignment,13,0.0047,ML & AI Concepts,119
+NVIDIA,Kafka,13,0.0047,Data Engineering & Analytics,119
+NVIDIA,Node.js,13,0.0047,Web & APIs,119
+NVIDIA,MongoDB,12,0.0044,Databases,122
+NVIDIA,Elasticsearch,11,0.004,Databases,123
+NVIDIA,Ray,11,0.004,ML Frameworks,123
+NVIDIA,NumPy,10,0.0036,ML Frameworks,125
+NVIDIA,Ruby,9,0.0033,Programming Languages,126
+NVIDIA,Stakeholder management,9,0.0033,Business & GTM,126
+NVIDIA,Enterprise sales,8,0.0029,Business & GTM,128
+NVIDIA,OAuth,8,0.0029,Security,128
+NVIDIA,Snowflake,8,0.0029,Data Engineering & Analytics,128
+NVIDIA,MySQL,7,0.0025,Databases,131
+NVIDIA,R,7,0.0025,Programming Languages,131
+NVIDIA,scikit-learn,7,0.0025,ML Frameworks,131
+NVIDIA,HTML / CSS,6,0.0022,Web & APIs,134
+NVIDIA,pandas,6,0.0022,ML Frameworks,134
+NVIDIA,Airflow,5,0.0018,Data Engineering & Analytics,136
+NVIDIA,Data warehousing,5,0.0018,Data Engineering & Analytics,136
+NVIDIA,Delta Lake,5,0.0018,Data Engineering & Analytics,136
+NVIDIA,PostgreSQL,5,0.0018,Databases,136
+NVIDIA,Scala,5,0.0018,Programming Languages,136
+NVIDIA,"Compliance (SOC 2, FedRAMP, ISO)",4,0.0015,Security,141
+NVIDIA,Redis,4,0.0015,Databases,141
+NVIDIA,GraphQL,2,0.0007,Web & APIs,143
+NVIDIA,Julia,2,0.0007,Programming Languages,143
+NVIDIA,Keras,2,0.0007,ML Frameworks,143
+NVIDIA,MLflow,2,0.0007,ML Frameworks,143
+NVIDIA,Swift,2,0.0007,Programming Languages,143
+NVIDIA,Cassandra,1,0.0004,Databases,148
+NVIDIA,Interpretability,1,0.0004,ML & AI Concepts,148
+NVIDIA,XGBoost,1,0.0004,ML Frameworks,148
+NVIDIA,dbt,1,0.0004,Data Engineering & Analytics,148
+OpenAI,Go-to-market,224,0.2738,Business & GTM,1
+OpenAI,Python,222,0.2714,Programming Languages,2
+OpenAI,Distributed systems,134,0.1638,DevOps & Infrastructure,3
+OpenAI,Observability,132,0.1614,DevOps & Infrastructure,4
+OpenAI,AI agents,125,0.1528,ML & AI Concepts,5
+OpenAI,LLMs,86,0.1051,ML & AI Concepts,6
+OpenAI,JavaScript,80,0.0978,Programming Languages,7
+OpenAI,Evals,63,0.077,ML & AI Concepts,8
+OpenAI,Incident response,63,0.077,Security,8
+OpenAI,Inference,61,0.0746,ML & AI Concepts,10
+OpenAI,Machine learning,60,0.0733,ML & AI Concepts,11
+OpenAI,Rust,53,0.0648,Programming Languages,12
+OpenAI,SQL,50,0.0611,Programming Languages,13
+OpenAI,C++,48,0.0587,Programming Languages,14
+OpenAI,GPU,48,0.0587,GPU & HPC,14
+OpenAI,Product management,46,0.0562,Business & GTM,16
+OpenAI,TypeScript,44,0.0538,Programming Languages,17
+OpenAI,ETL / ELT,39,0.0477,Data Engineering & Analytics,18
+OpenAI,Firmware,39,0.0477,Hardware & Semiconductor,18
+OpenAI,Go,39,0.0477,Programming Languages,18
+OpenAI,Kubernetes,39,0.0477,DevOps & Infrastructure,18
+OpenAI,AI safety / alignment,36,0.044,ML & AI Concepts,22
+OpenAI,CI/CD,32,0.0391,DevOps & Infrastructure,23
+OpenAI,Linux,31,0.0379,DevOps & Infrastructure,24
+OpenAI,Azure,29,0.0355,Cloud,25
+OpenAI,Stakeholder management,27,0.033,Business & GTM,26
+OpenAI,Terraform,25,0.0306,DevOps & Infrastructure,27
+OpenAI,AWS,24,0.0293,Cloud,28
+OpenAI,Generative AI,24,0.0293,ML & AI Concepts,28
+OpenAI,Statistics,24,0.0293,ML & AI Concepts,28
+OpenAI,HPC,23,0.0281,GPU & HPC,31
+OpenAI,Distributed training,22,0.0269,ML & AI Concepts,32
+OpenAI,Enterprise sales,22,0.0269,Business & GTM,32
+OpenAI,Reinforcement learning,22,0.0269,ML & AI Concepts,32
+OpenAI,Security engineering,18,0.022,Security,35
+OpenAI,Embedded systems,17,0.0208,Hardware & Semiconductor,36
+OpenAI,Ethernet,16,0.0196,Networking,37
+OpenAI,React,16,0.0196,Web & APIs,37
+OpenAI,PostgreSQL,15,0.0183,Databases,39
+OpenAI,Deep learning,13,0.0159,ML & AI Concepts,40
+OpenAI,Fine-tuning,11,0.0134,ML & AI Concepts,41
+OpenAI,GCP,11,0.0134,Cloud,41
+OpenAI,Java,11,0.0134,Programming Languages,41
+OpenAI,PCIe,11,0.0134,Hardware & Semiconductor,41
+OpenAI,PyTorch,11,0.0134,ML Frameworks,41
+OpenAI,Threat modelling,11,0.0134,Security,41
+OpenAI,C,10,0.0122,Programming Languages,47
+OpenAI,Compilers,10,0.0122,GPU & HPC,47
+OpenAI,MCP,10,0.0122,LLM & Inference Tools,47
+OpenAI,PCB design,10,0.0122,Hardware & Semiconductor,47
+OpenAI,Data warehousing,9,0.011,Data Engineering & Analytics,51
+OpenAI,Kafka,9,0.011,Data Engineering & Analytics,51
+OpenAI,MySQL,9,0.011,Databases,51
+OpenAI,SRE,9,0.011,DevOps & Infrastructure,51
+OpenAI,Spark,9,0.011,Data Engineering & Analytics,51
+OpenAI,Bash / Shell,8,0.0098,Programming Languages,56
+OpenAI,"Compliance (SOC 2, FedRAMP, ISO)",8,0.0098,Security,56
+OpenAI,IAM,8,0.0098,Security,56
+OpenAI,RTL,8,0.0098,Hardware & Semiconductor,56
+OpenAI,ASIC,7,0.0086,Hardware & Semiconductor,60
+OpenAI,OAuth,7,0.0086,Security,60
+OpenAI,RDMA,7,0.0086,GPU & HPC,60
+OpenAI,Salesforce,7,0.0086,Business & GTM,60
+OpenAI,Signal integrity,7,0.0086,Hardware & Semiconductor,60
+OpenAI,SoC,7,0.0086,Hardware & Semiconductor,60
+OpenAI,DNS,6,0.0073,Networking,66
+OpenAI,Docker,6,0.0073,DevOps & Infrastructure,66
+OpenAI,GitHub,6,0.0073,DevOps & Infrastructure,66
+OpenAI,Grafana,6,0.0073,DevOps & Infrastructure,66
+OpenAI,Physical design,6,0.0073,Hardware & Semiconductor,66
+OpenAI,RLHF,6,0.0073,ML & AI Concepts,66
+OpenAI,RoCE,6,0.0073,Networking,66
+OpenAI,TensorFlow,6,0.0073,ML Frameworks,66
+OpenAI,Airflow,5,0.0061,Data Engineering & Analytics,74
+OpenAI,BGP,5,0.0061,Networking,74
+OpenAI,CUDA,5,0.0061,GPU & HPC,74
+OpenAI,EDA tools,5,0.0061,Hardware & Semiconductor,74
+OpenAI,Git,5,0.0061,DevOps & Infrastructure,74
+OpenAI,InfiniBand,5,0.0061,GPU & HPC,74
+OpenAI,Interpretability,5,0.0061,ML & AI Concepts,74
+OpenAI,Kernel optimisation,5,0.0061,GPU & HPC,74
+OpenAI,Prometheus,5,0.0061,DevOps & Infrastructure,74
+OpenAI,TCP/IP,5,0.0061,Networking,74
+OpenAI,Verilog / SystemVerilog,5,0.0061,Hardware & Semiconductor,74
+OpenAI,Ansible,4,0.0049,DevOps & Infrastructure,85
+OpenAI,Cryptography,4,0.0049,Security,85
+OpenAI,DFT,4,0.0049,Hardware & Semiconductor,85
+OpenAI,Kotlin,4,0.0049,Programming Languages,85
+OpenAI,Network protocols,4,0.0049,Networking,85
+OpenAI,Node.js,4,0.0049,Web & APIs,85
+OpenAI,R,4,0.0049,Programming Languages,85
+OpenAI,REST APIs,4,0.0049,Web & APIs,85
+OpenAI,Computer vision,3,0.0037,ML & AI Concepts,93
+OpenAI,NCCL,3,0.0037,GPU & HPC,93
+OpenAI,OSPF,3,0.0037,Networking,93
+OpenAI,RAG,3,0.0037,ML & AI Concepts,93
+OpenAI,Recommender systems,3,0.0037,ML & AI Concepts,93
+OpenAI,Redis,3,0.0037,Databases,93
+OpenAI,SGLang,3,0.0037,LLM & Inference Tools,93
+OpenAI,Scala,3,0.0037,Programming Languages,93
+OpenAI,Transformers,3,0.0037,ML & AI Concepts,93
+OpenAI,vLLM,3,0.0037,LLM & Inference Tools,93
+OpenAI,Excel,2,0.0024,Data Engineering & Analytics,103
+OpenAI,Hadoop,2,0.0024,Data Engineering & Analytics,103
+OpenAI,JAX,2,0.0024,ML Frameworks,103
+OpenAI,MATLAB,2,0.0024,Programming Languages,103
+OpenAI,Microservices,2,0.0024,DevOps & Infrastructure,103
+OpenAI,NVLink,2,0.0024,GPU & HPC,103
+OpenAI,Triton,2,0.0024,LLM & Inference Tools,103
+OpenAI,Vector databases,2,0.0024,LLM & Inference Tools,103
+OpenAI,gRPC,2,0.0024,Web & APIs,103
+OpenAI,pandas,2,0.0024,ML Frameworks,103
+OpenAI,DGX,1,0.0012,GPU & HPC,113
+OpenAI,Elasticsearch,1,0.0012,Databases,113
+OpenAI,FPGA,1,0.0012,Hardware & Semiconductor,113
+OpenAI,GraphQL,1,0.0012,Web & APIs,113
+OpenAI,MPI,1,0.0012,GPU & HPC,113
+OpenAI,Slurm,1,0.0012,DevOps & Infrastructure,113
+OpenAI,Static timing analysis,1,0.0012,Hardware & Semiconductor,113
+OpenAI,Swift,1,0.0012,Programming Languages,113
+OpenAI,Tableau,1,0.0012,Data Engineering & Analytics,113
+OpenAI,Tcl,1,0.0012,Programming Languages,113
+OpenAI,UVM,1,0.0012,Hardware & Semiconductor,113
+OpenAI,VXLAN / EVPN,1,0.0012,Networking,113
+OpenAI,dbt,1,0.0012,Data Engineering & Analytics,113
+OpenAI,scikit-learn,1,0.0012,ML Frameworks,113

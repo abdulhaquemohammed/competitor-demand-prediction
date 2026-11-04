@@ -17,11 +17,12 @@ Predicts competitor hiring demand, skill trends and market direction from public
 - `src/collect.py` takes one snapshot of all four job boards (checks robots.txt, removes personal data)
 - `src/build_dataset.py` merges snapshots and tracks each job over time (first/last seen, open/closed)
 - `src/preprocess.py` removes boilerplate, flags non-English postings, builds NLP-ready text and seniority levels
+- `src/extract_skills.py` + `src/skill_taxonomy.py` extract skills (shared 158-skill taxonomy), role categories and feature tables
 - `scripts/` twice-weekly snapshot schedule (macOS launchd)
 - `notebooks/` analysis
 - `data/raw/`, `data/interim/` raw snapshots and merged table (git-ignored: copyrighted job text, kept local; available to the mentor on request)
 - `data/sample/` 20-row sample per company (descriptions cut to 300 characters) and snapshot counts
-- `data/processed/` derived features
+- `data/processed/` derived features: skills per posting, skill matrix, frequencies, trends (no job text, committed)
 - `weekly_logs/` weekly progress notes
 
 ## Progress
@@ -30,8 +31,9 @@ Predicts competitor hiring demand, skill trends and market direction from public
 | 1. Data Sources & Legal | Done ([docs](docs/TASK1_data_sources_and_legal.md)) |
 | 2. Data Collection | Done ([report](docs/TASK2_data_collection_report.md)), snapshots ongoing Mon/Thu |
 | 3. NLP Preprocessing | Done ([report](docs/TASK3_preprocessing.md), [notebook](notebooks/03_preprocessing.ipynb)) |
-| 4. Skill Extraction | Next |
-| 5-10 | Not started |
+| 4. Skill Extraction | Done ([report](docs/TASK4_skill_extraction.md), [notebook](notebooks/04_skills.ipynb)) |
+| 5. Hiring Trend Analysis | From 23 Nov (needs ~7 snapshots) |
+| 6-10 | Not started |
 
 ## Run
 ```bash
@@ -40,4 +42,5 @@ pip install -r requirements.txt
 python src/collect.py          # one snapshot (first NVIDIA run ~80 min, later runs only fetch new jobs)
 python src/build_dataset.py    # merge snapshots, print data-quality checks
 python src/preprocess.py       # clean text for NLP (Task 3)
+python src/extract_skills.py   # skills and feature tables (Task 4)
 ```

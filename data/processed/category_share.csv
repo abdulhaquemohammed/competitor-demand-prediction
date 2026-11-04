@@ -1,0 +1,15 @@
+category,Anthropic,Databricks,NVIDIA,OpenAI
+Business & GTM,0.3328,0.3615,0.1031,0.3093
+Cloud,0.1134,0.4297,0.0316,0.0452
+Data Engineering & Analytics,0.1134,0.5574,0.0751,0.0685
+Databases,0.006,0.0779,0.0091,0.022
+DevOps & Infrastructure,0.2239,0.4048,0.3691,0.2885
+GPU & HPC,0.0776,0.026,0.7024,0.0819
+Hardware & Semiconductor,0.0254,0.0054,0.4443,0.0746
+LLM & Inference Tools,0.0552,0.053,0.1122,0.0183
+ML & AI Concepts,0.5821,0.3788,0.5361,0.3557
+ML Frameworks,0.0269,0.0823,0.0969,0.0159
+Networking,0.0149,0.0011,0.1499,0.0355
+Programming Languages,0.3657,0.5152,0.5292,0.3337
+Security,0.1731,0.0606,0.0465,0.1149
+Web & APIs,0.0254,0.0271,0.0258,0.0257
