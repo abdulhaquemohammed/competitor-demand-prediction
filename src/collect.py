@@ -16,6 +16,7 @@ Stdlib only, no installs needed.
 
 import argparse
 import csv
+import html
 import json
 import time
 import urllib.error
@@ -131,8 +132,8 @@ def fetch_greenhouse(cfg, test):
         rows.append({
             "job_id": j.get("id"),
             "job_title": j.get("title"),
-            # HTML-escaped HTML; cleaned in Task 3
-            "job_description": j.get("content") or "",
+            # Greenhouse escapes its HTML; unescape so all sources match (cleaned in Task 3)
+            "job_description": html.unescape(j.get("content") or ""),
             "posting_date": (j.get("first_published") or "")[:10],
             "location": (j.get("location") or {}).get("name"),
             "job_url": j.get("absolute_url"),
