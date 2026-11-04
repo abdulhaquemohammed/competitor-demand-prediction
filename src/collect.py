@@ -1,289 +1,247 @@
-"""Task 2: collect a job-posting snapshot for each company.
-
-Run from the project root:
-    python src/collect.py            # full snapshot, all companies
-    python src/collect.py --test     # quick test: few jobs per company
-
-Each run:
-  1. checks robots.txt for every source and skips any disallowed path
-  2. fetches all open roles from each company's public job feed
-  3. saves raw responses to data/raw/<company>/<date>.json (git-ignored)
-  4. saves a normalised snapshot to data/raw/<company>/<date>.csv (git-ignored)
-  5. updates data/processed/job_tracker.csv (first/last seen per job, no text)
-
-Stdlib only, no installs needed.
 """
+Task 2: Data Collection
+Takes one snapshot of open job postings for OpenAI, Anthropic, Databricks and NVIDIA
+from their public job-board feeds (approved in Task 1) and saves them to
+data/raw/{company}/{YYYY-MM-DD}.json
 
-import argparse
+Run:  python src/collect.py            (all companies)
+      python src/collect.py openai     (one company)
+"""
 import csv
 import html
 import json
+import re
+import sys
 import time
-import urllib.error
-import urllib.request
-import urllib.robotparser
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
+from urllib import robotparser
+from urllib.parse import urlparse
 
-UA = "CadetX-student-project"
-ROOT = Path(__file__).resolve().parent.parent
+import requests
+
+ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
-PROCESSED = ROOT / "data" / "processed"
-LEGAL_LOG = ROOT / "docs" / "legal_checks.md"
-TODAY = date.today().isoformat()
+LOG = ROOT / "docs" / "collection_log.csv"
+UA = "CadetX-student-project"
+TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
-FIELDS = [
-    "job_id", "company_name", "job_title", "job_description", "posting_date",
-    "location", "job_url", "department", "employment_type", "salary_range",
-    "updated_at", "scraped_date",
-]
+session = requests.Session()
+session.headers.update({"User-Agent": UA, "Accept": "application/json"})
+
+# ---------------------------------------------------------------- legal checks
+
+def robots_allowed(url):
+    """Check robots.txt before every fetch. Returns (allowed, note)."""
+    p = urlparse(url)
+    robots_url = f"{p.scheme}://{p.netloc}/robots.txt"
+    try:
+        r = session.get(robots_url, timeout=20, headers={"Accept": "text/plain, */*"})
+    except requests.RequestException as e:
+        return False, f"robots.txt unreachable ({e.__class__.__name__}), not fetching"
+    if 400 <= r.status_code < 500:
+        # RFC 9309: 4xx (unavailable) means no restrictions apply
+        return True, f"robots.txt HTTP {r.status_code}: unavailable, no restrictions (RFC 9309)"
+    if r.status_code >= 500:
+        # RFC 9309: 5xx (unreachable) means assume complete disallow
+        return False, f"robots.txt HTTP {r.status_code}: server error, assume disallowed"
+    rp = robotparser.RobotFileParser()
+    rp.parse(r.text.splitlines())
+    ok = rp.can_fetch(UA, url)
+    return ok, f"robots.txt HTTP 200: {'allowed' if ok else 'DISALLOWED'} for {p.path}"
+
+
+def log_check(company, url, allowed, note, n_jobs=""):
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    new = not LOG.exists()
+    with open(LOG, "a", newline="") as f:
+        w = csv.writer(f)
+        if new:
+            w.writerow(["timestamp_utc", "company", "url", "robots_allowed", "note", "jobs_collected"])
+        w.writerow([NOW, company, url, allowed, note, n_jobs])
+
+# ---------------------------------------------------------------- personal data
+
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+# "Recruiter: Jane Smith" style lines (names after a hiring-contact label)
+NAME = re.compile(r"(?i:\b(recruiter|recruiting contact|talent partner|sourcer|hiring manager|point of contact))(\s*[:\-\u2013]\s*)[A-Z][A-Za-z'\-]+(?:\s+[A-Z][A-Za-z'\-]+)?")
+PHONE = re.compile(r"(?<![\w=/&?.-])(?:\+\d{1,3}[\s.-]?)?\(?\d{2,4}\)?[\s.-]\d{3,4}[\s.-]\d{3,4}(?!\w)")
+
+def redact(text):
+    """Remove emails and phone numbers so no personal contact data is ever stored."""
+    if not text:
+        return text
+    text = EMAIL.sub("[EMAIL_REMOVED]", text)
+    text = NAME.sub(r"\1\2[NAME_REMOVED]", text)
+    return PHONE.sub("[PHONE_REMOVED]", text)
+
+# ---------------------------------------------------------------- record builder
+
+def record(**kw):
+    """One row in the brief's schema (required fields first, then recommended)."""
+    base = dict(job_id=None, company_name=None, job_title=None, job_description=None,
+                posting_date=None, location=None, job_url=None,
+                employment_type=None, department=None, workplace_type=None,
+                salary_range=None, salary_min=None, salary_max=None, salary_currency=None,
+                updated_at=None, scraped_date=TODAY, source=None)
+    base.update(kw)
+    base["job_description"] = redact(base["job_description"])
+    return base
+
+# ---------------------------------------------------------------- sources
+
+def get_json(url, **kw):
+    r = session.get(url, timeout=60, **kw)
+    r.raise_for_status()
+    return r.json()
+
+
+def ashby(company, board):
+    url = f"https://api.ashbyhq.com/posting-api/job-board/{board}?includeCompensation=true"
+    ok, note = robots_allowed(url)
+    if not ok:
+        log_check(company, url, ok, note); return None
+    jobs = get_json(url)["jobs"]
+    out = []
+    for j in jobs:
+        if not j.get("isListed", True):
+            continue  # only collect publicly listed roles
+        comp = j.get("compensation") or {}
+        smin = smax = cur = None
+        for tier in comp.get("compensationTiers", []):
+            for c in tier.get("components", []):
+                if c.get("compensationType") == "Salary" and c.get("minValue"):
+                    smin, smax, cur = c["minValue"], c.get("maxValue"), c.get("currencyCode")
+                    break
+            if smin:
+                break
+        out.append(record(
+            job_id=j["id"], company_name=company, job_title=j["title"],
+            job_description=j.get("descriptionPlain"), posting_date=j.get("publishedAt"),
+            location=j.get("location"), job_url=j.get("jobUrl"),
+            employment_type=j.get("employmentType"), department=j.get("department"),
+            workplace_type=j.get("workplaceType"),
+            salary_range=comp.get("scrapeableCompensationSalarySummary"),
+            salary_min=smin, salary_max=smax, salary_currency=cur, source="ashby"))
+    log_check(company, url, ok, note, len(out))
+    return out
+
+
+TAG = re.compile(r"<[^>]+>")
+
+def greenhouse(company, board):
+    url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true"
+    ok, note = robots_allowed(url)
+    if not ok:
+        log_check(company, url, ok, note); return None
+    jobs = get_json(url)["jobs"]
+    out = []
+    for j in jobs:
+        # Greenhouse returns HTML that is itself HTML-escaped: unescape, then keep the
+        # HTML (full cleaning is Task 3), but also store a plain-text version.
+        raw_html = html.unescape(j.get("content") or "")
+        plain = re.sub(r"\s+", " ", html.unescape(TAG.sub(" ", raw_html))).strip()
+        depts = [d["name"] for d in j.get("departments", [])]
+        out.append(record(
+            job_id=str(j["id"]), company_name=company, job_title=j["title"],
+            job_description=plain, posting_date=j.get("first_published"),
+            location=(j.get("location") or {}).get("name"), job_url=j.get("absolute_url"),
+            department="; ".join(depts) or None, updated_at=j.get("updated_at"),
+            source="greenhouse"))
+    log_check(company, url, ok, note, len(out))
+    return out
+
 
 WD_BASE = "https://nvidia.wd5.myworkdayjobs.com"
-WD_API = WD_BASE + "/wday/cxs/nvidia/NVIDIAExternalCareerSite"
+WD_SITE = "/wday/cxs/nvidia/NVIDIAExternalCareerSite"
 
-COMPANIES = {
-    "openai": {
-        "source": "ashby",
-        "robots": "https://api.ashbyhq.com/robots.txt",
-        "url": "https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true",
-    },
-    "anthropic": {
-        "source": "greenhouse",
-        "robots": "https://boards-api.greenhouse.io/robots.txt",
-        "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
-    },
-    "databricks": {
-        "source": "greenhouse",
-        "robots": "https://boards-api.greenhouse.io/robots.txt",
-        "url": "https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true",
-    },
-    "nvidia": {
-        "source": "workday",
-        "robots": WD_BASE + "/robots.txt",
-        "url": WD_API + "/jobs",
-    },
-}
+def workday_nvidia(company="NVIDIA", delay=1.0):
+    list_url = WD_BASE + WD_SITE + "/jobs"
+    ok, note = robots_allowed(list_url)
+    if not ok:
+        log_check(company, list_url, ok, note); return None
 
+    # 1) list every open role (20 per page).
+    # Workday caps any one search at 2000 results and then loops back to page 1,
+    # so search one job family at a time (each family is under 2000) and stop
+    # at that family's count. De-duplicate by job ID.
+    def search(facets, offset):
+        r = session.post(list_url, json={"appliedFacets": facets, "limit": 20,
+                                         "offset": offset, "searchText": ""}, timeout=60)
+        r.raise_for_status()
+        return r.json()
 
-# ---------- HTTP helpers ----------
+    first = search({}, 0)
+    families = next(f["values"] for f in first["facets"] if f["facetParameter"] == "jobFamilyGroup")
+    listing = {}
+    for fam in families:
+        n = min(fam["count"], 2000)
+        for offset in range(0, n, 20):
+            for p in search({"jobFamilyGroup": [fam["id"]]}, offset).get("jobPostings", []):
+                jid = (p.get("bulletFields") or [p["externalPath"].rsplit("_", 1)[-1]])[0]
+                p["_family"] = fam["descriptor"]
+                listing[jid] = p
+            time.sleep(delay)
+    total_reported = sum(f["count"] for f in families)
 
-def http(url, data=None, timeout=30):
-    headers = {"User-Agent": UA, "Accept": "application/json"}
-    body = None
-    if data is not None:
-        body = json.dumps(data).encode()
-        headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=body, headers=headers)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
-
-
-def robots_allows(robots_url, target_url):
-    """RFC 9309: robots.txt that is unavailable (4xx) means no restrictions;
-    server errors (5xx) or no connection mean assume full disallow.
-    (Python's robotparser treats 401/403 as disallow-all, so this is handled here.)"""
-    try:
-        req = urllib.request.Request(robots_url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            lines = r.read().decode(errors="replace").splitlines()
-        rp = urllib.robotparser.RobotFileParser()
-        rp.parse(lines)
-        return rp.can_fetch(UA, target_url), "robots.txt parsed"
-    except urllib.error.HTTPError as e:
-        if 400 <= e.code < 500 and e.code != 429:
-            return True, f"robots.txt HTTP {e.code} (unavailable: no restrictions, RFC 9309)"
-        return False, f"robots.txt HTTP {e.code} (assume disallow)"
-    except Exception as e:  # network failure
-        return False, f"robots.txt unreachable: {e} (assume disallow)"
-
-
-# ---------- per-source parsers ----------
-
-def fetch_ashby(cfg, test):
-    raw = http(cfg["url"])
-    jobs = [j for j in raw.get("jobs", []) if j.get("isListed", True)]
-    if test:
-        jobs = jobs[:5]
-    rows = []
-    for j in jobs:
-        comp = (j.get("compensation") or {}).get("compensationTierSummary") or ""
-        rows.append({
-            "job_id": j.get("id"),
-            "job_title": j.get("title"),
-            "job_description": j.get("descriptionPlain") or "",
-            "posting_date": (j.get("publishedAt") or "")[:10],
-            "location": j.get("location"),
-            "job_url": j.get("jobUrl"),
-            "department": j.get("department"),
-            "employment_type": j.get("employmentType"),
-            "salary_range": comp,
-            "updated_at": "",
-        })
-    return raw, rows
-
-
-def fetch_greenhouse(cfg, test):
-    raw = http(cfg["url"])
-    jobs = raw.get("jobs", [])
-    if test:
-        jobs = jobs[:5]
-    rows = []
-    for j in jobs:
-        rows.append({
-            "job_id": j.get("id"),
-            "job_title": j.get("title"),
-            # Greenhouse escapes its HTML; unescape so all sources match (cleaned in Task 3)
-            "job_description": html.unescape(j.get("content") or ""),
-            "posting_date": (j.get("first_published") or "")[:10],
-            "location": (j.get("location") or {}).get("name"),
-            "job_url": j.get("absolute_url"),
-            "department": "; ".join(d.get("name", "") for d in j.get("departments") or []),
-            "employment_type": "",
-            "salary_range": "",
-            "updated_at": (j.get("updated_at") or "")[:10],
-        })
-    return raw, rows
-
-
-def fetch_workday(cfg, test, company_dir):
-    """List endpoint pages 20 at a time; descriptions need one request per job,
-    so details are cached and only fetched for jobs not seen before."""
-    # Workday's "total" is unreliable (shows 2000, and 0 after page 1), and the
-    # listing caps at 2000 unique postings then repeats (checked 4 Nov 2026), so
-    # page until an empty page or a page with no new job IDs.
-    listing, seen, offset, total = [], set(), 0, None
-    while True:
-        page = http(cfg["url"], {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": ""})
-        posts = page.get("jobPostings", [])
-        if total is None:
-            total = page.get("total", 0)
-        fresh = [p for p in posts if (p.get("bulletFields") or [p.get("externalPath")])[0] not in seen]
-        for p in fresh:
-            seen.add((p.get("bulletFields") or [p.get("externalPath")])[0])
-        listing.extend(fresh)
-        offset += 20
-        if not fresh or offset >= 10000 or (test and len(listing) >= 5):
-            break
-        time.sleep(1)
-    if test:
-        listing = listing[:5]
-
-    cache = company_dir / "details"
-    cache.mkdir(parents=True, exist_ok=True)
-    rows, new = [], 0
-    for p in listing:
-        jid = (p.get("bulletFields") or [p.get("externalPath", "").split("_")[-1]])[0]
-        cache_file = cache / f"{jid}.json"
-        if cache_file.exists():
-            info = json.loads(cache_file.read_text())
+    # 2) fetch the description page only for job IDs we have not seen before
+    cache_dir = RAW / "nvidia" / "details"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    out, fetched = [], 0
+    for jid, p in listing.items():
+        cache = cache_dir / f"{jid}.json"
+        if cache.exists():
+            info = json.loads(cache.read_text())
         else:
             try:
-                info = http(WD_API + p["externalPath"]).get("jobPostingInfo", {})
-            except Exception as e:
-                print(f"  ! detail failed for {jid}: {e}")
-                info = {}
-            cache_file.write_text(json.dumps(info))
-            new += 1
-            time.sleep(1)
-        rows.append({
-            "job_id": jid,
-            "job_title": p.get("title"),
-            "job_description": info.get("jobDescription", ""),
-            "posting_date": info.get("startDate", ""),
-            "location": info.get("location") or p.get("locationsText"),
-            "job_url": WD_BASE + "/NVIDIAExternalCareerSite" + p.get("externalPath", ""),
-            "department": "",
-            "employment_type": info.get("timeType", ""),
-            "salary_range": "",
-            "updated_at": "",
-        })
-    print(f"  workday: {len(listing)} listed (API total {total}), {new} new detail pages fetched")
-    return {"total": total, "jobPostings": listing}, rows
-
-
-# ---------- tracker (no job text, safe to commit) ----------
-
-def update_tracker(company, rows):
-    PROCESSED.mkdir(parents=True, exist_ok=True)
-    path = PROCESSED / "job_tracker.csv"
-    cols = ["company_name", "job_id", "job_title", "location", "department",
-            "posting_date", "first_seen", "last_seen", "job_status"]
-    tracker = {}
-    if path.exists():
-        with path.open(newline="", encoding="utf-8") as f:
-            for r in csv.DictReader(f):
-                tracker[(r["company_name"], r["job_id"])] = r
-    open_now = {str(r["job_id"]) for r in rows}
-    for r in rows:
-        key = (company, str(r["job_id"]))
-        t = tracker.get(key) or {"first_seen": TODAY}
-        t.update({
-            "company_name": company, "job_id": str(r["job_id"]),
-            "job_title": r["job_title"], "location": r["location"],
-            "department": r["department"], "posting_date": r["posting_date"],
-            "last_seen": TODAY, "job_status": "active",
-        })
-        tracker[key] = t
-    for (c, jid), t in tracker.items():
-        if c == company and jid not in open_now:
-            t["job_status"] = "closed"
-    with path.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols)
-        w.writeheader()
-        w.writerows(sorted(tracker.values(), key=lambda t: (t["company_name"], t["job_id"])))
-
-
-# ---------- main ----------
-
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--test", action="store_true", help="fetch ~5 jobs per company")
-    ap.add_argument("--only", choices=list(COMPANIES), help="run one company")
-    args = ap.parse_args()
-
-    log_lines = []
-    for company, cfg in COMPANIES.items():
-        if args.only and company != args.only:
-            continue
-        print(f"[{company}]")
-        allowed, reason = robots_allows(cfg["robots"], cfg["url"])
-        log_lines.append(f"| {TODAY} | {company} | {cfg['robots']} | {'allowed' if allowed else 'BLOCKED'} | {reason} |")
-        if not allowed:
-            print(f"  skipped: {reason}")
-            continue
-
-        company_dir = RAW / company
-        company_dir.mkdir(parents=True, exist_ok=True)
-        try:
-            if cfg["source"] == "ashby":
-                raw, rows = fetch_ashby(cfg, args.test)
-            elif cfg["source"] == "greenhouse":
-                raw, rows = fetch_greenhouse(cfg, args.test)
+                info = get_json(WD_BASE + WD_SITE + p["externalPath"])["jobPostingInfo"]
+            except requests.RequestException:
+                info = {}  # skip description this time, retried next snapshot
             else:
-                raw, rows = fetch_workday(cfg, args.test, company_dir)
-        except Exception as e:
-            print(f"  FAILED: {e}")
+                info["jobDescription"] = redact(info.get("jobDescription"))
+                cache.write_text(json.dumps(info))
+            fetched += 1
+            time.sleep(delay)
+        desc_html = info.get("jobDescription") or ""
+        plain = re.sub(r"\s+", " ", html.unescape(TAG.sub(" ", desc_html))).strip() or None
+        out.append(record(
+            job_id=jid, company_name=company, job_title=p["title"], job_description=plain,
+            posting_date=info.get("startDate"), location=p.get("locationsText"),
+            job_url=info.get("externalUrl") or f"{WD_BASE}/NVIDIAExternalCareerSite{p['externalPath']}",
+            employment_type=info.get("timeType"), department=p["_family"], source="workday"))
+    log_check(company, list_url, ok,
+              note + f"; Workday reported {total_reported}; {fetched} new detail pages", len(out))
+    return out
+
+
+COMPANIES = {
+    "openai":     lambda: ashby("OpenAI", "openai"),
+    "anthropic":  lambda: greenhouse("Anthropic", "anthropic"),
+    "databricks": lambda: greenhouse("Databricks", "databricks"),
+    "nvidia":     lambda: workday_nvidia(),
+}
+
+# ---------------------------------------------------------------- main
+
+def main(names):
+    for name in names:
+        try:
+            rows = COMPANIES[name]()
+        except requests.RequestException as e:
+            # stop on errors, no retry loop (Task 1, 3.5)
+            print(f"[{name}] FAILED: {e}")
+            log_check(name, "-", "-", f"request failed: {e}")
             continue
-
-        for r in rows:
-            r["company_name"] = company
-            r["scraped_date"] = TODAY
-        suffix = "_test" if args.test else ""
-        (company_dir / f"{TODAY}{suffix}.json").write_text(json.dumps(raw))
-        with (company_dir / f"{TODAY}{suffix}.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=FIELDS)
-            w.writeheader()
-            w.writerows(rows)
-        if not args.test:
-            update_tracker(company, rows)
-        print(f"  saved {len(rows)} jobs")
-
-    if not LEGAL_LOG.exists():
-        LEGAL_LOG.write_text("# Legal checks log\n\n| Date | Company | robots.txt | Result | Detail |\n|---|---|---|---|---|\n")
-    with LEGAL_LOG.open("a") as f:
-        f.write("\n".join(log_lines) + "\n")
-    print("done", datetime.now(timezone.utc).isoformat(timespec="seconds"))
+        if rows is None:
+            print(f"[{name}] skipped: robots.txt disallows")
+            continue
+        path = RAW / name / f"{TODAY}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(rows, ensure_ascii=False, indent=1))
+        print(f"[{name}] {len(rows)} postings -> {path.relative_to(ROOT)}")
+        time.sleep(1)
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:] or list(COMPANIES))
