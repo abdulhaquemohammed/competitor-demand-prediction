@@ -30,3 +30,7 @@ timestamp_utc,company,url,robots_allowed,note,jobs_collected
 2026-11-19T09:06:08+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,638
 2026-11-19T09:06:08+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,False,"robots.txt unreachable (ConnectionError), not fetching",
 2026-11-19T09:06:08+00:00,nvidia,-,-,"failed: ReadTimeout: HTTPSConnectionPool(host='nvidia.wd5.myworkdayjobs.com', port=443): Read timed out. (read timeout=60)",
+2026-11-20T18:43:38+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",853
+2026-11-20T18:43:38+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,639
+2026-11-20T18:43:38+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,895
+2026-11-20T18:43:38+00:00,nvidia,-,-,"stopped: HTTP 429 from nvidia.wd5.myworkdayjobs.com, not retried",

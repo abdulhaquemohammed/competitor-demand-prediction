@@ -10,6 +10,10 @@ Writes data/processed/ (no description text, so all committed):
   skill_trends_monthly.csv  per company, month and skill: share of that month's postings
   emerging_skills.csv     skills much more common in recent postings than older ones
 
+Postings flagged posting_date_source = "bulk_repost" (build_dataset.py) have no reliable
+date, so they are left out of the two date-based tables (monthly trends, emerging skills)
+but kept everywhere else.
+
 Run:   python src/extract_skills.py
 """
 import re
@@ -64,7 +68,7 @@ def main():
 
     OUT.mkdir(parents=True, exist_ok=True)
     keep = ["company_name", "job_id", "job_title", "role_category", "seniority_level", "department",
-            "location", "posting_date", "posting_month", "job_status", "duplicate_count", "n_skills"]
+            "location", "posting_date", "posting_date_source", "posting_month", "job_status", "duplicate_count", "n_skills"]
     jobs = df[keep].copy()
     jobs["extracted_skills"] = df["skill_list"].str.join("; ")
     jobs["skill_categories"] = df["category_list"].str.join("; ")
@@ -78,7 +82,8 @@ def main():
     pd.concat([df[["company_name", "job_id"]], matrix], axis=1).to_csv(OUT / "skill_matrix.csv", index=False)
 
     # skill share per company: % of that company's postings that ask for the skill
-    long = df[["company_name", "job_id", "skill_list", "posting_date", "posting_month"]].explode("skill_list")
+    long = df[["company_name", "job_id", "skill_list", "posting_date", "posting_month",
+               "posting_date_source"]].explode("skill_list")
     long = long.dropna(subset=["skill_list"]).rename(columns={"skill_list": "skill"})
     totals = df.groupby("company_name").size()
     freq = long.groupby(["company_name", "skill"]).size().rename("postings").reset_index()
@@ -92,8 +97,12 @@ def main():
     cat_share.index.name = "category"
     cat_share.to_csv(OUT / "category_share.csv")
 
+    # date-based tables below: bulk-reposted postings have no reliable date
+    dated = df[df["posting_date_source"] != "bulk_repost"].copy()
+    long = long[long["posting_date_source"] != "bulk_repost"]
+
     # monthly trend: share of each month's postings asking for each skill
-    month_tot = df.groupby(["company_name", "posting_month"]).size().rename("month_postings")
+    month_tot = dated.groupby(["company_name", "posting_month"]).size().rename("month_postings")
     trend = long.groupby(["company_name", "posting_month", "skill"]).size().rename("postings").reset_index()
     trend = trend.join(month_tot, on=["company_name", "posting_month"])
     trend = trend[trend["month_postings"] >= MIN_MONTH_POSTINGS]
@@ -101,10 +110,10 @@ def main():
     trend.to_csv(OUT / "skill_trends_monthly.csv", index=False)
 
     # emerging: share in postings from the last 90 days vs share in older postings
-    cutoff = df["posting_date"].max() - pd.Timedelta(days=RECENT_DAYS)
-    df["recent"] = df["posting_date"] >= cutoff
+    cutoff = dated["posting_date"].max() - pd.Timedelta(days=RECENT_DAYS)
+    dated["recent"] = dated["posting_date"] >= cutoff
     rows = []
-    for company, g in df.groupby("company_name"):
+    for company, g in dated.groupby("company_name"):
         new, old = g[g.recent], g[~g.recent]
         for s in skills:
             n_new = sum(s in ss for ss in new["skill_list"])

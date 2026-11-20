@@ -83,3 +83,20 @@ Python is the only skill that's common at all four. **AI agents** is the most ev
 - **Mentioned ≠ required.** "Nice to have" and "required" skills count the same.
 - **Own-product bias.** NVIDIA's own products (CUDA, TensorRT, NeMo) naturally appear mostly in NVIDIA postings. Databricks naming "Databricks" is excluded as a self-mention.
 - **Role categories are rule-based.** About 6% of titles stay "Other" (mostly regional heads and niche corporate roles).
+
+## 7. Update, 20 November 2026
+
+Two things changed: a fresh snapshot (20 Nov) and the NVIDIA posting-date fix (`build_dataset.py`, see `docs/TASK5_hiring_trends.md`). The section 5 figures above are from 4 Nov.
+
+- **Postings analysed:** 5,839 English postings of 5,855 (was 5,167 of 5,182).
+- **Skill shares:** the NVIDIA date fix changes no skill share, because shares use every posting. The only share changes come from new postings in later snapshots. Largest moves since the 4 Nov figures: OpenAI Go-to-market 27% to 30%, Python 27% to 24%; Databricks Snowflake up 1.4 points against the previous committed table. All under 3 points.
+- **Date-based tables changed:** NVIDIA postings flagged `bulk_repost` (1,582 with unreliable dates) are now left out of `skill_trends_monthly.csv` and `emerging_skills.csv`. This removes the fake 30 Oct spike from them.
+
+| Company | Top skills now (share of postings) |
+|---|---|
+| NVIDIA | GPU 58%, Python 43%, C++ 29%, deep learning 26%, HPC 25% |
+| Databricks | AWS 43%, Azure 41%, Python 40%, GCP 38%, Spark 32% |
+| Anthropic | LLMs 36%, Python 28%, go-to-market 26%, machine learning 16%, AI agents 15% |
+| OpenAI | Go-to-market 30%, Python 24%, observability 15%, AI agents 15%, distributed systems 14% |
+
+**Emerging signals now** (recent vs older): NVIDIA AI agents 9% to 20%, CI/CD 6% to 12%, observability 3% to 9%. Databricks Salesforce 4% to 14%, Snowflake 4% to 14%, enterprise sales 3% to 11%. The earlier NVIDIA signals for inference (10% to 14%) and Kubernetes (10% to 14%) now sit just under the 1.5x flag threshold.
