@@ -6,12 +6,12 @@ Anthropic,ML / AI Engineering,0.62,0.75,-16.7,-46.8,11,low
 Anthropic,Marketing & Comms,2.25,0.75,200.0,60.4,24,high
 Anthropic,Other,4.12,3.0,37.5,-28.5,57,low
 Anthropic,Product & Design,1.5,1.0,50.0,-9.8,20,medium
-Anthropic,Program & Operations,2.5,1.5,66.7,-10.2,32,medium
+Anthropic,Program & Operations,2.5,1.5,66.7,-10.2,32,low
 Anthropic,Research,2.75,1.25,120.0,9.0,32,medium
 Anthropic,Sales & Partnerships,9.38,6.62,41.5,-26.2,128,low
 Anthropic,Security,2.62,1.12,133.3,38.2,30,medium
 Anthropic,Software Engineering,5.75,4.12,39.4,-24.9,79,low
-Anthropic,Solutions & Field,5.12,2.12,141.2,40.9,58,high
+Anthropic,Solutions & Field,5.12,2.12,141.2,40.9,58,medium
 Databricks,Corporate,1.75,1.12,55.6,-16.0,23,low
 Databricks,Data,0.25,0.38,-33.3,-59.5,5,insufficient data
 Databricks,ML / AI Engineering,0.12,0.25,-50.0,-78.9,3,insufficient data
@@ -24,19 +24,19 @@ Databricks,Sales & Partnerships,14.5,4.25,241.2,87.2,150,high
 Databricks,Security,1.0,0.25,300.0,155.5,10,high
 Databricks,Software Engineering,3.75,2.38,57.9,-10.4,49,low
 Databricks,Solutions & Field,16.12,11.88,35.8,-22.4,224,low
-NVIDIA,Corporate,1.0,0.0,,,8,insufficient data
+NVIDIA,Corporate,1.25,0.0,,,10,insufficient data
 NVIDIA,Data,1.38,0.25,450.0,224.4,13,high
-NVIDIA,Hardware Engineering,19.12,10.62,80.0,22.2,238,medium
-NVIDIA,ML / AI Engineering,6.25,3.75,66.7,11.8,80,medium
-NVIDIA,Marketing & Comms,0.25,0.25,0.0,-28.6,4,insufficient data
-NVIDIA,Other,6.38,3.0,112.5,46.6,75,high
-NVIDIA,Product & Design,1.25,0.38,233.3,104.5,13,high
-NVIDIA,Program & Operations,2.0,0.88,128.6,60.4,23,high
-NVIDIA,Research,3.25,0.88,271.4,133.2,33,high
-NVIDIA,Sales & Partnerships,2.12,1.38,54.5,3.5,28,medium
-NVIDIA,Security,0.88,1.0,-12.5,-42.8,15,low
-NVIDIA,Software Engineering,35.75,20.75,72.3,17.3,452,medium
-NVIDIA,Solutions & Field,6.75,5.75,17.4,-17.3,100,low
+NVIDIA,Hardware Engineering,22.88,10.62,115.3,43.6,268,medium
+NVIDIA,ML / AI Engineering,7.88,3.75,110.0,38.2,93,medium
+NVIDIA,Marketing & Comms,0.62,0.25,150.0,68.0,7,insufficient data
+NVIDIA,Other,7.5,3.0,150.0,71.0,84,high
+NVIDIA,Product & Design,1.88,0.38,400.0,205.1,18,high
+NVIDIA,Program & Operations,2.88,0.88,228.6,125.5,30,high
+NVIDIA,Research,3.88,0.88,342.9,175.3,38,high
+NVIDIA,Sales & Partnerships,3.25,1.38,136.4,54.8,37,high
+NVIDIA,Security,1.12,1.0,12.5,-27.1,17,low
+NVIDIA,Software Engineering,44.75,20.75,115.7,44.1,524,medium
+NVIDIA,Solutions & Field,8.0,5.75,39.1,-3.5,110,medium
 OpenAI,Corporate,3.75,0.88,328.6,162.7,37,high
 OpenAI,Data,0.75,0.5,50.0,-18.6,10,low
 OpenAI,Hardware Engineering,1.62,1.75,-7.1,-52.2,27,low

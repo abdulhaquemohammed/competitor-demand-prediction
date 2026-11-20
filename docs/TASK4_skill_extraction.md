@@ -90,7 +90,7 @@ Two things changed: a fresh snapshot (20 Nov) and the NVIDIA posting-date fix (`
 
 - **Postings analysed:** 5,839 English postings of 5,855 (was 5,167 of 5,182).
 - **Skill shares:** the NVIDIA date fix changes no skill share, because shares use every posting. The only share changes come from new postings in later snapshots. Largest moves since the 4 Nov figures: OpenAI Go-to-market 27% to 30%, Python 27% to 24%; Databricks Snowflake up 1.4 points against the previous committed table. All under 3 points.
-- **Date-based tables changed:** NVIDIA postings flagged `bulk_repost` (1,582 with unreliable dates) are now left out of `skill_trends_monthly.csv` and `emerging_skills.csv`. This removes the fake 30 Oct spike from them.
+- **Date-based tables changed:** NVIDIA postings flagged `bulk_repost` (1,415 postings from 30 and 31 Oct, with unreliable dates) are now left out of `skill_trends_monthly.csv` and `emerging_skills.csv`. This removes the fake 30 Oct spike from them. The busy days of 2 and 3 Nov stay in: their requisition numbers are new, so those roles are genuine.
 
 | Company | Top skills now (share of postings) |
 |---|---|
@@ -99,4 +99,4 @@ Two things changed: a fresh snapshot (20 Nov) and the NVIDIA posting-date fix (`
 | Anthropic | LLMs 36%, Python 28%, go-to-market 26%, machine learning 16%, AI agents 15% |
 | OpenAI | Go-to-market 30%, Python 24%, observability 15%, AI agents 15%, distributed systems 14% |
 
-**Emerging signals now** (recent vs older): NVIDIA AI agents 9% to 20%, CI/CD 6% to 12%, observability 3% to 9%. Databricks Salesforce 4% to 14%, Snowflake 4% to 14%, enterprise sales 3% to 11%. The earlier NVIDIA signals for inference (10% to 14%) and Kubernetes (10% to 14%) now sit just under the 1.5x flag threshold.
+**Emerging signals now** (recent vs older): NVIDIA AI agents 9% to 20%, CI/CD 6% to 11%, observability 3% to 9%. Databricks Salesforce 4% to 14%, Snowflake 4% to 14%, enterprise sales 3% to 11%. The earlier NVIDIA signals for inference (11% to 15%) and Kubernetes (10% to 14%) sit just under the 1.5x flag threshold (ratios 1.40 and 1.44).

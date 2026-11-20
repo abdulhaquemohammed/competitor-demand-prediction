@@ -1,5 +1,5 @@
 company_name,new_roles_per_week_last4,new_roles_per_week_prev4,growth_pct,growth_pct_adjusted,snapshot_span,snapshot_days,opened_per_week,closed_per_week,open_stock_baseline,open_stock_latest,open_stock_change_pct,new_role_rate_pct_of_open,hiring_velocity_bucket
 Anthropic,44.2,39.5,12.0,-29.3,2026-11-04 to 2026-11-20,16,49.9,68.2,681,639,-6.2,6.92,medium
 Databricks,46.0,37.0,24.3,-1.4,2026-11-04 to 2026-11-20,16,57.3,70.4,925,895,-3.2,5.14,medium
-NVIDIA,107.8,64.8,66.4,35.5,2026-11-04 to 2026-11-16,12,145.8,183.8,2755,2690,-2.4,4.01,low
+NVIDIA,149.5,64.8,130.9,87.4,2026-11-04 to 2026-11-16,12,145.8,183.8,2755,2690,-2.4,5.56,medium
 OpenAI,69.5,44.2,57.1,3.0,2026-11-04 to 2026-11-20,16,91.0,75.2,817,853,4.4,8.15,high

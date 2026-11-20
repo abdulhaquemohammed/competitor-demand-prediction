@@ -315,152 +315,152 @@ Databricks,Node.js,Web & APIs,0,0.0,10,0.0184,0.0,False
 Databricks,GraphQL,Web & APIs,0,0.0,4,0.0074,0.0,False
 Databricks,gRPC,Web & APIs,0,0.0,1,0.0018,0.0,False
 Databricks,HTML / CSS,Web & APIs,0,0.0,12,0.0221,0.0,False
-NVIDIA,AI agents,ML & AI Concepts,188,0.1962,44,0.0946,2.07,True
-NVIDIA,CI/CD,DevOps & Infrastructure,115,0.12,29,0.0624,1.92,True
-NVIDIA,Observability,DevOps & Infrastructure,90,0.0939,14,0.0301,3.12,True
-NVIDIA,Distributed systems,DevOps & Infrastructure,74,0.0772,15,0.0323,2.39,True
-NVIDIA,Git,DevOps & Infrastructure,47,0.0491,13,0.028,1.75,True
-NVIDIA,ETL / ELT,Data Engineering & Analytics,46,0.048,13,0.028,1.72,True
-NVIDIA,DGX,GPU & HPC,42,0.0438,11,0.0237,1.85,True
-NVIDIA,Go,Programming Languages,39,0.0407,9,0.0194,2.1,True
-NVIDIA,Distributed training,ML & AI Concepts,37,0.0386,10,0.0215,1.8,True
-NVIDIA,Go-to-market,Business & GTM,36,0.0376,5,0.0108,3.49,True
-NVIDIA,Reinforcement learning,ML & AI Concepts,35,0.0365,6,0.0129,2.83,True
-NVIDIA,vLLM,LLM & Inference Tools,35,0.0365,11,0.0237,1.54,True
-NVIDIA,Statistics,ML & AI Concepts,33,0.0344,10,0.0215,1.6,True
-NVIDIA,SQL,Programming Languages,32,0.0334,10,0.0215,1.55,True
-NVIDIA,SRE,DevOps & Infrastructure,32,0.0334,2,0.0043,7.77,True
-NVIDIA,Grafana,DevOps & Infrastructure,29,0.0303,3,0.0065,4.69,True
-NVIDIA,Rust,Programming Languages,28,0.0292,5,0.0108,2.72,True
-NVIDIA,Incident response,Security,26,0.0271,8,0.0172,1.58,True
-NVIDIA,VXLAN / EVPN,Networking,25,0.0261,6,0.0129,2.02,True
-NVIDIA,SGLang,LLM & Inference Tools,23,0.024,7,0.0151,1.59,True
-NVIDIA,Terraform,DevOps & Infrastructure,23,0.024,2,0.0043,5.58,True
-NVIDIA,Prometheus,DevOps & Infrastructure,23,0.024,3,0.0065,3.72,True
-NVIDIA,BGP,Networking,23,0.024,6,0.0129,1.86,True
-NVIDIA,JAX,ML Frameworks,17,0.0177,4,0.0086,2.06,True
-NVIDIA,MCP,LLM & Inference Tools,17,0.0177,5,0.0108,1.65,True
-NVIDIA,REST APIs,Web & APIs,17,0.0177,4,0.0086,2.06,True
-NVIDIA,Transformers,ML & AI Concepts,15,0.0157,4,0.0086,1.82,True
-NVIDIA,LangChain,LLM & Inference Tools,11,0.0115,3,0.0065,1.78,True
-NVIDIA,DNS,Networking,11,0.0115,3,0.0065,1.78,True
-NVIDIA,GPU,GPU & HPC,511,0.5334,246,0.529,1.01,False
-NVIDIA,Python,Programming Languages,417,0.4353,190,0.4086,1.07,False
-NVIDIA,Linux,DevOps & Infrastructure,272,0.2839,103,0.2215,1.28,False
-NVIDIA,C++,Programming Languages,266,0.2777,117,0.2516,1.1,False
-NVIDIA,HPC,GPU & HPC,246,0.2568,113,0.243,1.06,False
-NVIDIA,Deep learning,ML & AI Concepts,220,0.2296,127,0.2731,0.84,False
-NVIDIA,LLMs,ML & AI Concepts,159,0.166,61,0.1312,1.27,False
-NVIDIA,Firmware,Hardware & Semiconductor,150,0.1566,71,0.1527,1.03,False
-NVIDIA,C,Programming Languages,148,0.1545,64,0.1376,1.12,False
-NVIDIA,CUDA,GPU & HPC,139,0.1451,63,0.1355,1.07,False
-NVIDIA,Inference,ML & AI Concepts,137,0.143,49,0.1054,1.36,False
-NVIDIA,Kubernetes,DevOps & Infrastructure,137,0.143,45,0.0968,1.48,False
-NVIDIA,Ethernet,Networking,111,0.1159,56,0.1204,0.96,False
-NVIDIA,Machine learning,ML & AI Concepts,109,0.1138,44,0.0946,1.2,False
-NVIDIA,InfiniBand,GPU & HPC,104,0.1086,62,0.1333,0.81,False
-NVIDIA,ASIC,Hardware & Semiconductor,103,0.1075,64,0.1376,0.78,False
-NVIDIA,SoC,Hardware & Semiconductor,88,0.0919,49,0.1054,0.87,False
-NVIDIA,RTL,Hardware & Semiconductor,77,0.0804,56,0.1204,0.67,False
-NVIDIA,Bash / Shell,Programming Languages,76,0.0793,27,0.0581,1.37,False
-NVIDIA,PyTorch,ML Frameworks,75,0.0783,29,0.0624,1.26,False
-NVIDIA,Embedded systems,Hardware & Semiconductor,72,0.0752,38,0.0817,0.92,False
-NVIDIA,Perl,Programming Languages,69,0.072,41,0.0882,0.82,False
-NVIDIA,PCIe,Hardware & Semiconductor,69,0.072,30,0.0645,1.12,False
-NVIDIA,Docker,DevOps & Infrastructure,68,0.071,27,0.0581,1.22,False
-NVIDIA,Generative AI,ML & AI Concepts,64,0.0668,32,0.0688,0.97,False
-NVIDIA,Verilog / SystemVerilog,Hardware & Semiconductor,61,0.0637,41,0.0882,0.72,False
-NVIDIA,Network protocols,Networking,56,0.0585,26,0.0559,1.05,False
-NVIDIA,Product management,Business & GTM,52,0.0543,20,0.043,1.26,False
-NVIDIA,RDMA,GPU & HPC,51,0.0532,20,0.043,1.24,False
-NVIDIA,DFT,Hardware & Semiconductor,49,0.0511,35,0.0753,0.68,False
-NVIDIA,TCP/IP,Networking,46,0.048,23,0.0495,0.97,False
-NVIDIA,NVLink,GPU & HPC,45,0.047,18,0.0387,1.21,False
-NVIDIA,Compilers,GPU & HPC,45,0.047,26,0.0559,0.84,False
-NVIDIA,Physical design,Hardware & Semiconductor,45,0.047,49,0.1054,0.45,False
-NVIDIA,RAG,ML & AI Concepts,44,0.0459,16,0.0344,1.33,False
-NVIDIA,Signal integrity,Hardware & Semiconductor,42,0.0438,20,0.043,1.02,False
-NVIDIA,RoCE,Networking,40,0.0418,21,0.0452,0.92,False
-NVIDIA,Ansible,DevOps & Infrastructure,39,0.0407,14,0.0301,1.35,False
-NVIDIA,TensorRT,LLM & Inference Tools,38,0.0397,15,0.0323,1.23,False
-NVIDIA,UVM,Hardware & Semiconductor,38,0.0397,22,0.0473,0.84,False
-NVIDIA,NCCL,GPU & HPC,37,0.0386,16,0.0344,1.12,False
-NVIDIA,NeMo,LLM & Inference Tools,36,0.0376,12,0.0258,1.46,False
-NVIDIA,VLSI,Hardware & Semiconductor,33,0.0344,13,0.028,1.23,False
-NVIDIA,PCB design,Hardware & Semiconductor,33,0.0344,24,0.0516,0.67,False
-NVIDIA,EDA tools,Hardware & Semiconductor,31,0.0324,26,0.0559,0.58,False
-NVIDIA,Slurm,DevOps & Infrastructure,30,0.0313,17,0.0366,0.86,False
-NVIDIA,Fine-tuning,ML & AI Concepts,29,0.0303,13,0.028,1.08,False
-NVIDIA,Computer vision,ML & AI Concepts,28,0.0292,14,0.0301,0.97,False
-NVIDIA,Java,Programming Languages,24,0.0251,10,0.0215,1.16,False
-NVIDIA,Tcl,Programming Languages,24,0.0251,15,0.0323,0.78,False
-NVIDIA,TensorFlow,ML Frameworks,24,0.0251,16,0.0344,0.73,False
-NVIDIA,AWS,Cloud,24,0.0251,13,0.028,0.9,False
-NVIDIA,Triton,LLM & Inference Tools,23,0.024,12,0.0258,0.93,False
-NVIDIA,NIM,LLM & Inference Tools,23,0.024,13,0.028,0.86,False
-NVIDIA,Azure,Cloud,23,0.024,13,0.028,0.86,False
-NVIDIA,Microservices,DevOps & Infrastructure,23,0.024,15,0.0323,0.74,False
-NVIDIA,Kernel optimisation,GPU & HPC,21,0.0219,7,0.0151,1.46,False
-NVIDIA,GCP,Cloud,20,0.0209,11,0.0237,0.88,False
-NVIDIA,MPI,GPU & HPC,20,0.0209,11,0.0237,0.88,False
-NVIDIA,FPGA,Hardware & Semiconductor,17,0.0177,14,0.0301,0.59,False
-NVIDIA,Hugging Face,ML Frameworks,14,0.0146,5,0.0108,1.36,False
-NVIDIA,Static timing analysis,Hardware & Semiconductor,14,0.0146,19,0.0409,0.36,False
-NVIDIA,OSPF,Networking,14,0.0146,5,0.0108,1.36,False
-NVIDIA,GitHub,DevOps & Infrastructure,13,0.0136,5,0.0108,1.26,False
-NVIDIA,Spark,Data Engineering & Analytics,12,0.0125,4,0.0086,1.46,False
-NVIDIA,MLOps,ML & AI Concepts,11,0.0115,9,0.0194,0.59,False
-NVIDIA,Excel,Data Engineering & Analytics,10,0.0104,5,0.0108,0.97,False
-NVIDIA,C#,Programming Languages,9,0.0094,4,0.0086,1.09,False
-NVIDIA,Vector databases,LLM & Inference Tools,9,0.0094,0,0.0,,False
-NVIDIA,OpenCL,GPU & HPC,9,0.0094,5,0.0108,0.87,False
-NVIDIA,JavaScript,Programming Languages,8,0.0084,6,0.0129,0.65,False
-NVIDIA,NLP,ML & AI Concepts,8,0.0084,6,0.0129,0.65,False
-NVIDIA,Evals,ML & AI Concepts,8,0.0084,1,0.0022,3.88,False
-NVIDIA,Cryptography,Security,8,0.0084,6,0.0129,0.65,False
-NVIDIA,Power BI,Data Engineering & Analytics,7,0.0073,6,0.0129,0.57,False
-NVIDIA,React,Web & APIs,7,0.0073,3,0.0065,1.13,False
-NVIDIA,TypeScript,Programming Languages,6,0.0063,1,0.0022,2.91,False
-NVIDIA,MySQL,Databases,6,0.0063,2,0.0043,1.46,False
-NVIDIA,MongoDB,Databases,6,0.0063,2,0.0043,1.46,False
-NVIDIA,Elasticsearch,Databases,6,0.0063,2,0.0043,1.46,False
-NVIDIA,cuDNN,GPU & HPC,6,0.0063,5,0.0108,0.58,False
-NVIDIA,Threat modelling,Security,6,0.0063,3,0.0065,0.97,False
-NVIDIA,MATLAB,Programming Languages,5,0.0052,9,0.0194,0.27,False
-NVIDIA,AI safety / alignment,ML & AI Concepts,5,0.0052,2,0.0043,1.21,False
-NVIDIA,Databricks,Data Engineering & Analytics,5,0.0052,1,0.0022,2.43,False
-NVIDIA,OpenMP,GPU & HPC,5,0.0052,2,0.0043,1.21,False
-NVIDIA,Salesforce,Business & GTM,5,0.0052,3,0.0065,0.81,False
-NVIDIA,Recommender systems,ML & AI Concepts,4,0.0042,3,0.0065,0.65,False
-NVIDIA,Kafka,Data Engineering & Analytics,4,0.0042,0,0.0,,False
-NVIDIA,Tableau,Data Engineering & Analytics,4,0.0042,3,0.0065,0.65,False
-NVIDIA,gRPC,Web & APIs,4,0.0042,3,0.0065,0.65,False
-NVIDIA,Ray,ML Frameworks,3,0.0031,0,0.0,,False
-NVIDIA,Redis,Databases,3,0.0031,0,0.0,,False
-NVIDIA,Security engineering,Security,3,0.0031,3,0.0065,0.49,False
-NVIDIA,IAM,Security,3,0.0031,2,0.0043,0.73,False
-NVIDIA,OAuth,Security,3,0.0031,0,0.0,,False
-NVIDIA,Enterprise sales,Business & GTM,3,0.0031,1,0.0022,1.46,False
-NVIDIA,Stakeholder management,Business & GTM,3,0.0031,3,0.0065,0.49,False
-NVIDIA,R,Programming Languages,2,0.0021,0,0.0,,False
-NVIDIA,scikit-learn,ML Frameworks,2,0.0021,1,0.0022,0.97,False
-NVIDIA,NumPy,ML Frameworks,2,0.0021,1,0.0022,0.97,False
-NVIDIA,RLHF,ML & AI Concepts,2,0.0021,1,0.0022,0.97,False
-NVIDIA,Delta Lake,Data Engineering & Analytics,2,0.0021,0,0.0,,False
-NVIDIA,PostgreSQL,Databases,2,0.0021,0,0.0,,False
-NVIDIA,Cassandra,Databases,2,0.0021,0,0.0,,False
-NVIDIA,Node.js,Web & APIs,2,0.0021,2,0.0043,0.49,False
-NVIDIA,HTML / CSS,Web & APIs,2,0.0021,1,0.0022,0.97,False
-NVIDIA,Ruby,Programming Languages,1,0.001,0,0.0,,False
-NVIDIA,pandas,ML Frameworks,1,0.001,1,0.0022,0.49,False
-NVIDIA,Airflow,Data Engineering & Analytics,1,0.001,1,0.0022,0.49,False
-NVIDIA,Snowflake,Data Engineering & Analytics,1,0.001,0,0.0,,False
-NVIDIA,Data warehousing,Data Engineering & Analytics,1,0.001,0,0.0,,False
-NVIDIA,"Compliance (SOC 2, FedRAMP, ISO)",Security,1,0.001,1,0.0022,0.49,False
+NVIDIA,AI agents,ML & AI Concepts,225,0.2,44,0.0946,2.11,True
+NVIDIA,CI/CD,DevOps & Infrastructure,129,0.1147,29,0.0624,1.84,True
+NVIDIA,Observability,DevOps & Infrastructure,104,0.0924,14,0.0301,3.07,True
+NVIDIA,Distributed systems,DevOps & Infrastructure,90,0.08,15,0.0323,2.48,True
+NVIDIA,Git,DevOps & Infrastructure,53,0.0471,13,0.028,1.69,True
+NVIDIA,ETL / ELT,Data Engineering & Analytics,51,0.0453,13,0.028,1.62,True
+NVIDIA,Go,Programming Languages,50,0.0444,9,0.0194,2.3,True
+NVIDIA,Go-to-market,Business & GTM,46,0.0409,5,0.0108,3.8,True
+NVIDIA,DGX,GPU & HPC,45,0.04,11,0.0237,1.69,True
+NVIDIA,Distributed training,ML & AI Concepts,44,0.0391,10,0.0215,1.82,True
+NVIDIA,NeMo,LLM & Inference Tools,44,0.0391,12,0.0258,1.52,True
+NVIDIA,Reinforcement learning,ML & AI Concepts,42,0.0373,6,0.0129,2.89,True
+NVIDIA,SRE,DevOps & Infrastructure,41,0.0364,2,0.0043,8.47,True
+NVIDIA,Statistics,ML & AI Concepts,40,0.0356,10,0.0215,1.65,True
+NVIDIA,SQL,Programming Languages,38,0.0338,10,0.0215,1.57,True
+NVIDIA,Rust,Programming Languages,34,0.0302,5,0.0108,2.81,True
+NVIDIA,Grafana,DevOps & Infrastructure,34,0.0302,3,0.0065,4.68,True
+NVIDIA,Prometheus,DevOps & Infrastructure,28,0.0249,3,0.0065,3.86,True
+NVIDIA,VXLAN / EVPN,Networking,28,0.0249,6,0.0129,1.93,True
+NVIDIA,SGLang,LLM & Inference Tools,26,0.0231,7,0.0151,1.54,True
+NVIDIA,BGP,Networking,26,0.0231,6,0.0129,1.79,True
+NVIDIA,Terraform,DevOps & Infrastructure,25,0.0222,2,0.0043,5.17,True
+NVIDIA,JAX,ML Frameworks,23,0.0204,4,0.0086,2.38,True
+NVIDIA,MCP,LLM & Inference Tools,21,0.0187,5,0.0108,1.74,True
+NVIDIA,REST APIs,Web & APIs,20,0.0178,4,0.0086,2.07,True
+NVIDIA,Transformers,ML & AI Concepts,16,0.0142,4,0.0086,1.65,True
+NVIDIA,DNS,Networking,14,0.0124,3,0.0065,1.93,True
+NVIDIA,LangChain,LLM & Inference Tools,12,0.0107,3,0.0065,1.65,True
+NVIDIA,GPU,GPU & HPC,604,0.5369,246,0.529,1.01,False
+NVIDIA,Python,Programming Languages,487,0.4329,190,0.4086,1.06,False
+NVIDIA,C++,Programming Languages,312,0.2773,117,0.2516,1.1,False
+NVIDIA,Linux,DevOps & Infrastructure,312,0.2773,103,0.2215,1.25,False
+NVIDIA,HPC,GPU & HPC,276,0.2453,113,0.243,1.01,False
+NVIDIA,Deep learning,ML & AI Concepts,259,0.2302,127,0.2731,0.84,False
+NVIDIA,LLMs,ML & AI Concepts,183,0.1627,61,0.1312,1.24,False
+NVIDIA,Firmware,Hardware & Semiconductor,174,0.1547,71,0.1527,1.01,False
+NVIDIA,C,Programming Languages,172,0.1529,64,0.1376,1.11,False
+NVIDIA,CUDA,GPU & HPC,167,0.1484,63,0.1355,1.1,False
+NVIDIA,Inference,ML & AI Concepts,166,0.1476,49,0.1054,1.4,False
+NVIDIA,Kubernetes,DevOps & Infrastructure,157,0.1396,45,0.0968,1.44,False
+NVIDIA,Machine learning,ML & AI Concepts,126,0.112,44,0.0946,1.18,False
+NVIDIA,Ethernet,Networking,126,0.112,56,0.1204,0.93,False
+NVIDIA,ASIC,Hardware & Semiconductor,119,0.1058,64,0.1376,0.77,False
+NVIDIA,InfiniBand,GPU & HPC,110,0.0978,62,0.1333,0.73,False
+NVIDIA,SoC,Hardware & Semiconductor,104,0.0924,49,0.1054,0.88,False
+NVIDIA,Bash / Shell,Programming Languages,90,0.08,27,0.0581,1.38,False
+NVIDIA,RTL,Hardware & Semiconductor,88,0.0782,56,0.1204,0.65,False
+NVIDIA,PyTorch,ML Frameworks,87,0.0773,29,0.0624,1.24,False
+NVIDIA,Embedded systems,Hardware & Semiconductor,84,0.0747,38,0.0817,0.91,False
+NVIDIA,Perl,Programming Languages,80,0.0711,41,0.0882,0.81,False
+NVIDIA,PCIe,Hardware & Semiconductor,80,0.0711,30,0.0645,1.1,False
+NVIDIA,Docker,DevOps & Infrastructure,75,0.0667,27,0.0581,1.15,False
+NVIDIA,Generative AI,ML & AI Concepts,73,0.0649,32,0.0688,0.94,False
+NVIDIA,Verilog / SystemVerilog,Hardware & Semiconductor,65,0.0578,41,0.0882,0.66,False
+NVIDIA,Product management,Business & GTM,64,0.0569,20,0.043,1.32,False
+NVIDIA,Network protocols,Networking,63,0.056,26,0.0559,1.0,False
+NVIDIA,RDMA,GPU & HPC,56,0.0498,20,0.043,1.16,False
+NVIDIA,DFT,Hardware & Semiconductor,55,0.0489,35,0.0753,0.65,False
+NVIDIA,Compilers,GPU & HPC,53,0.0471,26,0.0559,0.84,False
+NVIDIA,RAG,ML & AI Concepts,52,0.0462,16,0.0344,1.34,False
+NVIDIA,NVLink,GPU & HPC,52,0.0462,18,0.0387,1.19,False
+NVIDIA,Physical design,Hardware & Semiconductor,52,0.0462,49,0.1054,0.44,False
+NVIDIA,Signal integrity,Hardware & Semiconductor,51,0.0453,20,0.043,1.05,False
+NVIDIA,TCP/IP,Networking,51,0.0453,23,0.0495,0.92,False
+NVIDIA,Ansible,DevOps & Infrastructure,48,0.0427,14,0.0301,1.42,False
+NVIDIA,UVM,Hardware & Semiconductor,46,0.0409,22,0.0473,0.86,False
+NVIDIA,TensorRT,LLM & Inference Tools,43,0.0382,15,0.0323,1.18,False
+NVIDIA,RoCE,Networking,42,0.0373,21,0.0452,0.83,False
+NVIDIA,NCCL,GPU & HPC,41,0.0364,16,0.0344,1.06,False
+NVIDIA,vLLM,LLM & Inference Tools,39,0.0347,11,0.0237,1.47,False
+NVIDIA,EDA tools,Hardware & Semiconductor,39,0.0347,26,0.0559,0.62,False
+NVIDIA,Slurm,DevOps & Infrastructure,38,0.0338,17,0.0366,0.92,False
+NVIDIA,VLSI,Hardware & Semiconductor,38,0.0338,13,0.028,1.21,False
+NVIDIA,PCB design,Hardware & Semiconductor,37,0.0329,24,0.0516,0.64,False
+NVIDIA,Fine-tuning,ML & AI Concepts,34,0.0302,13,0.028,1.08,False
+NVIDIA,Triton,LLM & Inference Tools,32,0.0284,12,0.0258,1.1,False
+NVIDIA,Computer vision,ML & AI Concepts,31,0.0276,14,0.0301,0.92,False
+NVIDIA,Java,Programming Languages,29,0.0258,10,0.0215,1.2,False
+NVIDIA,Tcl,Programming Languages,28,0.0249,15,0.0323,0.77,False
+NVIDIA,NIM,LLM & Inference Tools,28,0.0249,13,0.028,0.89,False
+NVIDIA,Incident response,Security,28,0.0249,8,0.0172,1.45,False
+NVIDIA,Microservices,DevOps & Infrastructure,27,0.024,15,0.0323,0.74,False
+NVIDIA,TensorFlow,ML Frameworks,26,0.0231,16,0.0344,0.67,False
+NVIDIA,AWS,Cloud,26,0.0231,13,0.028,0.83,False
+NVIDIA,Azure,Cloud,25,0.0222,13,0.028,0.79,False
+NVIDIA,FPGA,Hardware & Semiconductor,24,0.0213,14,0.0301,0.71,False
+NVIDIA,Kernel optimisation,GPU & HPC,23,0.0204,7,0.0151,1.36,False
+NVIDIA,GCP,Cloud,22,0.0196,11,0.0237,0.83,False
+NVIDIA,MPI,GPU & HPC,22,0.0196,11,0.0237,0.83,False
+NVIDIA,Static timing analysis,Hardware & Semiconductor,18,0.016,19,0.0409,0.39,False
+NVIDIA,GitHub,DevOps & Infrastructure,16,0.0142,5,0.0108,1.32,False
+NVIDIA,OSPF,Networking,16,0.0142,5,0.0108,1.32,False
+NVIDIA,Hugging Face,ML Frameworks,15,0.0133,5,0.0108,1.24,False
+NVIDIA,MLOps,ML & AI Concepts,13,0.0116,9,0.0194,0.6,False
+NVIDIA,Spark,Data Engineering & Analytics,13,0.0116,4,0.0086,1.34,False
+NVIDIA,Vector databases,LLM & Inference Tools,12,0.0107,0,0.0,,False
+NVIDIA,Excel,Data Engineering & Analytics,12,0.0107,5,0.0108,0.99,False
+NVIDIA,OpenCL,GPU & HPC,11,0.0098,5,0.0108,0.91,False
+NVIDIA,JavaScript,Programming Languages,9,0.008,6,0.0129,0.62,False
+NVIDIA,C#,Programming Languages,9,0.008,4,0.0086,0.93,False
+NVIDIA,NLP,ML & AI Concepts,9,0.008,6,0.0129,0.62,False
+NVIDIA,Evals,ML & AI Concepts,9,0.008,1,0.0022,3.72,False
+NVIDIA,Cryptography,Security,9,0.008,6,0.0129,0.62,False
+NVIDIA,React,Web & APIs,9,0.008,3,0.0065,1.24,False
+NVIDIA,TypeScript,Programming Languages,8,0.0071,1,0.0022,3.31,False
+NVIDIA,Power BI,Data Engineering & Analytics,8,0.0071,6,0.0129,0.55,False
+NVIDIA,MongoDB,Databases,8,0.0071,2,0.0043,1.65,False
+NVIDIA,Elasticsearch,Databases,8,0.0071,2,0.0043,1.65,False
+NVIDIA,Salesforce,Business & GTM,8,0.0071,3,0.0065,1.1,False
+NVIDIA,AI safety / alignment,ML & AI Concepts,7,0.0062,2,0.0043,1.45,False
+NVIDIA,MySQL,Databases,7,0.0062,2,0.0043,1.45,False
+NVIDIA,cuDNN,GPU & HPC,7,0.0062,5,0.0108,0.58,False
+NVIDIA,Databricks,Data Engineering & Analytics,6,0.0053,1,0.0022,2.48,False
+NVIDIA,Kafka,Data Engineering & Analytics,6,0.0053,0,0.0,,False
+NVIDIA,Tableau,Data Engineering & Analytics,6,0.0053,3,0.0065,0.83,False
+NVIDIA,Threat modelling,Security,6,0.0053,3,0.0065,0.83,False
+NVIDIA,MATLAB,Programming Languages,5,0.0044,9,0.0194,0.23,False
+NVIDIA,Recommender systems,ML & AI Concepts,5,0.0044,3,0.0065,0.69,False
+NVIDIA,OpenMP,GPU & HPC,5,0.0044,2,0.0043,1.03,False
+NVIDIA,RLHF,ML & AI Concepts,4,0.0036,1,0.0022,1.65,False
+NVIDIA,Redis,Databases,4,0.0036,0,0.0,,False
+NVIDIA,Node.js,Web & APIs,4,0.0036,2,0.0043,0.83,False
+NVIDIA,gRPC,Web & APIs,4,0.0036,3,0.0065,0.55,False
+NVIDIA,R,Programming Languages,3,0.0027,0,0.0,,False
+NVIDIA,Ray,ML Frameworks,3,0.0027,0,0.0,,False
+NVIDIA,Security engineering,Security,3,0.0027,3,0.0065,0.41,False
+NVIDIA,IAM,Security,3,0.0027,2,0.0043,0.62,False
+NVIDIA,OAuth,Security,3,0.0027,0,0.0,,False
+NVIDIA,Enterprise sales,Business & GTM,3,0.0027,1,0.0022,1.24,False
+NVIDIA,Stakeholder management,Business & GTM,3,0.0027,3,0.0065,0.41,False
+NVIDIA,scikit-learn,ML Frameworks,2,0.0018,1,0.0022,0.83,False
+NVIDIA,NumPy,ML Frameworks,2,0.0018,1,0.0022,0.83,False
+NVIDIA,Airflow,Data Engineering & Analytics,2,0.0018,1,0.0022,0.83,False
+NVIDIA,Delta Lake,Data Engineering & Analytics,2,0.0018,0,0.0,,False
+NVIDIA,Data warehousing,Data Engineering & Analytics,2,0.0018,0,0.0,,False
+NVIDIA,PostgreSQL,Databases,2,0.0018,0,0.0,,False
+NVIDIA,Cassandra,Databases,2,0.0018,0,0.0,,False
+NVIDIA,HTML / CSS,Web & APIs,2,0.0018,1,0.0022,0.83,False
+NVIDIA,Ruby,Programming Languages,1,0.0009,0,0.0,,False
+NVIDIA,Julia,Programming Languages,1,0.0009,0,0.0,,False
+NVIDIA,pandas,ML Frameworks,1,0.0009,1,0.0022,0.41,False
+NVIDIA,Snowflake,Data Engineering & Analytics,1,0.0009,0,0.0,,False
+NVIDIA,"Compliance (SOC 2, FedRAMP, ISO)",Security,1,0.0009,1,0.0022,0.41,False
 NVIDIA,Scala,Programming Languages,0,0.0,2,0.0043,0.0,False
 NVIDIA,Kotlin,Programming Languages,0,0.0,0,0.0,,False
 NVIDIA,Swift,Programming Languages,0,0.0,0,0.0,,False
-NVIDIA,Julia,Programming Languages,0,0.0,0,0.0,,False
 NVIDIA,Keras,ML Frameworks,0,0.0,1,0.0022,0.0,False
 NVIDIA,XGBoost,ML Frameworks,0,0.0,0,0.0,,False
 NVIDIA,MLflow,ML Frameworks,0,0.0,0,0.0,,False

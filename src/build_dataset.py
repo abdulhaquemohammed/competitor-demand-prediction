@@ -7,8 +7,11 @@ Writes data/interim/jobs_master.csv     (full text, git-ignored: copyrighted des
        data/sample/snapshot_summary.csv (counts per company per snapshot, committed)
        docs/posting_date_fix.csv        (bulk-repost check per company, committed)
 
-Bulk reposts: a day with at least 50 postings and 10x the company's median daily count is a
-bulk repost (Workday resets startDate when roles are reposted). The real date is estimated
+Bulk reposts (Workday resets startDate when roles are reposted): a day with at least 50 postings
+and 10x the company's median daily count is a candidate. For companies with numeric requisition
+IDs a candidate only counts if its median requisition number is below the 25th percentile of
+requisition numbers on non-candidate days within +/-14 days (reposted roles are old; a genuine
+busy day has new requisitions). Companies without numeric IDs use the count rule alone. The real date is estimated
 from the requisition number (it rises over time) if that estimate is accurate enough on
 held-out normal postings (MAE <= 30 days). Otherwise the dates are kept and the rows are
 flagged posting_date_source = "bulk_repost", so trend work can leave them out of new-posting
@@ -31,6 +34,8 @@ BULK_MIN_RATIO = 10        # ... and at least this multiple of the company's med
 ROLL_WINDOW = 101          # postings in the rolling median of date sorted by requisition number
 MAX_MAE_DAYS = 30          # impute only if held-out error is at most this
 CV_FOLDS = 5
+AGE_WINDOW_DAYS = 14       # non-candidate days around a candidate used for the age check
+AGE_QUANTILE = 0.25        # candidate must be older than this quantile of nearby requisition numbers
 
 
 def load_snapshots():
@@ -66,15 +71,38 @@ def cv_mae(req, days):
     return float(np.concatenate(errs).mean())
 
 
+def age_check(day, req, candidates):
+    """Per candidate day: median requisition number vs the 25th percentile of requisition numbers
+    on non-candidate days within +/-14 days. Returns a table; 'flagged' = clearly older than normal."""
+    rows = []
+    near = ~day.isin(candidates.index) & req.notna()
+    for d, n in candidates.items():
+        window = near & ((day - d).abs() <= pd.Timedelta(days=AGE_WINDOW_DAYS))
+        med = req[(day == d)].median()
+        thr = req[window].quantile(AGE_QUANTILE) if window.sum() else np.nan
+        rows.append(dict(date=d.strftime("%Y-%m-%d"), postings=int(n), median_req=med,
+                         threshold_p25=thr, flagged=bool(med < thr)))
+    return pd.DataFrame(rows)
+
+
 def fix_bulk_reposts(jobs):
     """Detect bulk-repost days per company and impute or flag those postings (see docstring)."""
     jobs["posting_date_raw"] = jobs["posting_date"]
-    report = []
+    report, cand_tables = [], []
     for company, g in jobs[jobs["posting_date_source"] == "feed"].groupby("company_name"):
         day = g["posting_date"].dt.normalize()
         daily = day.value_counts()
         median = daily.median()
-        bulk_days = daily[(daily >= BULK_MIN_POSTINGS) & (daily >= BULK_MIN_RATIO * median)]
+        candidates = daily[(daily >= BULK_MIN_POSTINGS) & (daily >= BULK_MIN_RATIO * median)]
+        bulk_days = candidates
+        if len(candidates) and req_number(g["job_id"]).notna().mean() >= 0.9:
+            ac = age_check(day, req_number(g["job_id"]), candidates)
+            cand_tables.append(ac.assign(company_name=company))
+            bulk_days = candidates[[d.strftime("%Y-%m-%d") in set(ac[ac.flagged].date) for d in candidates.index]]
+        elif len(candidates):
+            cand_tables.append(pd.DataFrame(dict(
+                date=[d.strftime("%Y-%m-%d") for d in candidates.index], postings=candidates.values,
+                median_req=np.nan, threshold_p25=np.nan, flagged=True, company_name=company)))
         row = dict(company_name=company, postings=len(g), median_daily=median,
                    bulk_days="; ".join(d.strftime("%Y-%m-%d") for d in bulk_days.index),
                    bulk_postings=int(bulk_days.sum()), mae_days=None, route="none")
@@ -98,6 +126,12 @@ def fix_bulk_reposts(jobs):
         report.append(row)
     report = pd.DataFrame(report)
     DOCS.mkdir(exist_ok=True)
+    if cand_tables:
+        cands = pd.concat(cand_tables, ignore_index=True)
+        cands = cands[["company_name", "date", "postings", "median_req", "threshold_p25", "flagged"]]
+        cands["flagged"] = cands["flagged"].map({True: "yes", False: "no"})
+        cands.to_csv(DOCS / "bulk_repost_candidates.csv", index=False)
+        print("Candidate bulk-repost days (count rule), after age check:\n" + cands.to_string(index=False) + "\n")
     report.to_csv(DOCS / "posting_date_fix.csv", index=False)
     print("Bulk-repost check:\n" + report.to_string(index=False) + "\n")
     return jobs

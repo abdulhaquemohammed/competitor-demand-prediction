@@ -5,7 +5,7 @@
 ## Progress
 - Fixed snapshot reliability: snapshots on 5, 9, 12 and 19 Nov were partly lost to network errors after the Mac woke and to NVIDIA Workday read timeouts. `collect.py` now reports the real reason, retries network errors only (max 3 attempts, 30s then 60s wait), stops a company on HTTP 429, and retries single NVIDIA list pages. `run_snapshot.sh` waits up to 5 minutes for the network.
 - Took a fresh snapshot on 20 Nov: OpenAI 853, Anthropic 639, Databricks 895. NVIDIA was stopped by an HTTP 429 and not retried.
-- Found and handled NVIDIA's bulk-repost dates: 1,582 postings with reset start dates (1,351 on 30 Oct alone). Requisition-number imputation had a 36.6-day held-out error, over my 30-day limit, so those postings are flagged `bulk_repost` and left out of new-posting counts. Task 4 refreshed; no skill share moved by 3 points or more because of this.
+- Found and handled NVIDIA's bulk-repost dates: 1,415 postings with reset start dates on 30 and 31 Oct (1,351 on 30 Oct alone). The count rule alone also caught 2 and 3 Nov, so I added a requisition-age check; those two days are genuine new roles. Requisition-number imputation had a 37.0-day held-out error, over my 30-day limit, so the reposted postings are flagged `bulk_repost` and left out of new-posting counts. Task 4 refreshed; no skill share moved by 3 points or more because of this.
 - Completed Task 5 (started early, on 20 Nov, instead of 23 Nov): weekly and monthly new-role series with a survivorship correction, snapshot flows, velocity buckets, role-category growth, day-of-week pattern, notebook and report. The trend tables refresh automatically with every snapshot.
 
 ## Decisions
