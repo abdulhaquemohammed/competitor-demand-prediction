@@ -10,3 +10,23 @@ timestamp_utc,company,url,robots_allowed,note,jobs_collected
 2026-11-04T17:25:56+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,926
 2026-11-04T17:25:56+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,682
 2026-11-04T17:25:56+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",818
+2026-11-05T09:00:38+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",812
+2026-11-05T09:00:38+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,681
+2026-11-05T09:00:38+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,926
+2026-11-05T09:00:38+00:00,nvidia,-,-,"failed: ReadTimeout: HTTPSConnectionPool(host='nvidia.wd5.myworkdayjobs.com', port=443): Read timed out. (read timeout=60)",
+2026-11-09T09:02:39+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",813
+2026-11-09T09:02:39+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,676
+2026-11-09T09:02:39+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,921
+2026-11-09T09:02:39+00:00,nvidia,-,-,"failed: ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+2026-11-12T09:12:26+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,False,"robots.txt unreachable (ConnectionError), not fetching",
+2026-11-12T09:12:26+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,False,"robots.txt unreachable (ConnectionError), not fetching",
+2026-11-12T09:12:26+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,False,"robots.txt unreachable (ConnectionError), not fetching",
+2026-11-12T09:12:26+00:00,NVIDIA,https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs,False,"robots.txt unreachable (ConnectionError), not fetching",
+2026-11-16T09:00:04+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",838
+2026-11-16T09:00:04+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,661
+2026-11-16T09:00:04+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,895
+2026-11-16T09:00:04+00:00,NVIDIA,https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs,True,"robots.txt HTTP 429: unavailable, no restrictions (RFC 9309); Workday reported 2691; 249 new detail pages; 1 incomplete list entries skipped",2690
+2026-11-19T09:06:08+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",833
+2026-11-19T09:06:08+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,638
+2026-11-19T09:06:08+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,False,"robots.txt unreachable (ConnectionError), not fetching",
+2026-11-19T09:06:08+00:00,nvidia,-,-,"failed: ReadTimeout: HTTPSConnectionPool(host='nvidia.wd5.myworkdayjobs.com', port=443): Read timed out. (read timeout=60)",
