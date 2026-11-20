@@ -1,0 +1,52 @@
+company_name,role_category,new_roles_per_week_last8,new_roles_per_week_prev8,growth_pct,growth_pct_adjusted,roles_in_window,hiring_velocity_bucket
+Anthropic,Corporate,4.25,2.25,88.9,7.3,52,medium
+Anthropic,Data,0.75,0.25,200.0,68.0,8,insufficient data
+Anthropic,Hardware Engineering,0.25,0.5,-50.0,-70.0,6,insufficient data
+Anthropic,ML / AI Engineering,0.62,0.75,-16.7,-46.8,11,low
+Anthropic,Marketing & Comms,2.25,0.75,200.0,60.4,24,high
+Anthropic,Other,4.12,3.0,37.5,-28.5,57,low
+Anthropic,Product & Design,1.5,1.0,50.0,-9.8,20,medium
+Anthropic,Program & Operations,2.5,1.5,66.7,-10.2,32,medium
+Anthropic,Research,2.75,1.25,120.0,9.0,32,medium
+Anthropic,Sales & Partnerships,9.38,6.62,41.5,-26.2,128,low
+Anthropic,Security,2.62,1.12,133.3,38.2,30,medium
+Anthropic,Software Engineering,5.75,4.12,39.4,-24.9,79,low
+Anthropic,Solutions & Field,5.12,2.12,141.2,40.9,58,high
+Databricks,Corporate,1.75,1.12,55.6,-16.0,23,low
+Databricks,Data,0.25,0.38,-33.3,-59.5,5,insufficient data
+Databricks,ML / AI Engineering,0.12,0.25,-50.0,-78.9,3,insufficient data
+Databricks,Marketing & Comms,0.5,0.38,33.3,-20.7,7,insufficient data
+Databricks,Other,1.88,1.5,25.0,-28.3,27,low
+Databricks,Product & Design,1.0,0.12,700.0,294.8,9,insufficient data
+Databricks,Program & Operations,0.5,0.12,300.0,141.6,5,insufficient data
+Databricks,Research,0.12,0.0,,,1,insufficient data
+Databricks,Sales & Partnerships,14.5,4.25,241.2,87.2,150,high
+Databricks,Security,1.0,0.25,300.0,155.5,10,high
+Databricks,Software Engineering,3.75,2.38,57.9,-10.4,49,low
+Databricks,Solutions & Field,16.12,11.88,35.8,-22.4,224,low
+NVIDIA,Corporate,1.0,0.0,,,8,insufficient data
+NVIDIA,Data,1.38,0.25,450.0,224.4,13,high
+NVIDIA,Hardware Engineering,19.12,10.62,80.0,22.2,238,medium
+NVIDIA,ML / AI Engineering,6.25,3.75,66.7,11.8,80,medium
+NVIDIA,Marketing & Comms,0.25,0.25,0.0,-28.6,4,insufficient data
+NVIDIA,Other,6.38,3.0,112.5,46.6,75,high
+NVIDIA,Product & Design,1.25,0.38,233.3,104.5,13,high
+NVIDIA,Program & Operations,2.0,0.88,128.6,60.4,23,high
+NVIDIA,Research,3.25,0.88,271.4,133.2,33,high
+NVIDIA,Sales & Partnerships,2.12,1.38,54.5,3.5,28,medium
+NVIDIA,Security,0.88,1.0,-12.5,-42.8,15,low
+NVIDIA,Software Engineering,35.75,20.75,72.3,17.3,452,medium
+NVIDIA,Solutions & Field,6.75,5.75,17.4,-17.3,100,low
+OpenAI,Corporate,3.75,0.88,328.6,162.7,37,high
+OpenAI,Data,0.75,0.5,50.0,-18.6,10,low
+OpenAI,Hardware Engineering,1.62,1.75,-7.1,-52.2,27,low
+OpenAI,ML / AI Engineering,1.38,0.88,57.1,-8.1,18,medium
+OpenAI,Marketing & Comms,4.0,0.75,433.3,228.5,38,high
+OpenAI,Other,7.12,1.38,418.2,178.1,68,high
+OpenAI,Product & Design,2.5,0.62,300.0,121.6,25,high
+OpenAI,Program & Operations,4.5,2.25,100.0,8.1,54,medium
+OpenAI,Research,3.25,2.88,13.0,-41.1,49,low
+OpenAI,Sales & Partnerships,8.62,4.12,109.1,10.7,102,medium
+OpenAI,Security,1.25,0.38,233.3,95.0,13,high
+OpenAI,Software Engineering,11.0,7.62,44.3,-13.2,149,low
+OpenAI,Solutions & Field,7.12,4.25,67.6,4.3,91,medium

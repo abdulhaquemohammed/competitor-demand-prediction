@@ -18,11 +18,12 @@ Predicts competitor hiring demand, skill trends and market direction from public
 - `src/build_dataset.py` merges snapshots and tracks each job over time (first/last seen, open/closed)
 - `src/preprocess.py` removes boilerplate, flags non-English postings, builds NLP-ready text and seniority levels
 - `src/extract_skills.py` + `src/skill_taxonomy.py` extract skills (shared 158-skill taxonomy), role categories and feature tables
+- `src/trends.py` weekly and monthly new-role series (raw, unique, survivorship-adjusted), snapshot flows, velocity and role growth tables
 - `scripts/` twice-weekly snapshot schedule (macOS launchd)
 - `notebooks/` analysis
 - `data/raw/`, `data/interim/` raw snapshots and merged table (git-ignored: copyrighted job text, kept local; available to the mentor on request)
 - `data/sample/` 20-row sample per company (descriptions cut to 300 characters) and snapshot counts
-- `data/processed/` derived features: skills per posting, skill matrix, frequencies, trends (no job text, committed)
+- `data/processed/` derived features and trend tables: skills per posting, skill matrix, frequencies, weekly/monthly postings, snapshot flows, velocity (no job text, committed)
 - `weekly_logs/` weekly progress notes
 
 ## Progress
@@ -32,7 +33,7 @@ Predicts competitor hiring demand, skill trends and market direction from public
 | 2. Data Collection | Done ([report](docs/TASK2_data_collection_report.md)), snapshots ongoing Mon/Thu |
 | 3. NLP Preprocessing | Done ([report](docs/TASK3_preprocessing.md), [notebook](notebooks/03_preprocessing.ipynb)) |
 | 4. Skill Extraction | Done ([report](docs/TASK4_skill_extraction.md), [notebook](notebooks/04_skills.ipynb)) |
-| 5. Hiring Trend Analysis | From 23 Nov (needs ~7 snapshots) |
+| 5. Hiring Trend Analysis | Done ([report](docs/TASK5_hiring_trends.md), [notebook](notebooks/05_trends.ipynb)); snapshots and trend tables keep refreshing Mon/Thu |
 | 6-10 | Not started |
 
 ## Run
@@ -43,4 +44,5 @@ python src/collect.py          # one snapshot (first NVIDIA run ~80 min, later r
 python src/build_dataset.py    # merge snapshots, print data-quality checks
 python src/preprocess.py       # clean text for NLP (Task 3)
 python src/extract_skills.py   # skills and feature tables (Task 4)
+python src/trends.py           # hiring trend tables (Task 5)
 ```
