@@ -90,6 +90,7 @@ One row per posting, matching the brief's schema.
 5. **Different description formats.** Greenhouse and Workday give HTML, Ashby gives plain text. I've stripped tags for all three, but Task 3 has to check they end up at the same quality level so comparisons are fair.
 6. **Workday isn't a documented public API.** It can change without notice. It also caps each search at 2,000 results and then repeats page one, which I handle by searching one job family at a time. If it breaks, NVIDIA gets swapped for another AI company on Greenhouse, Lever or Ashby (Task 1, 2.3).
 7. **Gaps if a snapshot is missed.** The schedule runs on my Mac, so if it's off for days, those snapshots don't happen. Each missed date is visible in `snapshot_summary.csv`, and the time series in Task 5 will be built on actual snapshot dates rather than assuming a fixed interval.
+8. **Fix (20 Nov):** snapshots on 5, 9, 12 and 19 Nov were partly lost to network errors just after the Mac woke and to NVIDIA Workday read timeouts. The console wrongly said "robots.txt disallows". `collect.py` now prints the real reason (disallowed, unreachable, HTTP 429), retries network errors only (max 3 attempts, 30s then 60s wait), stops a company on 429, and retries single NVIDIA list pages with a 120s timeout. A list with a page still missing is not saved, so open jobs are never wrongly marked closed. `run_snapshot.sh` waits up to 5 minutes for the network first.
 
 ## 6. How to reproduce
 

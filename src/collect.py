@@ -4,6 +4,10 @@ Takes one snapshot of open job postings for OpenAI, Anthropic, Databricks and NV
 from their public job-board feeds (approved in Task 1) and saves them to
 data/raw/{company}/{YYYY-MM-DD}.json
 
+Network errors (connection reset, timeout) are retried at most 3 times per request
+with a 30s then 60s wait. A real robots.txt disallow, a 4xx or a 429 is never retried;
+a 429 stops that company for this run. This is a bounded retry, not a retry loop (Task 1).
+
 Run:  python src/collect.py            (all companies)
       python src/collect.py openai     (one company)
 """
@@ -27,19 +31,64 @@ UA = "CadetX-student-project"
 TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
+MIN_GAP = 1.0                 # seconds between any two requests
+MAX_ATTEMPTS = 3              # per request, network errors only
+BACKOFF = (30, 60, 120)       # wait before attempt 2, 3 (120 only if MAX_ATTEMPTS is raised)
+TIMEOUT = 60
+WD_TIMEOUT = 120              # Workday is slow to answer large searches
+
 session = requests.Session()
 session.headers.update({"User-Agent": UA, "Accept": "application/json"})
+
+
+class Skipped(Exception):
+    """Company not collected this run for a known reason (disallowed, unreachable, 429)."""
+    def __init__(self, note, failure=True):
+        super().__init__(note)
+        self.failure = failure   # False only for a real robots.txt disallow
+
+
+class RateLimited(Exception):
+    """HTTP 429: stop this company for this run, never retry."""
+
+
+_last = [0.0]
+
+def fetch(method, url, timeout=TIMEOUT, **kw):
+    """One HTTP request with a 1 second gap to the previous one and bounded retries.
+    Retries only ConnectionError/Timeout. Returns the response (any status except 429)."""
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        wait = MIN_GAP - (time.monotonic() - _last[0])
+        if wait > 0:
+            time.sleep(wait)
+        try:
+            r = session.request(method, url, timeout=timeout, **kw)
+        except (requests.ConnectionError, requests.Timeout) as e:
+            _last[0] = time.monotonic()
+            if attempt == MAX_ATTEMPTS:
+                raise
+            pause = BACKOFF[attempt - 1]
+            print(f"    {e.__class__.__name__} on {urlparse(url).netloc}, attempt {attempt}/{MAX_ATTEMPTS}, "
+                  f"retrying in {pause}s", flush=True)
+            time.sleep(pause)
+            continue
+        _last[0] = time.monotonic()
+        if r.status_code == 429:
+            raise RateLimited(f"HTTP 429 from {urlparse(url).netloc}")
+        return r
 
 # ---------------------------------------------------------------- legal checks
 
 def robots_allowed(url):
-    """Check robots.txt before every fetch. Returns (allowed, note)."""
+    """Check robots.txt before every fetch. Returns (allowed, note).
+    Raises RateLimited on 429 so the company is stopped rather than treated as 'no robots.txt'."""
     p = urlparse(url)
     robots_url = f"{p.scheme}://{p.netloc}/robots.txt"
     try:
-        r = session.get(robots_url, timeout=20, headers={"Accept": "text/plain, */*"})
+        r = fetch("GET", robots_url, timeout=20, headers={"Accept": "text/plain, */*"})
     except requests.RequestException as e:
-        return False, f"robots.txt unreachable ({e.__class__.__name__}), not fetching"
+        return False, (f"robots.txt unreachable ({e.__class__.__name__} after {MAX_ATTEMPTS} attempts), "
+                       "not fetching")
     if 400 <= r.status_code < 500:
         # RFC 9309: 4xx (unavailable) means no restrictions apply
         return True, f"robots.txt HTTP {r.status_code}: unavailable, no restrictions (RFC 9309)"
@@ -91,17 +140,24 @@ def record(**kw):
 
 # ---------------------------------------------------------------- sources
 
-def get_json(url, **kw):
-    r = session.get(url, timeout=60, **kw)
-    r.raise_for_status()
+def get_json(url, method="GET", timeout=TIMEOUT, **kw):
+    r = fetch(method, url, timeout=timeout, **kw)
+    r.raise_for_status()      # other 4xx/5xx: fail, no retry
     return r.json()
+
+
+def check_robots(company, url):
+    """Log the robots.txt check; raise Skipped with the real reason if we may not fetch."""
+    ok, note = robots_allowed(url)
+    if not ok:
+        log_check(company, url, ok, note)
+        raise Skipped(note, failure="DISALLOWED" not in note)
+    return note
 
 
 def ashby(company, board):
     url = f"https://api.ashbyhq.com/posting-api/job-board/{board}?includeCompensation=true"
-    ok, note = robots_allowed(url)
-    if not ok:
-        log_check(company, url, ok, note); return None
+    note = check_robots(company, url)
     jobs = get_json(url)["jobs"]
     out = []
     for j in jobs:
@@ -124,7 +180,7 @@ def ashby(company, board):
             workplace_type=j.get("workplaceType"),
             salary_range=comp.get("scrapeableCompensationSalarySummary"),
             salary_min=smin, salary_max=smax, salary_currency=cur, source="ashby"))
-    log_check(company, url, ok, note, len(out))
+    log_check(company, url, True, note, len(out))
     return out
 
 
@@ -132,9 +188,7 @@ TAG = re.compile(r"<[^>]+>")
 
 def greenhouse(company, board):
     url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true"
-    ok, note = robots_allowed(url)
-    if not ok:
-        log_check(company, url, ok, note); return None
+    note = check_robots(company, url)
     jobs = get_json(url)["jobs"]
     out = []
     for j in jobs:
@@ -149,44 +203,51 @@ def greenhouse(company, board):
             location=(j.get("location") or {}).get("name"), job_url=j.get("absolute_url"),
             department="; ".join(depts) or None, updated_at=j.get("updated_at"),
             source="greenhouse"))
-    log_check(company, url, ok, note, len(out))
+    log_check(company, url, True, note, len(out))
     return out
 
 
 WD_BASE = "https://nvidia.wd5.myworkdayjobs.com"
 WD_SITE = "/wday/cxs/nvidia/NVIDIAExternalCareerSite"
 
-def workday_nvidia(company="NVIDIA", delay=1.0):
+def workday_nvidia(company="NVIDIA"):
     list_url = WD_BASE + WD_SITE + "/jobs"
-    ok, note = robots_allowed(list_url)
-    if not ok:
-        log_check(company, list_url, ok, note); return None
+    note = check_robots(company, list_url)
 
     # 1) list every open role (20 per page).
     # Workday caps any one search at 2000 results and then loops back to page 1,
     # so search one job family at a time (each family is under 2000) and stop
     # at that family's count. De-duplicate by job ID.
+    # Each page is its own request with its own retries, so one slow page no longer
+    # fails the whole company. A page that still fails after 3 attempts makes the list
+    # incomplete; saving it would mark those jobs as closed, so the company fails instead.
     def search(facets, offset):
-        r = session.post(list_url, json={"appliedFacets": facets, "limit": 20,
-                                         "offset": offset, "searchText": ""}, timeout=60)
-        r.raise_for_status()
-        return r.json()
+        return get_json(list_url, method="POST", timeout=WD_TIMEOUT,
+                        json={"appliedFacets": facets, "limit": 20, "offset": offset, "searchText": ""})
 
     first = search({}, 0)
     families = next(f["values"] for f in first["facets"] if f["facetParameter"] == "jobFamilyGroup")
-    listing, skipped = {}, 0
+    listing, skipped, failed_pages = {}, 0, []
     for fam in families:
         n = min(fam["count"], 2000)
         for offset in range(0, n, 20):
-            for p in search({"jobFamilyGroup": [fam["id"]]}, offset).get("jobPostings", []):
+            try:
+                page = search({"jobFamilyGroup": [fam["id"]]}, offset)
+            except requests.RequestException as e:
+                failed_pages.append(f"{fam['descriptor']}@{offset}")
+                print(f"    list page {fam['descriptor']} offset {offset} failed: {e.__class__.__name__}")
+                continue
+            for p in page.get("jobPostings", []):
                 if not p.get("title") or not p.get("externalPath"):
                     skipped += 1  # Workday occasionally returns incomplete entries
                     continue
                 jid = (p.get("bulletFields") or [p["externalPath"].rsplit("_", 1)[-1]])[0]
                 p["_family"] = fam["descriptor"]
                 listing[jid] = p
-            time.sleep(delay)
     total_reported = sum(f["count"] for f in families)
+    if failed_pages:
+        raise RuntimeError(f"{len(failed_pages)} list pages failed after {MAX_ATTEMPTS} attempts "
+                           f"({', '.join(failed_pages[:5])}); incomplete list not saved")
 
     # 2) fetch the description page only for job IDs we have not seen before
     cache_dir = RAW / "nvidia" / "details"
@@ -198,14 +259,13 @@ def workday_nvidia(company="NVIDIA", delay=1.0):
             info = json.loads(cache.read_text())
         else:
             try:
-                info = get_json(WD_BASE + WD_SITE + p["externalPath"])["jobPostingInfo"]
+                info = get_json(WD_BASE + WD_SITE + p["externalPath"], timeout=WD_TIMEOUT)["jobPostingInfo"]
             except requests.RequestException:
                 info = {}  # skip description this time, retried next snapshot
             else:
                 info["jobDescription"] = redact(info.get("jobDescription"))
                 cache.write_text(json.dumps(info))
             fetched += 1
-            time.sleep(delay)
         desc_html = info.get("jobDescription") or ""
         plain = re.sub(r"\s+", " ", html.unescape(TAG.sub(" ", desc_html))).strip() or None
         out.append(record(
@@ -213,7 +273,7 @@ def workday_nvidia(company="NVIDIA", delay=1.0):
             posting_date=info.get("startDate"), location=p.get("locationsText"),
             job_url=info.get("externalUrl") or f"{WD_BASE}/NVIDIAExternalCareerSite{p['externalPath']}",
             employment_type=info.get("timeType"), department=p["_family"], source="workday"))
-    log_check(company, list_url, ok,
+    log_check(company, list_url, True,
               note + f"; Workday reported {total_reported}; {fetched} new detail pages; "
                      f"{skipped} incomplete list entries skipped", len(out))
     return out
@@ -233,20 +293,26 @@ def main(names):
     for name in names:
         try:
             rows = COMPANIES[name]()
+        except Skipped as e:
+            print(f"[{name}] skipped: {e}")
+            if e.failure:
+                failed.append(name)
+            continue
+        except RateLimited as e:
+            print(f"[{name}] stopped for this run: {e}")
+            log_check(name, "-", "-", f"stopped: {e}, not retried")
+            failed.append(name)
+            continue
         except Exception as e:
             # one company failing must not stop the others; no retry loop (Task 1, 3.5)
             print(f"[{name}] FAILED: {e.__class__.__name__}: {e}")
             log_check(name, "-", "-", f"failed: {e.__class__.__name__}: {e}")
             failed.append(name)
             continue
-        if rows is None:
-            print(f"[{name}] skipped: robots.txt disallows")
-            continue
         path = RAW / name / f"{TODAY}.json"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(rows, ensure_ascii=False, indent=1))
         print(f"[{name}] {len(rows)} postings -> {path.relative_to(ROOT)}")
-        time.sleep(1)
     return failed
 
 
