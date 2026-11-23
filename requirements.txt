@@ -4,3 +4,5 @@ scikit-learn>=1.4
 simplemma>=1.1
 matplotlib>=3.8
 jupyter
+statsmodels>=0.14
+prophet>=1.1  # optional: forecast.py skips Prophet if it is not installed

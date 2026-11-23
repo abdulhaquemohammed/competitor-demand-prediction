@@ -1,0 +1,5 @@
+company_name,model,forecast_next2_mean,snapshot_opened_per_week,ratio,flows_provisional
+OpenAI,ma4,95.8,82.5,1.16,False
+Anthropic,naive,40.5,44.6,0.91,False
+Databricks,holt_damped,57.1,50.1,1.14,False
+NVIDIA,prophet,169.6,145.8,1.16,True
