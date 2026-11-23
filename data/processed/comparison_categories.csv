@@ -1,0 +1,57 @@
+category,company_name,share,others_mean,gap_pp,rank_in_company
+Business & GTM,OpenAI,0.3275,0.2722,5.5,2
+Cloud,OpenAI,0.0458,0.199,-15.3,9
+Data Engineering & Analytics,OpenAI,0.0657,0.2491,-18.3,7
+Databases,OpenAI,0.0164,0.0274,-1.1,12
+DevOps & Infrastructure,OpenAI,0.2817,0.3371,-5.5,4
+GPU & HPC,OpenAI,0.0634,0.267,-20.4,8
+Hardware & Semiconductor,OpenAI,0.0692,0.1612,-9.2,6
+LLM & Inference Tools,OpenAI,0.0141,0.0756,-6.2,13
+ML & AI Concepts,OpenAI,0.365,0.4943,-12.9,1
+ML Frameworks,OpenAI,0.0117,0.0679,-5.6,14
+Networking,OpenAI,0.0282,0.0543,-2.6,10
+Programming Languages,OpenAI,0.3157,0.4666,-15.1,3
+Security,OpenAI,0.1197,0.0924,2.7,5
+Web & APIs,OpenAI,0.0258,0.0266,-0.1,11
+Business & GTM,Anthropic,0.3408,0.2678,7.3,3
+Cloud,Anthropic,0.12,0.1743,-5.4,6
+Data Engineering & Analytics,Anthropic,0.1168,0.232,-11.5,7
+Databases,Anthropic,0.0064,0.0307,-2.4,14
+DevOps & Infrastructure,Anthropic,0.2304,0.3542,-12.4,4
+GPU & HPC,Anthropic,0.08,0.2614,-18.1,8
+Hardware & Semiconductor,Anthropic,0.0288,0.1746,-14.6,11
+LLM & Inference Tools,Anthropic,0.0608,0.0601,0.1,9
+ML & AI Concepts,Anthropic,0.576,0.4239,15.2,1
+ML Frameworks,Anthropic,0.0304,0.0617,-3.1,10
+Networking,Anthropic,0.0128,0.0595,-4.7,13
+Programming Languages,Anthropic,0.3616,0.4514,-9.0,2
+Security,Anthropic,0.168,0.0763,9.2,5
+Web & APIs,Anthropic,0.0288,0.0256,0.3,11
+Business & GTM,Databricks,0.3744,0.2566,11.8,5
+Cloud,Databricks,0.4484,0.0648,38.4,3
+Data Engineering & Analytics,Databricks,0.5549,0.086,46.9,1
+Databases,Databricks,0.0661,0.0108,5.5,8
+DevOps & Infrastructure,Databricks,0.4081,0.295,11.3,4
+GPU & HPC,Databricks,0.0235,0.2803,-25.7,12
+Hardware & Semiconductor,Databricks,0.0045,0.1827,-17.8,13
+LLM & Inference Tools,Databricks,0.0527,0.0628,-1.0,10
+ML & AI Concepts,Databricks,0.3711,0.4922,-12.1,6
+ML Frameworks,Databricks,0.0751,0.0468,2.8,7
+Networking,Databricks,0.0045,0.0622,-5.8,13
+Programming Languages,Databricks,0.5101,0.4019,10.8,2
+Security,Databricks,0.0628,0.1114,-4.9,9
+Web & APIs,Databricks,0.0258,0.0266,-0.1,11
+Business & GTM,NVIDIA,0.1015,0.3476,-24.6,8
+Cloud,NVIDIA,0.0286,0.2047,-17.6,12
+Data Engineering & Analytics,NVIDIA,0.0755,0.2458,-17.0,10
+Databases,NVIDIA,0.0097,0.0297,-2.0,14
+DevOps & Infrastructure,NVIDIA,0.3729,0.3067,6.6,5
+GPU & HPC,NVIDIA,0.6974,0.0556,64.2,1
+Hardware & Semiconductor,NVIDIA,0.4502,0.0342,41.6,4
+LLM & Inference Tools,NVIDIA,0.1134,0.0425,7.1,7
+ML & AI Concepts,NVIDIA,0.5357,0.4374,9.8,2
+ML Frameworks,NVIDIA,0.0981,0.0391,5.9,9
+Networking,NVIDIA,0.1457,0.0152,13.1,6
+Programming Languages,NVIDIA,0.5283,0.3958,13.2,3
+Security,NVIDIA,0.0465,0.1168,-7.0,11
+Web & APIs,NVIDIA,0.0253,0.0268,-0.2,13

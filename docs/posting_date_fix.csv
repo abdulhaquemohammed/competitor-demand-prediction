@@ -1,5 +1,5 @@
 company_name,postings,median_daily,bulk_days,bulk_postings,mae_days,route
-Anthropic,789,2.0,,0,,none
-Databricks,1039,2.0,,0,,none
-NVIDIA,3005,3.0,2026-10-30; 2026-10-31,1415,37.0,"bulk_repost (kept dates, excluded from new-posting velocity)"
-OpenAI,1022,2.0,,0,,none
+Anthropic,796,2.0,,0,,none
+Databricks,1042,2.0,,0,,none
+NVIDIA,3005,3.0,2026-10-30; 2026-10-31,1415,37.2,"bulk_repost (kept dates, excluded from new-posting velocity)"
+OpenAI,1037,2.0,,0,,none

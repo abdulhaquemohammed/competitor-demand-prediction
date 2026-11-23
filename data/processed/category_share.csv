@@ -1,15 +1,15 @@
 category,Anthropic,Databricks,NVIDIA,OpenAI
-Business & GTM,0.3445,0.3674,0.1048,0.3327
-Cloud,0.12,0.4388,0.0316,0.0411
-Data Engineering & Analytics,0.1174,0.5583,0.0789,0.0665
-Databases,0.0052,0.0723,0.0103,0.0166
-DevOps & Infrastructure,0.2129,0.3905,0.375,0.2573
-GPU & HPC,0.0774,0.027,0.6975,0.0724
-Hardware & Semiconductor,0.0245,0.0048,0.4369,0.0675
-LLM & Inference Tools,0.0542,0.053,0.1148,0.0147
-ML & AI Concepts,0.569,0.3742,0.5398,0.3366
-ML Frameworks,0.0245,0.0849,0.0982,0.0127
-Networking,0.0142,0.0039,0.1481,0.0294
-Programming Languages,0.3458,0.5121,0.5288,0.3004
-Security,0.16,0.0598,0.0476,0.1076
-Web & APIs,0.0245,0.0241,0.026,0.0215
+Business & GTM,0.3453,0.3683,0.1048,0.3308
+Cloud,0.1202,0.4394,0.0316,0.0405
+Data Engineering & Analytics,0.1164,0.5577,0.0789,0.0675
+Databases,0.0051,0.0721,0.0103,0.0164
+DevOps & Infrastructure,0.211,0.3913,0.375,0.2546
+GPU & HPC,0.0767,0.0279,0.6975,0.0704
+Hardware & Semiconductor,0.0243,0.0048,0.4369,0.0665
+LLM & Inference Tools,0.0537,0.0529,0.1148,0.0145
+ML & AI Concepts,0.5665,0.375,0.5398,0.3414
+ML Frameworks,0.0243,0.0846,0.0982,0.0125
+Networking,0.0141,0.0038,0.1481,0.0289
+Programming Languages,0.344,0.5115,0.5288,0.297
+Security,0.1586,0.0606,0.0476,0.108
+Web & APIs,0.0243,0.024,0.026,0.0212

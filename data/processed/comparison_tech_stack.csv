@@ -1,0 +1,61 @@
+company_name,kind,name,postings,share_of_open,share_of_tech_roles,share_of_cloud_roles,top_tags
+Anthropic,category,Cloud,75,0.12,0.1974,,AWS; GCP; Azure
+Databricks,category,Cloud,400,0.4484,0.5435,,AWS; Azure; GCP
+NVIDIA,category,Cloud,77,0.0286,0.0312,,AWS; Azure; GCP
+OpenAI,category,Cloud,39,0.0458,0.0852,,Azure; AWS; GCP
+Anthropic,category,Data Engineering & Analytics,73,0.1168,0.1921,,ETL / ELT; BigQuery; Airflow
+Databricks,category,Data Engineering & Analytics,495,0.5549,0.6726,,Spark; Data warehousing; ETL / ELT
+NVIDIA,category,Data Engineering & Analytics,203,0.0755,0.0824,,ETL / ELT; Spark; Excel
+OpenAI,category,Data Engineering & Analytics,56,0.0657,0.1223,,ETL / ELT; Data warehousing; Spark
+Anthropic,category,Databases,4,0.0064,0.0105,,PostgreSQL; Redis; MySQL
+Databricks,category,Databases,59,0.0661,0.0802,,OLTP; PostgreSQL; MySQL
+NVIDIA,category,Databases,26,0.0097,0.0106,,MongoDB; MySQL; Elasticsearch
+OpenAI,category,Databases,14,0.0164,0.0306,,PostgreSQL; MySQL; Redis
+Anthropic,category,DevOps & Infrastructure,144,0.2304,0.3789,,Distributed systems; Observability; Kubernetes
+Databricks,category,DevOps & Infrastructure,364,0.4081,0.4946,,Distributed systems; CI/CD; Kubernetes
+NVIDIA,category,DevOps & Infrastructure,1003,0.3729,0.4071,,Linux; Kubernetes; CI/CD
+OpenAI,category,DevOps & Infrastructure,240,0.2817,0.524,,Observability; Distributed systems; Kubernetes
+Anthropic,category,GPU & HPC,50,0.08,0.1316,,GPU; HPC; Compilers
+Databricks,category,GPU & HPC,21,0.0235,0.0285,,GPU; HPC; CUDA
+NVIDIA,category,GPU & HPC,1876,0.6974,0.7614,,GPU; HPC; CUDA
+OpenAI,category,GPU & HPC,54,0.0634,0.1179,,GPU; HPC; Compilers
+Anthropic,category,Hardware & Semiconductor,18,0.0288,0.0474,,Firmware; Embedded systems; DFT
+Databricks,category,Hardware & Semiconductor,4,0.0045,0.0054,,EDA tools
+NVIDIA,category,Hardware & Semiconductor,1211,0.4502,0.4915,,Firmware; ASIC; SoC
+OpenAI,category,Hardware & Semiconductor,59,0.0692,0.1288,,Firmware; Embedded systems; PCIe
+Anthropic,category,LLM & Inference Tools,38,0.0608,0.1,,MCP; Vector databases; Triton
+Databricks,category,LLM & Inference Tools,47,0.0527,0.0639,,Vector databases; LangChain; MCP
+NVIDIA,category,LLM & Inference Tools,305,0.1134,0.1238,,TensorRT; vLLM; NeMo
+OpenAI,category,LLM & Inference Tools,12,0.0141,0.0262,,MCP; vLLM; SGLang
+Anthropic,category,ML Frameworks,19,0.0304,0.05,,PyTorch; JAX; pandas
+Databricks,category,ML Frameworks,67,0.0751,0.091,,MLflow; PyTorch; scikit-learn
+NVIDIA,category,ML Frameworks,264,0.0981,0.1071,,PyTorch; TensorFlow; JAX
+OpenAI,category,ML Frameworks,10,0.0117,0.0218,,PyTorch; TensorFlow; JAX
+Anthropic,category,Networking,8,0.0128,0.0211,,DNS; BGP; Ethernet
+Databricks,category,Networking,4,0.0045,0.0054,,DNS; TCP/IP; Network protocols
+NVIDIA,category,Networking,392,0.1457,0.1591,,Ethernet; Network protocols; RoCE
+OpenAI,category,Networking,24,0.0282,0.0524,,Ethernet; BGP; DNS
+Anthropic,category,Programming Languages,226,0.3616,0.5947,,Python; SQL; Rust
+Databricks,category,Programming Languages,455,0.5101,0.6182,,Python; SQL; Scala
+NVIDIA,category,Programming Languages,1421,0.5283,0.5767,,Python; C++; C
+OpenAI,category,Programming Languages,269,0.3157,0.5873,,Python; JavaScript; Rust
+Anthropic,category,Security,105,0.168,0.2763,,"Incident response; Security engineering; Compliance (SOC 2, FedRAMP, ISO)"
+Databricks,category,Security,56,0.0628,0.0761,,Security engineering; Incident response; IAM
+NVIDIA,category,Security,125,0.0465,0.0507,,Incident response; Threat modelling; Cryptography
+OpenAI,category,Security,102,0.1197,0.2227,,Incident response; Security engineering; Threat modelling
+Anthropic,category,Web & APIs,18,0.0288,0.0474,,React; HTML / CSS; REST APIs
+Databricks,category,Web & APIs,23,0.0258,0.0312,,React; HTML / CSS; Node.js
+NVIDIA,category,Web & APIs,68,0.0253,0.0276,,REST APIs; React; gRPC
+OpenAI,category,Web & APIs,22,0.0258,0.048,,React; REST APIs; Node.js
+Anthropic,cloud_provider,AWS,72,0.1152,0.1895,0.96,
+Databricks,cloud_provider,AWS,394,0.4417,0.5353,0.985,
+NVIDIA,cloud_provider,AWS,71,0.0264,0.0288,0.9221,
+OpenAI,cloud_provider,AWS,27,0.0317,0.059,0.6923,
+Anthropic,cloud_provider,Azure,34,0.0544,0.0895,0.4533,
+Databricks,cloud_provider,Azure,374,0.4193,0.5082,0.935,
+NVIDIA,cloud_provider,Azure,61,0.0227,0.0248,0.7922,
+OpenAI,cloud_provider,Azure,29,0.034,0.0633,0.7436,
+Anthropic,cloud_provider,GCP,71,0.1136,0.1868,0.9467,
+Databricks,cloud_provider,GCP,342,0.3834,0.4647,0.855,
+NVIDIA,cloud_provider,GCP,55,0.0204,0.0223,0.7143,
+OpenAI,cloud_provider,GCP,15,0.0176,0.0328,0.3846,

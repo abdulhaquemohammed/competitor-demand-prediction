@@ -453,70 +453,72 @@ Anthropic,2026-10,TypeScript,8,176,0.0455
 Anthropic,2026-10,UVM,1,176,0.0057
 Anthropic,2026-10,Vector databases,2,176,0.0114
 Anthropic,2026-10,dbt,2,176,0.0114
-Anthropic,2026-11,AI agents,17,126,0.1349
-Anthropic,2026-11,AI safety / alignment,10,126,0.0794
-Anthropic,2026-11,AWS,18,126,0.1429
-Anthropic,2026-11,Airflow,2,126,0.0159
-Anthropic,2026-11,Ansible,1,126,0.0079
-Anthropic,2026-11,Azure,9,126,0.0714
-Anthropic,2026-11,BGP,1,126,0.0079
-Anthropic,2026-11,BigQuery,5,126,0.0397
-Anthropic,2026-11,C++,2,126,0.0159
-Anthropic,2026-11,CI/CD,1,126,0.0079
-Anthropic,2026-11,Cryptography,1,126,0.0079
-Anthropic,2026-11,Databricks,1,126,0.0079
-Anthropic,2026-11,Deep learning,1,126,0.0079
-Anthropic,2026-11,Distributed systems,6,126,0.0476
-Anthropic,2026-11,Distributed training,3,126,0.0238
-Anthropic,2026-11,ETL / ELT,13,126,0.1032
-Anthropic,2026-11,Embedded systems,1,126,0.0079
-Anthropic,2026-11,Enterprise sales,14,126,0.1111
-Anthropic,2026-11,Evals,15,126,0.119
-Anthropic,2026-11,Excel,1,126,0.0079
-Anthropic,2026-11,Fine-tuning,3,126,0.0238
-Anthropic,2026-11,Firmware,1,126,0.0079
-Anthropic,2026-11,GCP,19,126,0.1508
-Anthropic,2026-11,GPU,7,126,0.0556
-Anthropic,2026-11,Generative AI,6,126,0.0476
-Anthropic,2026-11,Git,1,126,0.0079
-Anthropic,2026-11,Go,4,126,0.0317
-Anthropic,2026-11,Go-to-market,36,126,0.2857
-Anthropic,2026-11,Grafana,4,126,0.0317
-Anthropic,2026-11,HPC,3,126,0.0238
-Anthropic,2026-11,IAM,1,126,0.0079
-Anthropic,2026-11,Incident response,3,126,0.0238
-Anthropic,2026-11,Inference,12,126,0.0952
-Anthropic,2026-11,JAX,1,126,0.0079
-Anthropic,2026-11,Java,3,126,0.0238
-Anthropic,2026-11,Kubernetes,7,126,0.0556
-Anthropic,2026-11,LLMs,43,126,0.3413
-Anthropic,2026-11,Looker,2,126,0.0159
-Anthropic,2026-11,MCP,5,126,0.0397
-Anthropic,2026-11,Machine learning,18,126,0.1429
-Anthropic,2026-11,Node.js,1,126,0.0079
-Anthropic,2026-11,Observability,7,126,0.0556
-Anthropic,2026-11,Power BI,1,126,0.0079
-Anthropic,2026-11,Product management,5,126,0.0397
-Anthropic,2026-11,Prometheus,4,126,0.0317
-Anthropic,2026-11,PyTorch,2,126,0.0159
-Anthropic,2026-11,Python,24,126,0.1905
-Anthropic,2026-11,R,1,126,0.0079
-Anthropic,2026-11,React,1,126,0.0079
-Anthropic,2026-11,Reinforcement learning,7,126,0.0556
-Anthropic,2026-11,Rust,2,126,0.0159
-Anthropic,2026-11,SQL,13,126,0.1032
-Anthropic,2026-11,Salesforce,11,126,0.0873
-Anthropic,2026-11,Security engineering,3,126,0.0238
-Anthropic,2026-11,Snowflake,1,126,0.0079
-Anthropic,2026-11,Spark,1,126,0.0079
-Anthropic,2026-11,Stakeholder management,5,126,0.0397
-Anthropic,2026-11,Statistics,2,126,0.0159
-Anthropic,2026-11,Tableau,2,126,0.0159
-Anthropic,2026-11,Terraform,3,126,0.0238
-Anthropic,2026-11,Threat modelling,1,126,0.0079
-Anthropic,2026-11,Transformers,1,126,0.0079
-Anthropic,2026-11,TypeScript,2,126,0.0159
-Anthropic,2026-11,dbt,2,126,0.0159
+Anthropic,2026-11,AI agents,17,133,0.1278
+Anthropic,2026-11,AI safety / alignment,11,133,0.0827
+Anthropic,2026-11,AWS,19,133,0.1429
+Anthropic,2026-11,Airflow,2,133,0.015
+Anthropic,2026-11,Ansible,1,133,0.0075
+Anthropic,2026-11,Azure,9,133,0.0677
+Anthropic,2026-11,BGP,1,133,0.0075
+Anthropic,2026-11,BigQuery,5,133,0.0376
+Anthropic,2026-11,C++,2,133,0.015
+Anthropic,2026-11,CI/CD,1,133,0.0075
+Anthropic,2026-11,Cryptography,1,133,0.0075
+Anthropic,2026-11,Databricks,1,133,0.0075
+Anthropic,2026-11,Deep learning,1,133,0.0075
+Anthropic,2026-11,Distributed systems,6,133,0.0451
+Anthropic,2026-11,Distributed training,4,133,0.0301
+Anthropic,2026-11,ETL / ELT,13,133,0.0977
+Anthropic,2026-11,Embedded systems,1,133,0.0075
+Anthropic,2026-11,Enterprise sales,15,133,0.1128
+Anthropic,2026-11,Evals,17,133,0.1278
+Anthropic,2026-11,Excel,1,133,0.0075
+Anthropic,2026-11,Fine-tuning,4,133,0.0301
+Anthropic,2026-11,Firmware,1,133,0.0075
+Anthropic,2026-11,GCP,20,133,0.1504
+Anthropic,2026-11,GPU,7,133,0.0526
+Anthropic,2026-11,Generative AI,6,133,0.0451
+Anthropic,2026-11,Git,1,133,0.0075
+Anthropic,2026-11,Go,4,133,0.0301
+Anthropic,2026-11,Go-to-market,37,133,0.2782
+Anthropic,2026-11,Grafana,4,133,0.0301
+Anthropic,2026-11,HPC,3,133,0.0226
+Anthropic,2026-11,IAM,1,133,0.0075
+Anthropic,2026-11,Incident response,3,133,0.0226
+Anthropic,2026-11,Inference,12,133,0.0902
+Anthropic,2026-11,Interpretability,1,133,0.0075
+Anthropic,2026-11,JAX,1,133,0.0075
+Anthropic,2026-11,Java,3,133,0.0226
+Anthropic,2026-11,Kubernetes,7,133,0.0526
+Anthropic,2026-11,LLMs,45,133,0.3383
+Anthropic,2026-11,Looker,2,133,0.015
+Anthropic,2026-11,MCP,5,133,0.0376
+Anthropic,2026-11,Machine learning,20,133,0.1504
+Anthropic,2026-11,Node.js,1,133,0.0075
+Anthropic,2026-11,Observability,7,133,0.0526
+Anthropic,2026-11,Power BI,1,133,0.0075
+Anthropic,2026-11,Product management,5,133,0.0376
+Anthropic,2026-11,Prometheus,4,133,0.0301
+Anthropic,2026-11,PyTorch,2,133,0.015
+Anthropic,2026-11,Python,25,133,0.188
+Anthropic,2026-11,R,1,133,0.0075
+Anthropic,2026-11,RLHF,1,133,0.0075
+Anthropic,2026-11,React,1,133,0.0075
+Anthropic,2026-11,Reinforcement learning,9,133,0.0677
+Anthropic,2026-11,Rust,2,133,0.015
+Anthropic,2026-11,SQL,13,133,0.0977
+Anthropic,2026-11,Salesforce,14,133,0.1053
+Anthropic,2026-11,Security engineering,3,133,0.0226
+Anthropic,2026-11,Snowflake,1,133,0.0075
+Anthropic,2026-11,Spark,1,133,0.0075
+Anthropic,2026-11,Stakeholder management,6,133,0.0451
+Anthropic,2026-11,Statistics,2,133,0.015
+Anthropic,2026-11,Tableau,2,133,0.015
+Anthropic,2026-11,Terraform,3,133,0.0226
+Anthropic,2026-11,Threat modelling,1,133,0.0075
+Anthropic,2026-11,Transformers,1,133,0.0075
+Anthropic,2026-11,TypeScript,2,133,0.015
+Anthropic,2026-11,dbt,2,133,0.015
 Databricks,2025-10,AI agents,2,21,0.0952
 Databricks,2025-10,AWS,1,21,0.0476
 Databricks,2025-10,Azure,1,21,0.0476
@@ -1131,72 +1133,72 @@ Databricks,2026-10,TypeScript,7,196,0.0357
 Databricks,2026-10,Vector databases,7,196,0.0357
 Databricks,2026-10,pandas,3,196,0.0153
 Databricks,2026-10,scikit-learn,3,196,0.0153
-Databricks,2026-11,AI agents,17,137,0.1241
-Databricks,2026-11,AWS,66,137,0.4818
-Databricks,2026-11,Azure,59,137,0.4307
-Databricks,2026-11,C++,3,137,0.0219
-Databricks,2026-11,CI/CD,7,137,0.0511
-Databricks,2026-11,Data warehousing,31,137,0.2263
-Databricks,2026-11,Deep learning,1,137,0.0073
-Databricks,2026-11,Delta Lake,17,137,0.1241
-Databricks,2026-11,Distributed systems,13,137,0.0949
-Databricks,2026-11,Docker,3,137,0.0219
-Databricks,2026-11,ETL / ELT,13,137,0.0949
-Databricks,2026-11,Enterprise sales,18,137,0.1314
-Databricks,2026-11,Evals,2,137,0.0146
-Databricks,2026-11,Excel,2,137,0.0146
-Databricks,2026-11,Fine-tuning,7,137,0.0511
-Databricks,2026-11,GCP,56,137,0.4088
-Databricks,2026-11,GPU,2,137,0.0146
-Databricks,2026-11,Generative AI,21,137,0.1533
-Databricks,2026-11,Git,1,137,0.0073
-Databricks,2026-11,GitHub,1,137,0.0073
-Databricks,2026-11,Go,1,137,0.0073
-Databricks,2026-11,Go-to-market,29,137,0.2117
-Databricks,2026-11,Hadoop,7,137,0.0511
-Databricks,2026-11,Hugging Face,7,137,0.0511
-Databricks,2026-11,IAM,2,137,0.0146
-Databricks,2026-11,Incident response,2,137,0.0146
-Databricks,2026-11,Java,10,137,0.073
-Databricks,2026-11,JavaScript,4,137,0.0292
-Databricks,2026-11,Kafka,8,137,0.0584
-Databricks,2026-11,Kubernetes,4,137,0.0292
-Databricks,2026-11,LLMs,9,137,0.0657
-Databricks,2026-11,LangChain,7,137,0.0511
-Databricks,2026-11,MCP,5,137,0.0365
-Databricks,2026-11,MEDDPICC / MEDDIC,12,137,0.0876
-Databricks,2026-11,MLOps,12,137,0.0876
-Databricks,2026-11,MLflow,11,137,0.0803
-Databricks,2026-11,Machine learning,27,137,0.1971
-Databricks,2026-11,Microservices,2,137,0.0146
-Databricks,2026-11,MySQL,1,137,0.0073
-Databricks,2026-11,OAuth,2,137,0.0146
-Databricks,2026-11,OLTP,3,137,0.0219
-Databricks,2026-11,Observability,7,137,0.0511
-Databricks,2026-11,PostgreSQL,1,137,0.0073
-Databricks,2026-11,Product management,5,137,0.0365
-Databricks,2026-11,PyTorch,8,137,0.0584
-Databricks,2026-11,Python,49,137,0.3577
-Databricks,2026-11,RAG,8,137,0.0584
-Databricks,2026-11,RLHF,1,137,0.0073
-Databricks,2026-11,React,1,137,0.0073
-Databricks,2026-11,Reinforcement learning,1,137,0.0073
-Databricks,2026-11,Rust,1,137,0.0073
-Databricks,2026-11,SQL,44,137,0.3212
-Databricks,2026-11,Salesforce,20,137,0.146
-Databricks,2026-11,Scala,15,137,0.1095
-Databricks,2026-11,Security engineering,1,137,0.0073
-Databricks,2026-11,Snowflake,23,137,0.1679
-Databricks,2026-11,Spark,44,137,0.3212
-Databricks,2026-11,Stakeholder management,5,137,0.0365
-Databricks,2026-11,Statistics,10,137,0.073
-Databricks,2026-11,Tableau,1,137,0.0073
-Databricks,2026-11,TensorFlow,3,137,0.0219
-Databricks,2026-11,Terraform,5,137,0.0365
-Databricks,2026-11,TypeScript,5,137,0.0365
-Databricks,2026-11,Vector databases,1,137,0.0073
-Databricks,2026-11,pandas,9,137,0.0657
-Databricks,2026-11,scikit-learn,9,137,0.0657
+Databricks,2026-11,AI agents,17,140,0.1214
+Databricks,2026-11,AWS,68,140,0.4857
+Databricks,2026-11,Azure,61,140,0.4357
+Databricks,2026-11,C++,3,140,0.0214
+Databricks,2026-11,CI/CD,8,140,0.0571
+Databricks,2026-11,Data warehousing,32,140,0.2286
+Databricks,2026-11,Deep learning,1,140,0.0071
+Databricks,2026-11,Delta Lake,17,140,0.1214
+Databricks,2026-11,Distributed systems,14,140,0.1
+Databricks,2026-11,Docker,4,140,0.0286
+Databricks,2026-11,ETL / ELT,13,140,0.0929
+Databricks,2026-11,Enterprise sales,18,140,0.1286
+Databricks,2026-11,Evals,2,140,0.0143
+Databricks,2026-11,Excel,2,140,0.0143
+Databricks,2026-11,Fine-tuning,7,140,0.05
+Databricks,2026-11,GCP,57,140,0.4071
+Databricks,2026-11,GPU,3,140,0.0214
+Databricks,2026-11,Generative AI,22,140,0.1571
+Databricks,2026-11,Git,1,140,0.0071
+Databricks,2026-11,GitHub,1,140,0.0071
+Databricks,2026-11,Go,2,140,0.0143
+Databricks,2026-11,Go-to-market,29,140,0.2071
+Databricks,2026-11,Hadoop,7,140,0.05
+Databricks,2026-11,Hugging Face,7,140,0.05
+Databricks,2026-11,IAM,3,140,0.0214
+Databricks,2026-11,Incident response,2,140,0.0143
+Databricks,2026-11,Java,11,140,0.0786
+Databricks,2026-11,JavaScript,5,140,0.0357
+Databricks,2026-11,Kafka,8,140,0.0571
+Databricks,2026-11,Kubernetes,5,140,0.0357
+Databricks,2026-11,LLMs,11,140,0.0786
+Databricks,2026-11,LangChain,7,140,0.05
+Databricks,2026-11,MCP,5,140,0.0357
+Databricks,2026-11,MEDDPICC / MEDDIC,12,140,0.0857
+Databricks,2026-11,MLOps,13,140,0.0929
+Databricks,2026-11,MLflow,11,140,0.0786
+Databricks,2026-11,Machine learning,27,140,0.1929
+Databricks,2026-11,Microservices,2,140,0.0143
+Databricks,2026-11,MySQL,1,140,0.0071
+Databricks,2026-11,OAuth,3,140,0.0214
+Databricks,2026-11,OLTP,3,140,0.0214
+Databricks,2026-11,Observability,8,140,0.0571
+Databricks,2026-11,PostgreSQL,1,140,0.0071
+Databricks,2026-11,Product management,6,140,0.0429
+Databricks,2026-11,PyTorch,8,140,0.0571
+Databricks,2026-11,Python,51,140,0.3643
+Databricks,2026-11,RAG,8,140,0.0571
+Databricks,2026-11,RLHF,1,140,0.0071
+Databricks,2026-11,React,1,140,0.0071
+Databricks,2026-11,Reinforcement learning,1,140,0.0071
+Databricks,2026-11,Rust,1,140,0.0071
+Databricks,2026-11,SQL,45,140,0.3214
+Databricks,2026-11,Salesforce,20,140,0.1429
+Databricks,2026-11,Scala,16,140,0.1143
+Databricks,2026-11,Security engineering,1,140,0.0071
+Databricks,2026-11,Snowflake,24,140,0.1714
+Databricks,2026-11,Spark,45,140,0.3214
+Databricks,2026-11,Stakeholder management,5,140,0.0357
+Databricks,2026-11,Statistics,10,140,0.0714
+Databricks,2026-11,Tableau,1,140,0.0071
+Databricks,2026-11,TensorFlow,3,140,0.0214
+Databricks,2026-11,Terraform,7,140,0.05
+Databricks,2026-11,TypeScript,6,140,0.0429
+Databricks,2026-11,Vector databases,1,140,0.0071
+Databricks,2026-11,pandas,9,140,0.0643
+Databricks,2026-11,scikit-learn,9,140,0.0643
 NVIDIA,2026-04,AI agents,4,37,0.1081
 NVIDIA,2026-04,ASIC,3,37,0.0811
 NVIDIA,2026-04,Ansible,1,37,0.027
@@ -2407,6 +2409,7 @@ OpenAI,2026-09,TypeScript,13,184,0.0707
 OpenAI,2026-09,Verilog / SystemVerilog,2,184,0.0109
 OpenAI,2026-10,AI agents,32,212,0.1509
 OpenAI,2026-10,AI safety / alignment,8,212,0.0377
+OpenAI,2026-10,ASIC,1,212,0.0047
 OpenAI,2026-10,AWS,3,212,0.0142
 OpenAI,2026-10,Airflow,2,212,0.0094
 OpenAI,2026-10,Ansible,1,212,0.0047
@@ -2420,7 +2423,6 @@ OpenAI,2026-10,"Compliance (SOC 2, FedRAMP, ISO)",3,212,0.0142
 OpenAI,2026-10,Cryptography,1,212,0.0047
 OpenAI,2026-10,DNS,2,212,0.0094
 OpenAI,2026-10,Data warehousing,2,212,0.0094
-OpenAI,2026-10,Deep learning,1,212,0.0047
 OpenAI,2026-10,Distributed systems,15,212,0.0708
 OpenAI,2026-10,Distributed training,2,212,0.0094
 OpenAI,2026-10,Docker,3,212,0.0142
@@ -2432,17 +2434,17 @@ OpenAI,2026-10,Ethernet,5,212,0.0236
 OpenAI,2026-10,Evals,13,212,0.0613
 OpenAI,2026-10,Excel,1,212,0.0047
 OpenAI,2026-10,Fine-tuning,1,212,0.0047
-OpenAI,2026-10,Firmware,7,212,0.033
+OpenAI,2026-10,Firmware,6,212,0.0283
 OpenAI,2026-10,GCP,2,212,0.0094
 OpenAI,2026-10,GPU,3,212,0.0142
 OpenAI,2026-10,Generative AI,8,212,0.0377
 OpenAI,2026-10,Go,7,212,0.033
 OpenAI,2026-10,Go-to-market,53,212,0.25
-OpenAI,2026-10,HPC,3,212,0.0142
+OpenAI,2026-10,HPC,2,212,0.0094
 OpenAI,2026-10,Hadoop,1,212,0.0047
 OpenAI,2026-10,IAM,2,212,0.0094
 OpenAI,2026-10,Incident response,11,212,0.0519
-OpenAI,2026-10,Inference,12,212,0.0566
+OpenAI,2026-10,Inference,13,212,0.0613
 OpenAI,2026-10,Interpretability,1,212,0.0047
 OpenAI,2026-10,Java,3,212,0.0142
 OpenAI,2026-10,JavaScript,14,212,0.066
@@ -2463,8 +2465,7 @@ OpenAI,2026-10,Physical design,1,212,0.0047
 OpenAI,2026-10,PostgreSQL,1,212,0.0047
 OpenAI,2026-10,Product management,11,212,0.0519
 OpenAI,2026-10,PyTorch,1,212,0.0047
-OpenAI,2026-10,Python,38,212,0.1792
-OpenAI,2026-10,R,1,212,0.0047
+OpenAI,2026-10,Python,37,212,0.1745
 OpenAI,2026-10,REST APIs,1,212,0.0047
 OpenAI,2026-10,RLHF,1,212,0.0047
 OpenAI,2026-10,RTL,1,212,0.0047
@@ -2478,7 +2479,7 @@ OpenAI,2026-10,SRE,1,212,0.0047
 OpenAI,2026-10,Salesforce,3,212,0.0142
 OpenAI,2026-10,Scala,1,212,0.0047
 OpenAI,2026-10,Security engineering,4,212,0.0189
-OpenAI,2026-10,Signal integrity,3,212,0.0142
+OpenAI,2026-10,Signal integrity,4,212,0.0189
 OpenAI,2026-10,SoC,2,212,0.0094
 OpenAI,2026-10,Spark,4,212,0.0189
 OpenAI,2026-10,Stakeholder management,9,212,0.0425
@@ -2491,76 +2492,82 @@ OpenAI,2026-10,Verilog / SystemVerilog,1,212,0.0047
 OpenAI,2026-10,dbt,1,212,0.0047
 OpenAI,2026-10,gRPC,1,212,0.0047
 OpenAI,2026-10,scikit-learn,1,212,0.0047
-OpenAI,2026-11,AI agents,31,262,0.1183
-OpenAI,2026-11,AI safety / alignment,6,262,0.0229
-OpenAI,2026-11,ASIC,2,262,0.0076
-OpenAI,2026-11,AWS,5,262,0.0191
-OpenAI,2026-11,Airflow,2,262,0.0076
-OpenAI,2026-11,Azure,5,262,0.0191
-OpenAI,2026-11,BigQuery,1,262,0.0038
-OpenAI,2026-11,C,2,262,0.0076
-OpenAI,2026-11,C++,5,262,0.0191
-OpenAI,2026-11,CI/CD,7,262,0.0267
-OpenAI,2026-11,Compilers,1,262,0.0038
-OpenAI,2026-11,Data warehousing,5,262,0.0191
-OpenAI,2026-11,Databricks,3,262,0.0115
-OpenAI,2026-11,Distributed systems,10,262,0.0382
-OpenAI,2026-11,Distributed training,2,262,0.0076
-OpenAI,2026-11,EDA tools,2,262,0.0076
-OpenAI,2026-11,ETL / ELT,8,262,0.0305
-OpenAI,2026-11,Embedded systems,7,262,0.0267
-OpenAI,2026-11,Enterprise sales,21,262,0.0802
-OpenAI,2026-11,Ethernet,2,262,0.0076
-OpenAI,2026-11,Evals,12,262,0.0458
-OpenAI,2026-11,Firmware,10,262,0.0382
-OpenAI,2026-11,GCP,5,262,0.0191
-OpenAI,2026-11,GPU,8,262,0.0305
-OpenAI,2026-11,Generative AI,9,262,0.0344
-OpenAI,2026-11,Git,2,262,0.0076
-OpenAI,2026-11,GitHub,3,262,0.0115
-OpenAI,2026-11,Go,1,262,0.0038
-OpenAI,2026-11,Go-to-market,96,262,0.3664
-OpenAI,2026-11,HPC,4,262,0.0153
-OpenAI,2026-11,HTML / CSS,1,262,0.0038
-OpenAI,2026-11,IAM,6,262,0.0229
-OpenAI,2026-11,Incident response,9,262,0.0344
-OpenAI,2026-11,Inference,10,262,0.0382
-OpenAI,2026-11,JavaScript,14,262,0.0534
-OpenAI,2026-11,Kafka,3,262,0.0115
-OpenAI,2026-11,Kernel optimisation,1,262,0.0038
-OpenAI,2026-11,Kotlin,2,262,0.0076
-OpenAI,2026-11,Kubernetes,5,262,0.0191
-OpenAI,2026-11,LLMs,14,262,0.0534
-OpenAI,2026-11,Linux,3,262,0.0115
-OpenAI,2026-11,Machine learning,2,262,0.0076
-OpenAI,2026-11,MySQL,1,262,0.0038
-OpenAI,2026-11,Node.js,1,262,0.0038
-OpenAI,2026-11,OAuth,1,262,0.0038
-OpenAI,2026-11,Observability,21,262,0.0802
-OpenAI,2026-11,Physical design,2,262,0.0076
-OpenAI,2026-11,PostgreSQL,1,262,0.0038
-OpenAI,2026-11,Product management,11,262,0.042
-OpenAI,2026-11,Python,30,262,0.1145
-OpenAI,2026-11,R,1,262,0.0038
-OpenAI,2026-11,RAG,4,262,0.0153
-OpenAI,2026-11,RTL,4,262,0.0153
-OpenAI,2026-11,React,2,262,0.0076
-OpenAI,2026-11,Recommender systems,1,262,0.0038
-OpenAI,2026-11,Reinforcement learning,2,262,0.0076
-OpenAI,2026-11,Rust,5,262,0.0191
-OpenAI,2026-11,SQL,19,262,0.0725
-OpenAI,2026-11,SRE,4,262,0.0153
-OpenAI,2026-11,Security engineering,7,262,0.0267
-OpenAI,2026-11,Slurm,1,262,0.0038
-OpenAI,2026-11,Snowflake,1,262,0.0038
-OpenAI,2026-11,SoC,2,262,0.0076
-OpenAI,2026-11,Spark,3,262,0.0115
-OpenAI,2026-11,Stakeholder management,8,262,0.0305
-OpenAI,2026-11,Statistics,3,262,0.0115
-OpenAI,2026-11,Swift,1,262,0.0038
-OpenAI,2026-11,TCP/IP,1,262,0.0038
-OpenAI,2026-11,Terraform,3,262,0.0115
-OpenAI,2026-11,Threat modelling,4,262,0.0153
-OpenAI,2026-11,TypeScript,7,262,0.0267
-OpenAI,2026-11,Verilog / SystemVerilog,2,262,0.0076
-OpenAI,2026-11,dbt,1,262,0.0038
+OpenAI,2026-11,AI agents,35,277,0.1264
+OpenAI,2026-11,AI safety / alignment,8,277,0.0289
+OpenAI,2026-11,ASIC,2,277,0.0072
+OpenAI,2026-11,AWS,5,277,0.0181
+OpenAI,2026-11,Airflow,2,277,0.0072
+OpenAI,2026-11,Azure,5,277,0.0181
+OpenAI,2026-11,BigQuery,1,277,0.0036
+OpenAI,2026-11,C,2,277,0.0072
+OpenAI,2026-11,C++,5,277,0.0181
+OpenAI,2026-11,CI/CD,7,277,0.0253
+OpenAI,2026-11,Compilers,1,277,0.0036
+OpenAI,2026-11,Data warehousing,6,277,0.0217
+OpenAI,2026-11,Databricks,3,277,0.0108
+OpenAI,2026-11,Deep learning,1,277,0.0036
+OpenAI,2026-11,Distributed systems,10,277,0.0361
+OpenAI,2026-11,Distributed training,4,277,0.0144
+OpenAI,2026-11,EDA tools,2,277,0.0072
+OpenAI,2026-11,ETL / ELT,9,277,0.0325
+OpenAI,2026-11,Embedded systems,7,277,0.0253
+OpenAI,2026-11,Enterprise sales,21,277,0.0758
+OpenAI,2026-11,Ethernet,2,277,0.0072
+OpenAI,2026-11,Evals,13,277,0.0469
+OpenAI,2026-11,Excel,1,277,0.0036
+OpenAI,2026-11,Fine-tuning,1,277,0.0036
+OpenAI,2026-11,Firmware,10,277,0.0361
+OpenAI,2026-11,GCP,5,277,0.0181
+OpenAI,2026-11,GPU,8,277,0.0289
+OpenAI,2026-11,Generative AI,9,277,0.0325
+OpenAI,2026-11,Git,2,277,0.0072
+OpenAI,2026-11,GitHub,3,277,0.0108
+OpenAI,2026-11,Go,1,277,0.0036
+OpenAI,2026-11,Go-to-market,99,277,0.3574
+OpenAI,2026-11,HPC,4,277,0.0144
+OpenAI,2026-11,HTML / CSS,1,277,0.0036
+OpenAI,2026-11,IAM,6,277,0.0217
+OpenAI,2026-11,Incident response,10,277,0.0361
+OpenAI,2026-11,Inference,10,277,0.0361
+OpenAI,2026-11,JavaScript,14,277,0.0505
+OpenAI,2026-11,Kafka,3,277,0.0108
+OpenAI,2026-11,Kernel optimisation,1,277,0.0036
+OpenAI,2026-11,Kotlin,2,277,0.0072
+OpenAI,2026-11,Kubernetes,5,277,0.0181
+OpenAI,2026-11,LLMs,17,277,0.0614
+OpenAI,2026-11,Linux,3,277,0.0108
+OpenAI,2026-11,Machine learning,7,277,0.0253
+OpenAI,2026-11,MySQL,1,277,0.0036
+OpenAI,2026-11,Node.js,1,277,0.0036
+OpenAI,2026-11,OAuth,1,277,0.0036
+OpenAI,2026-11,Observability,22,277,0.0794
+OpenAI,2026-11,Physical design,2,277,0.0072
+OpenAI,2026-11,PostgreSQL,1,277,0.0036
+OpenAI,2026-11,Product management,11,277,0.0397
+OpenAI,2026-11,Python,31,277,0.1119
+OpenAI,2026-11,R,1,277,0.0036
+OpenAI,2026-11,RAG,4,277,0.0144
+OpenAI,2026-11,RLHF,1,277,0.0036
+OpenAI,2026-11,RTL,4,277,0.0144
+OpenAI,2026-11,React,2,277,0.0072
+OpenAI,2026-11,Recommender systems,1,277,0.0036
+OpenAI,2026-11,Reinforcement learning,9,277,0.0325
+OpenAI,2026-11,Rust,5,277,0.0181
+OpenAI,2026-11,SQL,21,277,0.0758
+OpenAI,2026-11,SRE,4,277,0.0144
+OpenAI,2026-11,Salesforce,1,277,0.0036
+OpenAI,2026-11,Scala,1,277,0.0036
+OpenAI,2026-11,Security engineering,7,277,0.0253
+OpenAI,2026-11,Slurm,1,277,0.0036
+OpenAI,2026-11,Snowflake,1,277,0.0036
+OpenAI,2026-11,SoC,2,277,0.0072
+OpenAI,2026-11,Spark,4,277,0.0144
+OpenAI,2026-11,Stakeholder management,8,277,0.0289
+OpenAI,2026-11,Statistics,3,277,0.0108
+OpenAI,2026-11,Swift,1,277,0.0036
+OpenAI,2026-11,TCP/IP,1,277,0.0036
+OpenAI,2026-11,Terraform,3,277,0.0108
+OpenAI,2026-11,Threat modelling,5,277,0.0181
+OpenAI,2026-11,TypeScript,7,277,0.0253
+OpenAI,2026-11,Verilog / SystemVerilog,2,277,0.0072
+OpenAI,2026-11,dbt,1,277,0.0036

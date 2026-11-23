@@ -34,3 +34,7 @@ timestamp_utc,company,url,robots_allowed,note,jobs_collected
 2026-11-20T18:43:38+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,639
 2026-11-20T18:43:38+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,895
 2026-11-20T18:43:38+00:00,nvidia,-,-,"stopped: HTTP 429 from nvidia.wd5.myworkdayjobs.com, not retried",
+2026-11-23T09:11:22+00:00,OpenAI,https://api.ashbyhq.com/posting-api/job-board/openai?includeCompensation=true,True,"robots.txt HTTP 401: unavailable, no restrictions (RFC 9309)",852
+2026-11-23T09:11:22+00:00,Anthropic,https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/anthropic/jobs,635
+2026-11-23T09:11:22+00:00,Databricks,https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true,True,robots.txt HTTP 200: allowed for /v1/boards/databricks/jobs,893
+2026-11-23T09:11:22+00:00,nvidia,-,-,"stopped: HTTP 429 from nvidia.wd5.myworkdayjobs.com, not retried",

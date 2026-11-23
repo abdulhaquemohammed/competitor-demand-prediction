@@ -1,0 +1,45 @@
+company_name,gap_type,item_type,item,company_share,others_mean_share,gap_pp,note
+OpenAI,below_peers,skill_category,Cloud,0.0458,0.199,-15.3,5% vs 20% at the other three
+OpenAI,below_peers,skill_category,Data Engineering & Analytics,0.0657,0.2491,-18.3,7% vs 25% at the other three
+OpenAI,below_peers,skill_category,GPU & HPC,0.0634,0.267,-20.4,6% vs 27% at the other three
+OpenAI,below_peers,skill_category,Hardware & Semiconductor,0.0692,0.1612,-9.2,7% vs 16% at the other three
+Anthropic,below_peers,skill_category,GPU & HPC,0.08,0.2614,-18.1,8% vs 26% at the other three
+Anthropic,below_peers,skill_category,Hardware & Semiconductor,0.0288,0.1746,-14.6,3% vs 17% at the other three
+Databricks,below_peers,skill_category,GPU & HPC,0.0235,0.2803,-25.7,2% vs 28% at the other three
+Databricks,below_peers,skill_category,Hardware & Semiconductor,0.0045,0.1827,-17.8,0% vs 18% at the other three
+NVIDIA,below_peers,skill_category,Business & GTM,0.1015,0.3476,-24.6,10% vs 35% at the other three
+NVIDIA,below_peers,skill_category,Cloud,0.0286,0.2047,-17.6,3% vs 20% at the other three
+NVIDIA,below_peers,skill_category,Data Engineering & Analytics,0.0755,0.2458,-17.0,8% vs 25% at the other three
+NVIDIA,below_peers,skill_category,Security,0.0465,0.1168,-7.0,5% vs 12% at the other three
+all four,white_space_thin,skill_category,Databases,0.0247,,,every company at or below 10% (max 7%)
+all four,white_space_thin,skill_category,ML Frameworks,0.0538,,,every company at or below 10% (max 10%)
+all four,white_space_thin,skill_category,Web & APIs,0.0264,,,every company at or below 10% (max 3%)
+Anthropic,below_peers,role_category,Solutions & Field,0.0944,0.2061,-11.2,9% vs 21% at the other three
+NVIDIA,below_peers,role_category,Sales & Partnerships,0.0368,0.1807,-14.4,4% vs 18% at the other three
+NVIDIA,below_peers,role_category,Solutions & Field,0.0874,0.2085,-12.1,9% vs 21% at the other three
+OpenAI,below_peers,skill,C++,0.0528,0.1333,-8.0,5% vs 13% at the other three
+OpenAI,below_peers,skill,SQL,0.0587,0.1458,-8.7,6% vs 15% at the other three
+OpenAI,below_peers,skill,Machine learning,0.0634,0.14,-7.7,6% vs 14% at the other three
+OpenAI,below_peers,skill,Spark,0.0117,0.112,-10.0,1% vs 11% at the other three
+OpenAI,below_peers,skill,ETL / ELT,0.0469,0.1071,-6.0,5% vs 11% at the other three
+OpenAI,below_peers,skill,AWS,0.0317,0.1944,-16.3,3% vs 19% at the other three
+OpenAI,below_peers,skill,GCP,0.0176,0.1725,-15.5,2% vs 17% at the other three
+OpenAI,below_peers,skill,Azure,0.034,0.1655,-13.1,3% vs 17% at the other three
+OpenAI,below_peers,skill,GPU,0.0446,0.222,-17.7,4% vs 22% at the other three
+Anthropic,below_peers,skill,C++,0.0288,0.1413,-11.2,3% vs 14% at the other three
+Anthropic,below_peers,skill,Spark,0.0096,0.1128,-10.3,1% vs 11% at the other three
+Anthropic,below_peers,skill,Azure,0.0544,0.1587,-10.4,5% vs 16% at the other three
+Anthropic,below_peers,skill,GPU,0.0624,0.216,-15.4,6% vs 22% at the other three
+Databricks,below_peers,skill,LLMs,0.0785,0.2121,-13.4,8% vs 21% at the other three
+Databricks,below_peers,skill,Inference,0.0179,0.107,-8.9,2% vs 11% at the other three
+Databricks,below_peers,skill,GPU,0.0235,0.229,-20.5,2% vs 23% at the other three
+NVIDIA,below_peers,skill,SQL,0.0245,0.1572,-13.3,2% vs 16% at the other three
+NVIDIA,below_peers,skill,Spark,0.0171,0.1103,-9.3,2% vs 11% at the other three
+NVIDIA,below_peers,skill,ETL / ELT,0.0439,0.1081,-6.4,4% vs 11% at the other three
+NVIDIA,below_peers,skill,Data warehousing,0.0019,0.1009,-9.9,0% vs 10% at the other three
+NVIDIA,below_peers,skill,AWS,0.0264,0.1962,-17.0,3% vs 20% at the other three
+NVIDIA,below_peers,skill,GCP,0.0204,0.1715,-15.1,2% vs 17% at the other three
+NVIDIA,below_peers,skill,Azure,0.0227,0.1692,-14.7,2% vs 17% at the other three
+NVIDIA,below_peers,skill,Distributed systems,0.0743,0.164,-9.0,7% vs 16% at the other three
+NVIDIA,below_peers,skill,Go-to-market,0.0491,0.2401,-19.1,5% vs 24% at the other three
+all four,white_space_all_growing,skill,Go-to-market,,,,"recent vs older share: OpenAI x1.4, Anthropic x1.3, Databricks x1.3, NVIDIA x3.9"

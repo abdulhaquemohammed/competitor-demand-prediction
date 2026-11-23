@@ -1,97 +1,97 @@
 company_name,skill,category,recent_postings,recent_share,older_postings,older_share,growth_ratio,emerging_skill_flag
-Anthropic,Salesforce,Business & GTM,29,0.0603,7,0.0238,2.53,True
-Anthropic,"Compliance (SOC 2, FedRAMP, ISO)",Security,23,0.0478,7,0.0238,2.01,True
-Anthropic,LLMs,ML & AI Concepts,164,0.341,115,0.3912,0.87,False
-Anthropic,Go-to-market,Business & GTM,138,0.2869,67,0.2279,1.26,False
-Anthropic,Python,Programming Languages,109,0.2266,111,0.3776,0.6,False
-Anthropic,Machine learning,ML & AI Concepts,64,0.1331,59,0.2007,0.66,False
-Anthropic,AI agents,ML & AI Concepts,63,0.131,54,0.1837,0.71,False
-Anthropic,SQL,Programming Languages,59,0.1227,43,0.1463,0.84,False
-Anthropic,AWS,Cloud,49,0.1019,40,0.1361,0.75,False
-Anthropic,GCP,Cloud,49,0.1019,39,0.1327,0.77,False
-Anthropic,Inference,ML & AI Concepts,46,0.0956,44,0.1497,0.64,False
-Anthropic,AI safety / alignment,ML & AI Concepts,46,0.0956,38,0.1293,0.74,False
-Anthropic,Enterprise sales,Business & GTM,43,0.0894,24,0.0816,1.1,False
-Anthropic,Evals,ML & AI Concepts,39,0.0811,28,0.0952,0.85,False
-Anthropic,ETL / ELT,Data Engineering & Analytics,35,0.0728,26,0.0884,0.82,False
-Anthropic,Observability,DevOps & Infrastructure,28,0.0582,30,0.102,0.57,False
-Anthropic,Azure,Cloud,25,0.052,20,0.068,0.76,False
-Anthropic,Kubernetes,DevOps & Infrastructure,25,0.052,33,0.1122,0.46,False
-Anthropic,GPU,GPU & HPC,25,0.052,24,0.0816,0.64,False
-Anthropic,Reinforcement learning,ML & AI Concepts,24,0.0499,31,0.1054,0.47,False
-Anthropic,MCP,LLM & Inference Tools,24,0.0499,12,0.0408,1.22,False
-Anthropic,Distributed systems,DevOps & Infrastructure,23,0.0478,57,0.1939,0.25,False
-Anthropic,Rust,Programming Languages,22,0.0457,34,0.1156,0.4,False
-Anthropic,Incident response,Security,20,0.0416,27,0.0918,0.45,False
-Anthropic,Generative AI,ML & AI Concepts,19,0.0395,15,0.051,0.77,False
-Anthropic,Security engineering,Security,19,0.0395,17,0.0578,0.68,False
-Anthropic,Go,Programming Languages,18,0.0374,24,0.0816,0.46,False
-Anthropic,TypeScript,Programming Languages,17,0.0353,15,0.051,0.69,False
-Anthropic,Stakeholder management,Business & GTM,16,0.0333,13,0.0442,0.75,False
-Anthropic,Product management,Business & GTM,14,0.0291,11,0.0374,0.78,False
-Anthropic,BigQuery,Data Engineering & Analytics,13,0.027,7,0.0238,1.14,False
-Anthropic,CI/CD,DevOps & Infrastructure,13,0.027,13,0.0442,0.61,False
-Anthropic,C++,Programming Languages,12,0.0249,7,0.0238,1.05,False
-Anthropic,Java,Programming Languages,10,0.0208,8,0.0272,0.76,False
-Anthropic,IAM,Security,10,0.0208,11,0.0374,0.56,False
-Anthropic,Statistics,ML & AI Concepts,9,0.0187,8,0.0272,0.69,False
-Anthropic,Terraform,DevOps & Infrastructure,9,0.0187,5,0.017,1.1,False
-Anthropic,R,Programming Languages,8,0.0166,2,0.0068,2.44,False
-Anthropic,Bash / Shell,Programming Languages,8,0.0166,3,0.0102,1.63,False
-Anthropic,Distributed training,ML & AI Concepts,8,0.0166,20,0.068,0.24,False
-Anthropic,Excel,Data Engineering & Analytics,8,0.0166,3,0.0102,1.63,False
-Anthropic,Prometheus,DevOps & Infrastructure,8,0.0166,2,0.0068,2.44,False
-Anthropic,Grafana,DevOps & Infrastructure,8,0.0166,3,0.0102,1.63,False
-Anthropic,Firmware,Hardware & Semiconductor,8,0.0166,5,0.017,0.98,False
-Anthropic,Airflow,Data Engineering & Analytics,7,0.0146,2,0.0068,2.14,False
-Anthropic,dbt,Data Engineering & Analytics,7,0.0146,2,0.0068,2.14,False
-Anthropic,Data warehousing,Data Engineering & Analytics,7,0.0146,3,0.0102,1.43,False
-Anthropic,GitHub,DevOps & Infrastructure,7,0.0146,5,0.017,0.86,False
-Anthropic,Cryptography,Security,7,0.0146,4,0.0136,1.07,False
-Anthropic,Fine-tuning,ML & AI Concepts,6,0.0125,12,0.0408,0.31,False
-Anthropic,Tableau,Data Engineering & Analytics,6,0.0125,1,0.0034,3.67,False
-Anthropic,Linux,DevOps & Infrastructure,6,0.0125,8,0.0272,0.46,False
-Anthropic,Transformers,ML & AI Concepts,5,0.0104,3,0.0102,1.02,False
-Anthropic,Looker,Data Engineering & Analytics,5,0.0104,1,0.0034,3.06,False
-Anthropic,Power BI,Data Engineering & Analytics,5,0.0104,1,0.0034,3.06,False
-Anthropic,Git,DevOps & Infrastructure,5,0.0104,0,0.0,,False
-Anthropic,HPC,GPU & HPC,5,0.0104,10,0.034,0.31,False
-Anthropic,Threat modelling,Security,5,0.0104,9,0.0306,0.34,False
-Anthropic,React,Web & APIs,5,0.0104,8,0.0272,0.38,False
-Anthropic,PyTorch,ML Frameworks,4,0.0083,12,0.0408,0.2,False
-Anthropic,Interpretability,ML & AI Concepts,4,0.0083,9,0.0306,0.27,False
-Anthropic,Kafka,Data Engineering & Analytics,4,0.0083,0,0.0,,False
-Anthropic,JAX,ML Frameworks,3,0.0062,9,0.0306,0.2,False
-Anthropic,Deep learning,ML & AI Concepts,3,0.0062,6,0.0204,0.31,False
+Anthropic,Salesforce,Business & GTM,32,0.066,7,0.0236,2.8,True
+Anthropic,"Compliance (SOC 2, FedRAMP, ISO)",Security,23,0.0474,7,0.0236,2.01,True
+Anthropic,LLMs,ML & AI Concepts,166,0.3423,115,0.3872,0.88,False
+Anthropic,Go-to-market,Business & GTM,139,0.2866,67,0.2256,1.27,False
+Anthropic,Python,Programming Languages,110,0.2268,111,0.3737,0.61,False
+Anthropic,Machine learning,ML & AI Concepts,66,0.1361,59,0.1987,0.69,False
+Anthropic,AI agents,ML & AI Concepts,63,0.1299,54,0.1818,0.71,False
+Anthropic,SQL,Programming Languages,59,0.1216,43,0.1448,0.84,False
+Anthropic,AWS,Cloud,50,0.1031,40,0.1347,0.77,False
+Anthropic,GCP,Cloud,50,0.1031,39,0.1313,0.79,False
+Anthropic,AI safety / alignment,ML & AI Concepts,47,0.0969,38,0.1279,0.76,False
+Anthropic,Inference,ML & AI Concepts,46,0.0948,44,0.1481,0.64,False
+Anthropic,Enterprise sales,Business & GTM,44,0.0907,24,0.0808,1.12,False
+Anthropic,Evals,ML & AI Concepts,41,0.0845,28,0.0943,0.9,False
+Anthropic,ETL / ELT,Data Engineering & Analytics,35,0.0722,26,0.0875,0.82,False
+Anthropic,Observability,DevOps & Infrastructure,28,0.0577,30,0.101,0.57,False
+Anthropic,Reinforcement learning,ML & AI Concepts,26,0.0536,31,0.1044,0.51,False
+Anthropic,Azure,Cloud,25,0.0515,20,0.0673,0.77,False
+Anthropic,Kubernetes,DevOps & Infrastructure,25,0.0515,33,0.1111,0.46,False
+Anthropic,GPU,GPU & HPC,25,0.0515,24,0.0808,0.64,False
+Anthropic,MCP,LLM & Inference Tools,24,0.0495,12,0.0404,1.22,False
+Anthropic,Distributed systems,DevOps & Infrastructure,23,0.0474,57,0.1919,0.25,False
+Anthropic,Rust,Programming Languages,22,0.0454,34,0.1145,0.4,False
+Anthropic,Incident response,Security,20,0.0412,27,0.0909,0.45,False
+Anthropic,Generative AI,ML & AI Concepts,19,0.0392,15,0.0505,0.78,False
+Anthropic,Security engineering,Security,19,0.0392,17,0.0572,0.68,False
+Anthropic,Go,Programming Languages,18,0.0371,24,0.0808,0.46,False
+Anthropic,TypeScript,Programming Languages,17,0.0351,15,0.0505,0.69,False
+Anthropic,Stakeholder management,Business & GTM,17,0.0351,13,0.0438,0.8,False
+Anthropic,Product management,Business & GTM,14,0.0289,11,0.037,0.78,False
+Anthropic,BigQuery,Data Engineering & Analytics,13,0.0268,7,0.0236,1.14,False
+Anthropic,CI/CD,DevOps & Infrastructure,13,0.0268,13,0.0438,0.61,False
+Anthropic,C++,Programming Languages,12,0.0247,7,0.0236,1.05,False
+Anthropic,Java,Programming Languages,10,0.0206,8,0.0269,0.77,False
+Anthropic,IAM,Security,10,0.0206,11,0.037,0.56,False
+Anthropic,Distributed training,ML & AI Concepts,9,0.0186,20,0.0673,0.28,False
+Anthropic,Statistics,ML & AI Concepts,9,0.0186,8,0.0269,0.69,False
+Anthropic,Terraform,DevOps & Infrastructure,9,0.0186,5,0.0168,1.1,False
+Anthropic,R,Programming Languages,8,0.0165,2,0.0067,2.45,False
+Anthropic,Bash / Shell,Programming Languages,8,0.0165,3,0.0101,1.63,False
+Anthropic,Prometheus,DevOps & Infrastructure,8,0.0165,2,0.0067,2.45,False
+Anthropic,Grafana,DevOps & Infrastructure,8,0.0165,3,0.0101,1.63,False
+Anthropic,Firmware,Hardware & Semiconductor,8,0.0165,5,0.0168,0.98,False
+Anthropic,Fine-tuning,ML & AI Concepts,7,0.0144,12,0.0404,0.36,False
+Anthropic,Airflow,Data Engineering & Analytics,7,0.0144,2,0.0067,2.14,False
+Anthropic,dbt,Data Engineering & Analytics,7,0.0144,2,0.0067,2.14,False
+Anthropic,Data warehousing,Data Engineering & Analytics,7,0.0144,3,0.0101,1.43,False
+Anthropic,Excel,Data Engineering & Analytics,7,0.0144,4,0.0135,1.07,False
+Anthropic,GitHub,DevOps & Infrastructure,7,0.0144,5,0.0168,0.86,False
+Anthropic,Cryptography,Security,7,0.0144,4,0.0135,1.07,False
+Anthropic,Tableau,Data Engineering & Analytics,6,0.0124,1,0.0034,3.67,False
+Anthropic,Linux,DevOps & Infrastructure,6,0.0124,8,0.0269,0.46,False
+Anthropic,Transformers,ML & AI Concepts,5,0.0103,3,0.0101,1.02,False
+Anthropic,Interpretability,ML & AI Concepts,5,0.0103,9,0.0303,0.34,False
+Anthropic,Looker,Data Engineering & Analytics,5,0.0103,1,0.0034,3.06,False
+Anthropic,Git,DevOps & Infrastructure,5,0.0103,0,0.0,,False
+Anthropic,HPC,GPU & HPC,5,0.0103,10,0.0337,0.31,False
+Anthropic,Threat modelling,Security,5,0.0103,9,0.0303,0.34,False
+Anthropic,React,Web & APIs,5,0.0103,8,0.0269,0.38,False
+Anthropic,PyTorch,ML Frameworks,4,0.0082,12,0.0404,0.2,False
+Anthropic,Kafka,Data Engineering & Analytics,4,0.0082,0,0.0,,False
+Anthropic,Power BI,Data Engineering & Analytics,4,0.0082,2,0.0067,1.22,False
+Anthropic,JAX,ML Frameworks,3,0.0062,9,0.0303,0.2,False
+Anthropic,Deep learning,ML & AI Concepts,3,0.0062,6,0.0202,0.31,False
 Anthropic,Snowflake,Data Engineering & Analytics,3,0.0062,0,0.0,,False
-Anthropic,OAuth,Security,3,0.0062,6,0.0204,0.31,False
-Anthropic,HTML / CSS,Web & APIs,3,0.0062,1,0.0034,1.83,False
-Anthropic,JavaScript,Programming Languages,2,0.0042,2,0.0068,0.61,False
-Anthropic,C,Programming Languages,2,0.0042,3,0.0102,0.41,False
-Anthropic,NLP,ML & AI Concepts,2,0.0042,2,0.0068,0.61,False
-Anthropic,Vector databases,LLM & Inference Tools,2,0.0042,2,0.0068,0.61,False
-Anthropic,Spark,Data Engineering & Analytics,2,0.0042,4,0.0136,0.31,False
-Anthropic,Databricks,Data Engineering & Analytics,2,0.0042,0,0.0,,False
-Anthropic,SRE,DevOps & Infrastructure,2,0.0042,2,0.0068,0.61,False
-Anthropic,DFT,Hardware & Semiconductor,2,0.0042,1,0.0034,1.22,False
-Anthropic,Embedded systems,Hardware & Semiconductor,2,0.0042,2,0.0068,0.61,False
-Anthropic,Physical design,Hardware & Semiconductor,2,0.0042,1,0.0034,1.22,False
-Anthropic,DNS,Networking,2,0.0042,4,0.0136,0.31,False
+Anthropic,OAuth,Security,3,0.0062,6,0.0202,0.31,False
+Anthropic,HTML / CSS,Web & APIs,3,0.0062,1,0.0034,1.84,False
+Anthropic,JavaScript,Programming Languages,2,0.0041,2,0.0067,0.61,False
+Anthropic,C,Programming Languages,2,0.0041,3,0.0101,0.41,False
+Anthropic,NLP,ML & AI Concepts,2,0.0041,2,0.0067,0.61,False
+Anthropic,RLHF,ML & AI Concepts,2,0.0041,6,0.0202,0.2,False
+Anthropic,Vector databases,LLM & Inference Tools,2,0.0041,2,0.0067,0.61,False
+Anthropic,Spark,Data Engineering & Analytics,2,0.0041,4,0.0135,0.31,False
+Anthropic,Databricks,Data Engineering & Analytics,2,0.0041,0,0.0,,False
+Anthropic,SRE,DevOps & Infrastructure,2,0.0041,2,0.0067,0.61,False
+Anthropic,DFT,Hardware & Semiconductor,2,0.0041,1,0.0034,1.22,False
+Anthropic,Embedded systems,Hardware & Semiconductor,2,0.0041,2,0.0067,0.61,False
+Anthropic,Physical design,Hardware & Semiconductor,2,0.0041,1,0.0034,1.22,False
+Anthropic,DNS,Networking,2,0.0041,4,0.0135,0.31,False
 Anthropic,Swift,Programming Languages,1,0.0021,1,0.0034,0.61,False
-Anthropic,TensorFlow,ML Frameworks,1,0.0021,2,0.0068,0.31,False
+Anthropic,TensorFlow,ML Frameworks,1,0.0021,2,0.0067,0.31,False
 Anthropic,Computer vision,ML & AI Concepts,1,0.0021,1,0.0034,0.61,False
-Anthropic,RLHF,ML & AI Concepts,1,0.0021,6,0.0204,0.1,False
 Anthropic,Triton,LLM & Inference Tools,1,0.0021,1,0.0034,0.61,False
 Anthropic,Ansible,DevOps & Infrastructure,1,0.0021,0,0.0,,False
 Anthropic,RDMA,GPU & HPC,1,0.0021,1,0.0034,0.61,False
-Anthropic,Compilers,GPU & HPC,1,0.0021,3,0.0102,0.2,False
+Anthropic,Compilers,GPU & HPC,1,0.0021,3,0.0101,0.2,False
 Anthropic,Kernel optimisation,GPU & HPC,1,0.0021,1,0.0034,0.61,False
-Anthropic,ASIC,Hardware & Semiconductor,1,0.0021,2,0.0068,0.31,False
+Anthropic,ASIC,Hardware & Semiconductor,1,0.0021,2,0.0067,0.31,False
 Anthropic,RTL,Hardware & Semiconductor,1,0.0021,1,0.0034,0.61,False
 Anthropic,FPGA,Hardware & Semiconductor,1,0.0021,0,0.0,,False
 Anthropic,UVM,Hardware & Semiconductor,1,0.0021,0,0.0,,False
 Anthropic,EDA tools,Hardware & Semiconductor,1,0.0021,0,0.0,,False
-Anthropic,BGP,Networking,1,0.0021,2,0.0068,0.31,False
+Anthropic,BGP,Networking,1,0.0021,2,0.0067,0.31,False
 Anthropic,Node.js,Web & APIs,1,0.0021,1,0.0034,0.61,False
 Anthropic,REST APIs,Web & APIs,1,0.0021,1,0.0034,0.61,False
 Anthropic,GraphQL,Web & APIs,1,0.0021,0,0.0,,False
@@ -109,7 +109,7 @@ Anthropic,XGBoost,ML Frameworks,0,0.0,0,0.0,,False
 Anthropic,Hugging Face,ML Frameworks,0,0.0,0,0.0,,False
 Anthropic,Ray,ML Frameworks,0,0.0,0,0.0,,False
 Anthropic,MLflow,ML Frameworks,0,0.0,0,0.0,,False
-Anthropic,pandas,ML Frameworks,0,0.0,3,0.0102,0.0,False
+Anthropic,pandas,ML Frameworks,0,0.0,3,0.0101,0.0,False
 Anthropic,NumPy,ML Frameworks,0,0.0,0,0.0,,False
 Anthropic,RAG,ML & AI Concepts,0,0.0,1,0.0034,0.0,False
 Anthropic,MLOps,ML & AI Concepts,0,0.0,1,0.0034,0.0,False
@@ -122,23 +122,23 @@ Anthropic,NeMo,LLM & Inference Tools,0,0.0,0,0.0,,False
 Anthropic,NIM,LLM & Inference Tools,0,0.0,0,0.0,,False
 Anthropic,Hadoop,Data Engineering & Analytics,0,0.0,0,0.0,,False
 Anthropic,Delta Lake,Data Engineering & Analytics,0,0.0,0,0.0,,False
-Anthropic,PostgreSQL,Databases,0,0.0,3,0.0102,0.0,False
+Anthropic,PostgreSQL,Databases,0,0.0,3,0.0101,0.0,False
 Anthropic,MySQL,Databases,0,0.0,1,0.0034,0.0,False
 Anthropic,MongoDB,Databases,0,0.0,0,0.0,,False
-Anthropic,Redis,Databases,0,0.0,2,0.0068,0.0,False
+Anthropic,Redis,Databases,0,0.0,2,0.0067,0.0,False
 Anthropic,Cassandra,Databases,0,0.0,0,0.0,,False
 Anthropic,Elasticsearch,Databases,0,0.0,0,0.0,,False
 Anthropic,DynamoDB,Databases,0,0.0,1,0.0034,0.0,False
 Anthropic,OLTP,Databases,0,0.0,1,0.0034,0.0,False
-Anthropic,Docker,DevOps & Infrastructure,0,0.0,4,0.0136,0.0,False
+Anthropic,Docker,DevOps & Infrastructure,0,0.0,4,0.0135,0.0,False
 Anthropic,Slurm,DevOps & Infrastructure,0,0.0,0,0.0,,False
 Anthropic,Microservices,DevOps & Infrastructure,0,0.0,0,0.0,,False
-Anthropic,CUDA,GPU & HPC,0,0.0,3,0.0102,0.0,False
-Anthropic,NCCL,GPU & HPC,0,0.0,2,0.0068,0.0,False
+Anthropic,CUDA,GPU & HPC,0,0.0,3,0.0101,0.0,False
+Anthropic,NCCL,GPU & HPC,0,0.0,2,0.0067,0.0,False
 Anthropic,MPI,GPU & HPC,0,0.0,0,0.0,,False
 Anthropic,OpenCL,GPU & HPC,0,0.0,0,0.0,,False
 Anthropic,OpenMP,GPU & HPC,0,0.0,0,0.0,,False
-Anthropic,InfiniBand,GPU & HPC,0,0.0,2,0.0068,0.0,False
+Anthropic,InfiniBand,GPU & HPC,0,0.0,2,0.0067,0.0,False
 Anthropic,NVLink,GPU & HPC,0,0.0,0,0.0,,False
 Anthropic,cuDNN,GPU & HPC,0,0.0,0,0.0,,False
 Anthropic,DGX,GPU & HPC,0,0.0,0,0.0,,False
@@ -148,104 +148,104 @@ Anthropic,PCIe,Hardware & Semiconductor,0,0.0,1,0.0034,0.0,False
 Anthropic,SoC,Hardware & Semiconductor,0,0.0,0,0.0,,False
 Anthropic,Static timing analysis,Hardware & Semiconductor,0,0.0,0,0.0,,False
 Anthropic,PCB design,Hardware & Semiconductor,0,0.0,1,0.0034,0.0,False
-Anthropic,Signal integrity,Hardware & Semiconductor,0,0.0,2,0.0068,0.0,False
+Anthropic,Signal integrity,Hardware & Semiconductor,0,0.0,2,0.0067,0.0,False
 Anthropic,TCP/IP,Networking,0,0.0,1,0.0034,0.0,False
-Anthropic,Ethernet,Networking,0,0.0,2,0.0068,0.0,False
+Anthropic,Ethernet,Networking,0,0.0,2,0.0067,0.0,False
 Anthropic,RoCE,Networking,0,0.0,0,0.0,,False
 Anthropic,OSPF,Networking,0,0.0,0,0.0,,False
 Anthropic,VXLAN / EVPN,Networking,0,0.0,0,0.0,,False
 Anthropic,Network protocols,Networking,0,0.0,0,0.0,,False
 Anthropic,gRPC,Web & APIs,0,0.0,0,0.0,,False
 Anthropic,MEDDPICC / MEDDIC,Business & GTM,0,0.0,0,0.0,,False
-Databricks,Salesforce,Business & GTM,71,0.1437,23,0.0424,3.39,True
-Databricks,Snowflake,Data Engineering & Analytics,67,0.1356,21,0.0387,3.51,True
-Databricks,Enterprise sales,Business & GTM,53,0.1073,16,0.0295,3.64,True
-Databricks,MEDDPICC / MEDDIC,Business & GTM,40,0.081,20,0.0368,2.2,True
-Databricks,Stakeholder management,Business & GTM,29,0.0587,17,0.0313,1.88,True
-Databricks,scikit-learn,ML Frameworks,14,0.0283,10,0.0184,1.54,True
-Databricks,pandas,ML Frameworks,14,0.0283,9,0.0166,1.71,True
-Databricks,IAM,Security,14,0.0283,7,0.0129,2.2,True
-Databricks,Excel,Data Engineering & Analytics,10,0.0202,2,0.0037,5.5,True
-Databricks,AWS,Cloud,220,0.4453,226,0.4162,1.07,False
-Databricks,Python,Programming Languages,206,0.417,213,0.3923,1.06,False
-Databricks,Azure,Cloud,199,0.4028,226,0.4162,0.97,False
-Databricks,GCP,Cloud,190,0.3846,200,0.3683,1.04,False
-Databricks,SQL,Programming Languages,160,0.3239,136,0.2505,1.29,False
-Databricks,Spark,Data Engineering & Analytics,153,0.3097,177,0.326,0.95,False
-Databricks,Data warehousing,Data Engineering & Analytics,137,0.2773,148,0.2726,1.02,False
-Databricks,Go-to-market,Business & GTM,90,0.1822,76,0.14,1.3,False
-Databricks,Scala,Programming Languages,84,0.17,182,0.3352,0.51,False
-Databricks,Machine learning,ML & AI Concepts,65,0.1316,87,0.1602,0.82,False
-Databricks,AI agents,ML & AI Concepts,59,0.1194,72,0.1326,0.9,False
-Databricks,ETL / ELT,Data Engineering & Analytics,59,0.1194,141,0.2597,0.46,False
-Databricks,Generative AI,ML & AI Concepts,57,0.1154,48,0.0884,1.31,False
-Databricks,Java,Programming Languages,53,0.1073,122,0.2247,0.48,False
-Databricks,Distributed systems,DevOps & Infrastructure,51,0.1032,168,0.3094,0.33,False
-Databricks,MLOps,ML & AI Concepts,44,0.0891,70,0.1289,0.69,False
-Databricks,Delta Lake,Data Engineering & Analytics,42,0.085,49,0.0902,0.94,False
-Databricks,LLMs,ML & AI Concepts,39,0.0789,47,0.0866,0.91,False
-Databricks,CI/CD,DevOps & Infrastructure,36,0.0729,88,0.1621,0.45,False
-Databricks,MLflow,ML Frameworks,31,0.0628,32,0.0589,1.06,False
-Databricks,Product management,Business & GTM,29,0.0587,94,0.1731,0.34,False
-Databricks,Observability,DevOps & Infrastructure,28,0.0567,44,0.081,0.7,False
-Databricks,JavaScript,Programming Languages,24,0.0486,70,0.1289,0.38,False
-Databricks,TypeScript,Programming Languages,24,0.0486,66,0.1215,0.4,False
-Databricks,Hadoop,Data Engineering & Analytics,23,0.0466,33,0.0608,0.77,False
-Databricks,RAG,ML & AI Concepts,22,0.0445,24,0.0442,1.01,False
-Databricks,Kafka,Data Engineering & Analytics,20,0.0405,22,0.0405,1.0,False
-Databricks,Fine-tuning,ML & AI Concepts,19,0.0385,19,0.035,1.1,False
-Databricks,Terraform,DevOps & Infrastructure,17,0.0344,17,0.0313,1.1,False
-Databricks,OLTP,Databases,16,0.0324,39,0.0718,0.45,False
-Databricks,Statistics,ML & AI Concepts,15,0.0304,20,0.0368,0.82,False
-Databricks,PyTorch,ML Frameworks,14,0.0283,16,0.0295,0.96,False
-Databricks,Kubernetes,DevOps & Infrastructure,14,0.0283,61,0.1123,0.25,False
-Databricks,Incident response,Security,13,0.0263,10,0.0184,1.43,False
-Databricks,LangChain,LLM & Inference Tools,11,0.0223,12,0.0221,1.01,False
-Databricks,PostgreSQL,Databases,11,0.0223,23,0.0424,0.53,False
-Databricks,Docker,DevOps & Infrastructure,11,0.0223,28,0.0516,0.43,False
-Databricks,Hugging Face,ML Frameworks,10,0.0202,8,0.0147,1.37,False
-Databricks,Vector databases,LLM & Inference Tools,10,0.0202,20,0.0368,0.55,False
-Databricks,Microservices,DevOps & Infrastructure,10,0.0202,28,0.0516,0.39,False
-Databricks,MySQL,Databases,9,0.0182,20,0.0368,0.49,False
-Databricks,GPU,GPU & HPC,9,0.0182,17,0.0313,0.58,False
-Databricks,C++,Programming Languages,8,0.0162,70,0.1289,0.13,False
-Databricks,Go,Programming Languages,8,0.0162,23,0.0424,0.38,False
-Databricks,MCP,LLM & Inference Tools,8,0.0162,8,0.0147,1.1,False
-Databricks,OAuth,Security,8,0.0162,4,0.0074,2.2,False
-Databricks,R,Programming Languages,6,0.0121,14,0.0258,0.47,False
-Databricks,Evals,ML & AI Concepts,6,0.0121,6,0.011,1.1,False
-Databricks,Security engineering,Security,6,0.0121,19,0.035,0.35,False
-Databricks,"Compliance (SOC 2, FedRAMP, ISO)",Security,6,0.0121,6,0.011,1.1,False
-Databricks,Deep learning,ML & AI Concepts,5,0.0101,7,0.0129,0.79,False
-Databricks,GitHub,DevOps & Infrastructure,5,0.0101,8,0.0147,0.69,False
-Databricks,SRE,DevOps & Infrastructure,5,0.0101,6,0.011,0.92,False
-Databricks,Inference,ML & AI Concepts,4,0.0081,15,0.0276,0.29,False
-Databricks,Distributed training,ML & AI Concepts,4,0.0081,5,0.0092,0.88,False
-Databricks,Linux,DevOps & Infrastructure,4,0.0081,11,0.0203,0.4,False
-Databricks,Prometheus,DevOps & Infrastructure,4,0.0081,3,0.0055,1.47,False
-Databricks,Grafana,DevOps & Infrastructure,4,0.0081,1,0.0018,4.4,False
-Databricks,Bash / Shell,Programming Languages,3,0.0061,3,0.0055,1.1,False
-Databricks,TensorFlow,ML Frameworks,3,0.0061,5,0.0092,0.66,False
-Databricks,Git,DevOps & Infrastructure,3,0.0061,4,0.0074,0.82,False
-Databricks,REST APIs,Web & APIs,3,0.0061,3,0.0055,1.1,False
-Databricks,BigQuery,Data Engineering & Analytics,2,0.004,3,0.0055,0.73,False
-Databricks,Tableau,Data Engineering & Analytics,2,0.004,6,0.011,0.37,False
-Databricks,Cryptography,Security,2,0.004,13,0.0239,0.17,False
-Databricks,React,Web & APIs,2,0.004,16,0.0295,0.14,False
-Databricks,Rust,Programming Languages,1,0.002,14,0.0258,0.08,False
-Databricks,Reinforcement learning,ML & AI Concepts,1,0.002,2,0.0037,0.55,False
+Databricks,Salesforce,Business & GTM,70,0.1423,24,0.0438,3.25,True
+Databricks,Snowflake,Data Engineering & Analytics,68,0.1382,21,0.0383,3.61,True
+Databricks,Enterprise sales,Business & GTM,51,0.1037,18,0.0328,3.16,True
+Databricks,MEDDPICC / MEDDIC,Business & GTM,40,0.0813,20,0.0365,2.23,True
+Databricks,Stakeholder management,Business & GTM,29,0.0589,17,0.031,1.9,True
+Databricks,IAM,Security,15,0.0305,7,0.0128,2.39,True
+Databricks,scikit-learn,ML Frameworks,14,0.0285,10,0.0182,1.56,True
+Databricks,pandas,ML Frameworks,14,0.0285,9,0.0164,1.73,True
+Databricks,Excel,Data Engineering & Analytics,10,0.0203,2,0.0036,5.57,True
+Databricks,AWS,Cloud,220,0.4472,228,0.4161,1.07,False
+Databricks,Python,Programming Languages,207,0.4207,214,0.3905,1.08,False
+Databricks,Azure,Cloud,199,0.4045,228,0.4161,0.97,False
+Databricks,GCP,Cloud,189,0.3841,202,0.3686,1.04,False
+Databricks,SQL,Programming Languages,161,0.3272,135,0.2464,1.33,False
+Databricks,Spark,Data Engineering & Analytics,152,0.3089,179,0.3266,0.95,False
+Databricks,Data warehousing,Data Engineering & Analytics,137,0.2785,148,0.2701,1.03,False
+Databricks,Go-to-market,Business & GTM,88,0.1789,78,0.1423,1.26,False
+Databricks,Scala,Programming Languages,84,0.1707,183,0.3339,0.51,False
+Databricks,Machine learning,ML & AI Concepts,65,0.1321,87,0.1588,0.83,False
+Databricks,AI agents,ML & AI Concepts,59,0.1199,72,0.1314,0.91,False
+Databricks,Generative AI,ML & AI Concepts,58,0.1179,48,0.0876,1.35,False
+Databricks,ETL / ELT,Data Engineering & Analytics,57,0.1159,143,0.2609,0.44,False
+Databricks,Java,Programming Languages,54,0.1098,122,0.2226,0.49,False
+Databricks,Distributed systems,DevOps & Infrastructure,52,0.1057,168,0.3066,0.34,False
+Databricks,MLOps,ML & AI Concepts,44,0.0894,71,0.1296,0.69,False
+Databricks,LLMs,ML & AI Concepts,41,0.0833,47,0.0858,0.97,False
+Databricks,Delta Lake,Data Engineering & Analytics,41,0.0833,50,0.0912,0.91,False
+Databricks,CI/CD,DevOps & Infrastructure,36,0.0732,89,0.1624,0.45,False
+Databricks,MLflow,ML Frameworks,31,0.063,32,0.0584,1.08,False
+Databricks,Observability,DevOps & Infrastructure,29,0.0589,44,0.0803,0.73,False
+Databricks,Product management,Business & GTM,29,0.0589,96,0.1752,0.34,False
+Databricks,JavaScript,Programming Languages,24,0.0488,71,0.1296,0.38,False
+Databricks,TypeScript,Programming Languages,24,0.0488,67,0.1223,0.4,False
+Databricks,Hadoop,Data Engineering & Analytics,23,0.0467,33,0.0602,0.78,False
+Databricks,RAG,ML & AI Concepts,22,0.0447,24,0.0438,1.02,False
+Databricks,Kafka,Data Engineering & Analytics,20,0.0407,22,0.0401,1.01,False
+Databricks,Fine-tuning,ML & AI Concepts,19,0.0386,19,0.0347,1.11,False
+Databricks,Terraform,DevOps & Infrastructure,19,0.0386,17,0.031,1.24,False
+Databricks,Statistics,ML & AI Concepts,15,0.0305,20,0.0365,0.84,False
+Databricks,OLTP,Databases,15,0.0305,40,0.073,0.42,False
+Databricks,Kubernetes,DevOps & Infrastructure,15,0.0305,61,0.1113,0.27,False
+Databricks,PyTorch,ML Frameworks,14,0.0285,16,0.0292,0.97,False
+Databricks,Incident response,Security,13,0.0264,10,0.0182,1.45,False
+Databricks,Docker,DevOps & Infrastructure,12,0.0244,28,0.0511,0.48,False
+Databricks,LangChain,LLM & Inference Tools,11,0.0224,12,0.0219,1.02,False
+Databricks,Hugging Face,ML Frameworks,10,0.0203,8,0.0146,1.39,False
+Databricks,Vector databases,LLM & Inference Tools,10,0.0203,20,0.0365,0.56,False
+Databricks,PostgreSQL,Databases,10,0.0203,24,0.0438,0.46,False
+Databricks,GPU,GPU & HPC,10,0.0203,17,0.031,0.66,False
+Databricks,Go,Programming Languages,9,0.0183,23,0.042,0.44,False
+Databricks,Microservices,DevOps & Infrastructure,9,0.0183,30,0.0547,0.33,False
+Databricks,OAuth,Security,9,0.0183,4,0.0073,2.51,False
+Databricks,C++,Programming Languages,8,0.0163,70,0.1277,0.13,False
+Databricks,MCP,LLM & Inference Tools,8,0.0163,8,0.0146,1.11,False
+Databricks,MySQL,Databases,8,0.0163,21,0.0383,0.42,False
+Databricks,R,Programming Languages,6,0.0122,14,0.0255,0.48,False
+Databricks,Evals,ML & AI Concepts,6,0.0122,6,0.0109,1.11,False
+Databricks,Security engineering,Security,6,0.0122,19,0.0347,0.35,False
+Databricks,"Compliance (SOC 2, FedRAMP, ISO)",Security,6,0.0122,6,0.0109,1.11,False
+Databricks,Deep learning,ML & AI Concepts,5,0.0102,7,0.0128,0.8,False
+Databricks,GitHub,DevOps & Infrastructure,5,0.0102,7,0.0128,0.8,False
+Databricks,SRE,DevOps & Infrastructure,5,0.0102,6,0.0109,0.93,False
+Databricks,Inference,ML & AI Concepts,4,0.0081,15,0.0274,0.3,False
+Databricks,Distributed training,ML & AI Concepts,4,0.0081,5,0.0091,0.89,False
+Databricks,Linux,DevOps & Infrastructure,4,0.0081,11,0.0201,0.41,False
+Databricks,Prometheus,DevOps & Infrastructure,4,0.0081,3,0.0055,1.49,False
+Databricks,Grafana,DevOps & Infrastructure,4,0.0081,1,0.0018,4.46,False
+Databricks,Bash / Shell,Programming Languages,3,0.0061,3,0.0055,1.11,False
+Databricks,TensorFlow,ML Frameworks,3,0.0061,5,0.0091,0.67,False
+Databricks,Git,DevOps & Infrastructure,3,0.0061,4,0.0073,0.84,False
+Databricks,REST APIs,Web & APIs,3,0.0061,3,0.0055,1.11,False
+Databricks,BigQuery,Data Engineering & Analytics,2,0.0041,3,0.0055,0.74,False
+Databricks,Tableau,Data Engineering & Analytics,2,0.0041,6,0.0109,0.37,False
+Databricks,Cryptography,Security,2,0.0041,13,0.0237,0.17,False
+Databricks,React,Web & APIs,2,0.0041,16,0.0292,0.14,False
+Databricks,Rust,Programming Languages,1,0.002,14,0.0255,0.08,False
+Databricks,Reinforcement learning,ML & AI Concepts,1,0.002,2,0.0036,0.56,False
 Databricks,RLHF,ML & AI Concepts,1,0.002,0,0.0,,False
 Databricks,AI safety / alignment,ML & AI Concepts,1,0.002,0,0.0,,False
 Databricks,Airflow,Data Engineering & Analytics,1,0.002,3,0.0055,0.37,False
-Databricks,Cassandra,Databases,1,0.002,6,0.011,0.18,False
+Databricks,Cassandra,Databases,1,0.002,6,0.0109,0.19,False
 Databricks,HPC,GPU & HPC,1,0.002,3,0.0055,0.37,False
-Databricks,EDA tools,Hardware & Semiconductor,1,0.002,4,0.0074,0.27,False
-Databricks,TCP/IP,Networking,1,0.002,2,0.0037,0.55,False
+Databricks,EDA tools,Hardware & Semiconductor,1,0.002,4,0.0073,0.28,False
+Databricks,TCP/IP,Networking,1,0.002,2,0.0036,0.56,False
 Databricks,DNS,Networking,1,0.002,3,0.0055,0.37,False
-Databricks,Network protocols,Networking,1,0.002,2,0.0037,0.55,False
+Databricks,Network protocols,Networking,1,0.002,2,0.0036,0.56,False
 Databricks,Threat modelling,Security,1,0.002,0,0.0,,False
 Databricks,C,Programming Languages,0,0.0,0,0.0,,False
-Databricks,C#,Programming Languages,0,0.0,6,0.011,0.0,False
+Databricks,C#,Programming Languages,0,0.0,6,0.0109,0.0,False
 Databricks,Kotlin,Programming Languages,0,0.0,0,0.0,,False
 Databricks,Swift,Programming Languages,0,0.0,0,0.0,,False
 Databricks,MATLAB,Programming Languages,0,0.0,0,0.0,,False
@@ -256,12 +256,12 @@ Databricks,Julia,Programming Languages,0,0.0,0,0.0,,False
 Databricks,JAX,ML Frameworks,0,0.0,0,0.0,,False
 Databricks,Keras,ML Frameworks,0,0.0,0,0.0,,False
 Databricks,XGBoost,ML Frameworks,0,0.0,0,0.0,,False
-Databricks,Ray,ML Frameworks,0,0.0,5,0.0092,0.0,False
+Databricks,Ray,ML Frameworks,0,0.0,5,0.0091,0.0,False
 Databricks,NumPy,ML Frameworks,0,0.0,0,0.0,,False
-Databricks,NLP,ML & AI Concepts,0,0.0,4,0.0074,0.0,False
+Databricks,NLP,ML & AI Concepts,0,0.0,4,0.0073,0.0,False
 Databricks,Computer vision,ML & AI Concepts,0,0.0,0,0.0,,False
 Databricks,Transformers,ML & AI Concepts,0,0.0,0,0.0,,False
-Databricks,Recommender systems,ML & AI Concepts,0,0.0,5,0.0092,0.0,False
+Databricks,Recommender systems,ML & AI Concepts,0,0.0,5,0.0091,0.0,False
 Databricks,Interpretability,ML & AI Concepts,0,0.0,0,0.0,,False
 Databricks,vLLM,LLM & Inference Tools,0,0.0,1,0.0018,0.0,False
 Databricks,SGLang,LLM & Inference Tools,0,0.0,1,0.0018,0.0,False
@@ -271,11 +271,11 @@ Databricks,NeMo,LLM & Inference Tools,0,0.0,0,0.0,,False
 Databricks,NIM,LLM & Inference Tools,0,0.0,0,0.0,,False
 Databricks,Databricks,Data Engineering & Analytics,0,0.0,0,0.0,,False
 Databricks,dbt,Data Engineering & Analytics,0,0.0,1,0.0018,0.0,False
-Databricks,Looker,Data Engineering & Analytics,0,0.0,2,0.0037,0.0,False
+Databricks,Looker,Data Engineering & Analytics,0,0.0,2,0.0036,0.0,False
 Databricks,Power BI,Data Engineering & Analytics,0,0.0,0,0.0,,False
 Databricks,MongoDB,Databases,0,0.0,0,0.0,,False
 Databricks,Redis,Databases,0,0.0,0,0.0,,False
-Databricks,Elasticsearch,Databases,0,0.0,5,0.0092,0.0,False
+Databricks,Elasticsearch,Databases,0,0.0,5,0.0091,0.0,False
 Databricks,DynamoDB,Databases,0,0.0,0,0.0,,False
 Databricks,Slurm,DevOps & Infrastructure,0,0.0,1,0.0018,0.0,False
 Databricks,Ansible,DevOps & Infrastructure,0,0.0,0,0.0,,False
@@ -289,8 +289,8 @@ Databricks,InfiniBand,GPU & HPC,0,0.0,0,0.0,,False
 Databricks,NVLink,GPU & HPC,0,0.0,0,0.0,,False
 Databricks,cuDNN,GPU & HPC,0,0.0,1,0.0018,0.0,False
 Databricks,DGX,GPU & HPC,0,0.0,0,0.0,,False
-Databricks,Compilers,GPU & HPC,0,0.0,2,0.0037,0.0,False
-Databricks,Kernel optimisation,GPU & HPC,0,0.0,2,0.0037,0.0,False
+Databricks,Compilers,GPU & HPC,0,0.0,2,0.0036,0.0,False
+Databricks,Kernel optimisation,GPU & HPC,0,0.0,2,0.0036,0.0,False
 Databricks,ASIC,Hardware & Semiconductor,0,0.0,0,0.0,,False
 Databricks,RTL,Hardware & Semiconductor,0,0.0,0,0.0,,False
 Databricks,Verilog / SystemVerilog,Hardware & Semiconductor,0,0.0,0,0.0,,False
@@ -311,157 +311,157 @@ Databricks,RoCE,Networking,0,0.0,0,0.0,,False
 Databricks,BGP,Networking,0,0.0,0,0.0,,False
 Databricks,OSPF,Networking,0,0.0,0,0.0,,False
 Databricks,VXLAN / EVPN,Networking,0,0.0,0,0.0,,False
-Databricks,Node.js,Web & APIs,0,0.0,10,0.0184,0.0,False
-Databricks,GraphQL,Web & APIs,0,0.0,4,0.0074,0.0,False
+Databricks,Node.js,Web & APIs,0,0.0,10,0.0182,0.0,False
+Databricks,GraphQL,Web & APIs,0,0.0,4,0.0073,0.0,False
 Databricks,gRPC,Web & APIs,0,0.0,1,0.0018,0.0,False
-Databricks,HTML / CSS,Web & APIs,0,0.0,12,0.0221,0.0,False
-NVIDIA,AI agents,ML & AI Concepts,225,0.2,44,0.0946,2.11,True
-NVIDIA,CI/CD,DevOps & Infrastructure,129,0.1147,29,0.0624,1.84,True
-NVIDIA,Observability,DevOps & Infrastructure,104,0.0924,14,0.0301,3.07,True
-NVIDIA,Distributed systems,DevOps & Infrastructure,90,0.08,15,0.0323,2.48,True
-NVIDIA,Git,DevOps & Infrastructure,53,0.0471,13,0.028,1.69,True
-NVIDIA,ETL / ELT,Data Engineering & Analytics,51,0.0453,13,0.028,1.62,True
-NVIDIA,Go,Programming Languages,50,0.0444,9,0.0194,2.3,True
-NVIDIA,Go-to-market,Business & GTM,46,0.0409,5,0.0108,3.8,True
-NVIDIA,DGX,GPU & HPC,45,0.04,11,0.0237,1.69,True
-NVIDIA,Distributed training,ML & AI Concepts,44,0.0391,10,0.0215,1.82,True
-NVIDIA,NeMo,LLM & Inference Tools,44,0.0391,12,0.0258,1.52,True
-NVIDIA,Reinforcement learning,ML & AI Concepts,42,0.0373,6,0.0129,2.89,True
-NVIDIA,SRE,DevOps & Infrastructure,41,0.0364,2,0.0043,8.47,True
-NVIDIA,Statistics,ML & AI Concepts,40,0.0356,10,0.0215,1.65,True
-NVIDIA,SQL,Programming Languages,38,0.0338,10,0.0215,1.57,True
-NVIDIA,Rust,Programming Languages,34,0.0302,5,0.0108,2.81,True
-NVIDIA,Grafana,DevOps & Infrastructure,34,0.0302,3,0.0065,4.68,True
-NVIDIA,Prometheus,DevOps & Infrastructure,28,0.0249,3,0.0065,3.86,True
-NVIDIA,VXLAN / EVPN,Networking,28,0.0249,6,0.0129,1.93,True
-NVIDIA,SGLang,LLM & Inference Tools,26,0.0231,7,0.0151,1.54,True
-NVIDIA,BGP,Networking,26,0.0231,6,0.0129,1.79,True
-NVIDIA,Terraform,DevOps & Infrastructure,25,0.0222,2,0.0043,5.17,True
-NVIDIA,JAX,ML Frameworks,23,0.0204,4,0.0086,2.38,True
-NVIDIA,MCP,LLM & Inference Tools,21,0.0187,5,0.0108,1.74,True
-NVIDIA,REST APIs,Web & APIs,20,0.0178,4,0.0086,2.07,True
-NVIDIA,Transformers,ML & AI Concepts,16,0.0142,4,0.0086,1.65,True
-NVIDIA,DNS,Networking,14,0.0124,3,0.0065,1.93,True
-NVIDIA,LangChain,LLM & Inference Tools,12,0.0107,3,0.0065,1.65,True
-NVIDIA,GPU,GPU & HPC,604,0.5369,246,0.529,1.01,False
-NVIDIA,Python,Programming Languages,487,0.4329,190,0.4086,1.06,False
-NVIDIA,C++,Programming Languages,312,0.2773,117,0.2516,1.1,False
-NVIDIA,Linux,DevOps & Infrastructure,312,0.2773,103,0.2215,1.25,False
-NVIDIA,HPC,GPU & HPC,276,0.2453,113,0.243,1.01,False
-NVIDIA,Deep learning,ML & AI Concepts,259,0.2302,127,0.2731,0.84,False
-NVIDIA,LLMs,ML & AI Concepts,183,0.1627,61,0.1312,1.24,False
-NVIDIA,Firmware,Hardware & Semiconductor,174,0.1547,71,0.1527,1.01,False
-NVIDIA,C,Programming Languages,172,0.1529,64,0.1376,1.11,False
-NVIDIA,CUDA,GPU & HPC,167,0.1484,63,0.1355,1.1,False
-NVIDIA,Inference,ML & AI Concepts,166,0.1476,49,0.1054,1.4,False
-NVIDIA,Kubernetes,DevOps & Infrastructure,157,0.1396,45,0.0968,1.44,False
-NVIDIA,Machine learning,ML & AI Concepts,126,0.112,44,0.0946,1.18,False
-NVIDIA,Ethernet,Networking,126,0.112,56,0.1204,0.93,False
-NVIDIA,ASIC,Hardware & Semiconductor,119,0.1058,64,0.1376,0.77,False
-NVIDIA,InfiniBand,GPU & HPC,110,0.0978,62,0.1333,0.73,False
-NVIDIA,SoC,Hardware & Semiconductor,104,0.0924,49,0.1054,0.88,False
-NVIDIA,Bash / Shell,Programming Languages,90,0.08,27,0.0581,1.38,False
-NVIDIA,RTL,Hardware & Semiconductor,88,0.0782,56,0.1204,0.65,False
-NVIDIA,PyTorch,ML Frameworks,87,0.0773,29,0.0624,1.24,False
-NVIDIA,Embedded systems,Hardware & Semiconductor,84,0.0747,38,0.0817,0.91,False
-NVIDIA,Perl,Programming Languages,80,0.0711,41,0.0882,0.81,False
-NVIDIA,PCIe,Hardware & Semiconductor,80,0.0711,30,0.0645,1.1,False
-NVIDIA,Docker,DevOps & Infrastructure,75,0.0667,27,0.0581,1.15,False
-NVIDIA,Generative AI,ML & AI Concepts,73,0.0649,32,0.0688,0.94,False
-NVIDIA,Verilog / SystemVerilog,Hardware & Semiconductor,65,0.0578,41,0.0882,0.66,False
-NVIDIA,Product management,Business & GTM,64,0.0569,20,0.043,1.32,False
-NVIDIA,Network protocols,Networking,63,0.056,26,0.0559,1.0,False
-NVIDIA,RDMA,GPU & HPC,56,0.0498,20,0.043,1.16,False
-NVIDIA,DFT,Hardware & Semiconductor,55,0.0489,35,0.0753,0.65,False
-NVIDIA,Compilers,GPU & HPC,53,0.0471,26,0.0559,0.84,False
-NVIDIA,RAG,ML & AI Concepts,52,0.0462,16,0.0344,1.34,False
-NVIDIA,NVLink,GPU & HPC,52,0.0462,18,0.0387,1.19,False
-NVIDIA,Physical design,Hardware & Semiconductor,52,0.0462,49,0.1054,0.44,False
-NVIDIA,Signal integrity,Hardware & Semiconductor,51,0.0453,20,0.043,1.05,False
-NVIDIA,TCP/IP,Networking,51,0.0453,23,0.0495,0.92,False
-NVIDIA,Ansible,DevOps & Infrastructure,48,0.0427,14,0.0301,1.42,False
-NVIDIA,UVM,Hardware & Semiconductor,46,0.0409,22,0.0473,0.86,False
-NVIDIA,TensorRT,LLM & Inference Tools,43,0.0382,15,0.0323,1.18,False
-NVIDIA,RoCE,Networking,42,0.0373,21,0.0452,0.83,False
-NVIDIA,NCCL,GPU & HPC,41,0.0364,16,0.0344,1.06,False
-NVIDIA,vLLM,LLM & Inference Tools,39,0.0347,11,0.0237,1.47,False
-NVIDIA,EDA tools,Hardware & Semiconductor,39,0.0347,26,0.0559,0.62,False
-NVIDIA,Slurm,DevOps & Infrastructure,38,0.0338,17,0.0366,0.92,False
-NVIDIA,VLSI,Hardware & Semiconductor,38,0.0338,13,0.028,1.21,False
-NVIDIA,PCB design,Hardware & Semiconductor,37,0.0329,24,0.0516,0.64,False
-NVIDIA,Fine-tuning,ML & AI Concepts,34,0.0302,13,0.028,1.08,False
-NVIDIA,Triton,LLM & Inference Tools,32,0.0284,12,0.0258,1.1,False
-NVIDIA,Computer vision,ML & AI Concepts,31,0.0276,14,0.0301,0.92,False
-NVIDIA,Java,Programming Languages,29,0.0258,10,0.0215,1.2,False
-NVIDIA,Tcl,Programming Languages,28,0.0249,15,0.0323,0.77,False
-NVIDIA,NIM,LLM & Inference Tools,28,0.0249,13,0.028,0.89,False
-NVIDIA,Incident response,Security,28,0.0249,8,0.0172,1.45,False
-NVIDIA,Microservices,DevOps & Infrastructure,27,0.024,15,0.0323,0.74,False
-NVIDIA,TensorFlow,ML Frameworks,26,0.0231,16,0.0344,0.67,False
-NVIDIA,AWS,Cloud,26,0.0231,13,0.028,0.83,False
-NVIDIA,Azure,Cloud,25,0.0222,13,0.028,0.79,False
-NVIDIA,FPGA,Hardware & Semiconductor,24,0.0213,14,0.0301,0.71,False
-NVIDIA,Kernel optimisation,GPU & HPC,23,0.0204,7,0.0151,1.36,False
-NVIDIA,GCP,Cloud,22,0.0196,11,0.0237,0.83,False
-NVIDIA,MPI,GPU & HPC,22,0.0196,11,0.0237,0.83,False
-NVIDIA,Static timing analysis,Hardware & Semiconductor,18,0.016,19,0.0409,0.39,False
-NVIDIA,GitHub,DevOps & Infrastructure,16,0.0142,5,0.0108,1.32,False
-NVIDIA,OSPF,Networking,16,0.0142,5,0.0108,1.32,False
-NVIDIA,Hugging Face,ML Frameworks,15,0.0133,5,0.0108,1.24,False
-NVIDIA,MLOps,ML & AI Concepts,13,0.0116,9,0.0194,0.6,False
-NVIDIA,Spark,Data Engineering & Analytics,13,0.0116,4,0.0086,1.34,False
-NVIDIA,Vector databases,LLM & Inference Tools,12,0.0107,0,0.0,,False
-NVIDIA,Excel,Data Engineering & Analytics,12,0.0107,5,0.0108,0.99,False
-NVIDIA,OpenCL,GPU & HPC,11,0.0098,5,0.0108,0.91,False
-NVIDIA,JavaScript,Programming Languages,9,0.008,6,0.0129,0.62,False
-NVIDIA,C#,Programming Languages,9,0.008,4,0.0086,0.93,False
-NVIDIA,NLP,ML & AI Concepts,9,0.008,6,0.0129,0.62,False
-NVIDIA,Evals,ML & AI Concepts,9,0.008,1,0.0022,3.72,False
-NVIDIA,Cryptography,Security,9,0.008,6,0.0129,0.62,False
-NVIDIA,React,Web & APIs,9,0.008,3,0.0065,1.24,False
-NVIDIA,TypeScript,Programming Languages,8,0.0071,1,0.0022,3.31,False
-NVIDIA,Power BI,Data Engineering & Analytics,8,0.0071,6,0.0129,0.55,False
-NVIDIA,MongoDB,Databases,8,0.0071,2,0.0043,1.65,False
-NVIDIA,Elasticsearch,Databases,8,0.0071,2,0.0043,1.65,False
-NVIDIA,Salesforce,Business & GTM,8,0.0071,3,0.0065,1.1,False
-NVIDIA,AI safety / alignment,ML & AI Concepts,7,0.0062,2,0.0043,1.45,False
-NVIDIA,MySQL,Databases,7,0.0062,2,0.0043,1.45,False
-NVIDIA,cuDNN,GPU & HPC,7,0.0062,5,0.0108,0.58,False
-NVIDIA,Databricks,Data Engineering & Analytics,6,0.0053,1,0.0022,2.48,False
-NVIDIA,Kafka,Data Engineering & Analytics,6,0.0053,0,0.0,,False
-NVIDIA,Tableau,Data Engineering & Analytics,6,0.0053,3,0.0065,0.83,False
-NVIDIA,Threat modelling,Security,6,0.0053,3,0.0065,0.83,False
-NVIDIA,MATLAB,Programming Languages,5,0.0044,9,0.0194,0.23,False
-NVIDIA,Recommender systems,ML & AI Concepts,5,0.0044,3,0.0065,0.69,False
-NVIDIA,OpenMP,GPU & HPC,5,0.0044,2,0.0043,1.03,False
-NVIDIA,RLHF,ML & AI Concepts,4,0.0036,1,0.0022,1.65,False
+Databricks,HTML / CSS,Web & APIs,0,0.0,12,0.0219,0.0,False
+NVIDIA,AI agents,ML & AI Concepts,223,0.1996,46,0.0973,2.05,True
+NVIDIA,CI/CD,DevOps & Infrastructure,126,0.1128,32,0.0677,1.67,True
+NVIDIA,Observability,DevOps & Infrastructure,101,0.0904,17,0.0359,2.52,True
+NVIDIA,Distributed systems,DevOps & Infrastructure,89,0.0797,16,0.0338,2.36,True
+NVIDIA,Git,DevOps & Infrastructure,53,0.0474,13,0.0275,1.73,True
+NVIDIA,ETL / ELT,Data Engineering & Analytics,50,0.0448,14,0.0296,1.51,True
+NVIDIA,Go,Programming Languages,49,0.0439,10,0.0211,2.07,True
+NVIDIA,Go-to-market,Business & GTM,46,0.0412,5,0.0106,3.9,True
+NVIDIA,DGX,GPU & HPC,45,0.0403,11,0.0233,1.73,True
+NVIDIA,Distributed training,ML & AI Concepts,44,0.0394,10,0.0211,1.86,True
+NVIDIA,Reinforcement learning,ML & AI Concepts,42,0.0376,6,0.0127,2.96,True
+NVIDIA,Statistics,ML & AI Concepts,40,0.0358,10,0.0211,1.69,True
+NVIDIA,SRE,DevOps & Infrastructure,40,0.0358,3,0.0063,5.65,True
+NVIDIA,vLLM,LLM & Inference Tools,39,0.0349,11,0.0233,1.5,True
+NVIDIA,SQL,Programming Languages,38,0.034,10,0.0211,1.61,True
+NVIDIA,Rust,Programming Languages,34,0.0304,5,0.0106,2.88,True
+NVIDIA,Grafana,DevOps & Infrastructure,33,0.0295,4,0.0085,3.49,True
+NVIDIA,VXLAN / EVPN,Networking,28,0.0251,6,0.0127,1.98,True
+NVIDIA,Prometheus,DevOps & Infrastructure,27,0.0242,4,0.0085,2.86,True
+NVIDIA,SGLang,LLM & Inference Tools,26,0.0233,7,0.0148,1.57,True
+NVIDIA,BGP,Networking,26,0.0233,6,0.0127,1.83,True
+NVIDIA,Terraform,DevOps & Infrastructure,24,0.0215,3,0.0063,3.39,True
+NVIDIA,JAX,ML Frameworks,23,0.0206,4,0.0085,2.43,True
+NVIDIA,MCP,LLM & Inference Tools,21,0.0188,5,0.0106,1.78,True
+NVIDIA,REST APIs,Web & APIs,20,0.0179,4,0.0085,2.12,True
+NVIDIA,Transformers,ML & AI Concepts,16,0.0143,4,0.0085,1.69,True
+NVIDIA,DNS,Networking,14,0.0125,3,0.0063,1.98,True
+NVIDIA,LangChain,LLM & Inference Tools,12,0.0107,3,0.0063,1.69,True
+NVIDIA,Vector databases,LLM & Inference Tools,11,0.0098,1,0.0021,4.66,True
+NVIDIA,GPU,GPU & HPC,599,0.5363,251,0.5307,1.01,False
+NVIDIA,Python,Programming Languages,483,0.4324,194,0.4101,1.05,False
+NVIDIA,C++,Programming Languages,311,0.2784,118,0.2495,1.12,False
+NVIDIA,Linux,DevOps & Infrastructure,309,0.2766,106,0.2241,1.23,False
+NVIDIA,HPC,GPU & HPC,275,0.2462,114,0.241,1.02,False
+NVIDIA,Deep learning,ML & AI Concepts,256,0.2292,130,0.2748,0.83,False
+NVIDIA,LLMs,ML & AI Concepts,182,0.1629,62,0.1311,1.24,False
+NVIDIA,Firmware,Hardware & Semiconductor,174,0.1558,71,0.1501,1.04,False
+NVIDIA,C,Programming Languages,171,0.1531,65,0.1374,1.11,False
+NVIDIA,Inference,ML & AI Concepts,166,0.1486,49,0.1036,1.43,False
+NVIDIA,CUDA,GPU & HPC,166,0.1486,64,0.1353,1.1,False
+NVIDIA,Kubernetes,DevOps & Infrastructure,153,0.137,49,0.1036,1.32,False
+NVIDIA,Ethernet,Networking,126,0.1128,56,0.1184,0.95,False
+NVIDIA,Machine learning,ML & AI Concepts,124,0.111,46,0.0973,1.14,False
+NVIDIA,ASIC,Hardware & Semiconductor,119,0.1065,64,0.1353,0.79,False
+NVIDIA,InfiniBand,GPU & HPC,110,0.0985,62,0.1311,0.75,False
+NVIDIA,SoC,Hardware & Semiconductor,103,0.0922,50,0.1057,0.87,False
+NVIDIA,Bash / Shell,Programming Languages,89,0.0797,28,0.0592,1.35,False
+NVIDIA,PyTorch,ML Frameworks,86,0.077,30,0.0634,1.21,False
+NVIDIA,RTL,Hardware & Semiconductor,86,0.077,58,0.1226,0.63,False
+NVIDIA,Embedded systems,Hardware & Semiconductor,83,0.0743,39,0.0825,0.9,False
+NVIDIA,Perl,Programming Languages,80,0.0716,41,0.0867,0.83,False
+NVIDIA,PCIe,Hardware & Semiconductor,80,0.0716,30,0.0634,1.13,False
+NVIDIA,Generative AI,ML & AI Concepts,73,0.0654,32,0.0677,0.97,False
+NVIDIA,Docker,DevOps & Infrastructure,72,0.0645,30,0.0634,1.02,False
+NVIDIA,Verilog / SystemVerilog,Hardware & Semiconductor,65,0.0582,41,0.0867,0.67,False
+NVIDIA,Network protocols,Networking,63,0.0564,26,0.055,1.03,False
+NVIDIA,Product management,Business & GTM,63,0.0564,21,0.0444,1.27,False
+NVIDIA,RDMA,GPU & HPC,56,0.0501,20,0.0423,1.19,False
+NVIDIA,DFT,Hardware & Semiconductor,55,0.0492,35,0.074,0.67,False
+NVIDIA,Compilers,GPU & HPC,53,0.0474,26,0.055,0.86,False
+NVIDIA,RAG,ML & AI Concepts,52,0.0466,16,0.0338,1.38,False
+NVIDIA,NVLink,GPU & HPC,52,0.0466,18,0.0381,1.22,False
+NVIDIA,Physical design,Hardware & Semiconductor,52,0.0466,49,0.1036,0.45,False
+NVIDIA,Signal integrity,Hardware & Semiconductor,51,0.0457,20,0.0423,1.08,False
+NVIDIA,TCP/IP,Networking,51,0.0457,23,0.0486,0.94,False
+NVIDIA,Ansible,DevOps & Infrastructure,47,0.0421,15,0.0317,1.33,False
+NVIDIA,UVM,Hardware & Semiconductor,46,0.0412,22,0.0465,0.89,False
+NVIDIA,TensorRT,LLM & Inference Tools,43,0.0385,15,0.0317,1.21,False
+NVIDIA,NeMo,LLM & Inference Tools,43,0.0385,13,0.0275,1.4,False
+NVIDIA,RoCE,Networking,42,0.0376,21,0.0444,0.85,False
+NVIDIA,NCCL,GPU & HPC,41,0.0367,16,0.0338,1.09,False
+NVIDIA,EDA tools,Hardware & Semiconductor,39,0.0349,26,0.055,0.64,False
+NVIDIA,Slurm,DevOps & Infrastructure,38,0.034,17,0.0359,0.95,False
+NVIDIA,VLSI,Hardware & Semiconductor,38,0.034,13,0.0275,1.24,False
+NVIDIA,PCB design,Hardware & Semiconductor,37,0.0331,24,0.0507,0.65,False
+NVIDIA,Fine-tuning,ML & AI Concepts,34,0.0304,13,0.0275,1.11,False
+NVIDIA,Triton,LLM & Inference Tools,32,0.0286,12,0.0254,1.13,False
+NVIDIA,Computer vision,ML & AI Concepts,30,0.0269,15,0.0317,0.85,False
+NVIDIA,Java,Programming Languages,29,0.026,10,0.0211,1.23,False
+NVIDIA,Tcl,Programming Languages,28,0.0251,15,0.0317,0.79,False
+NVIDIA,NIM,LLM & Inference Tools,27,0.0242,14,0.0296,0.82,False
+NVIDIA,Microservices,DevOps & Infrastructure,27,0.0242,15,0.0317,0.76,False
+NVIDIA,Incident response,Security,27,0.0242,9,0.019,1.27,False
+NVIDIA,TensorFlow,ML Frameworks,26,0.0233,16,0.0338,0.69,False
+NVIDIA,AWS,Cloud,26,0.0233,13,0.0275,0.85,False
+NVIDIA,Azure,Cloud,25,0.0224,13,0.0275,0.81,False
+NVIDIA,FPGA,Hardware & Semiconductor,24,0.0215,14,0.0296,0.73,False
+NVIDIA,Kernel optimisation,GPU & HPC,23,0.0206,7,0.0148,1.39,False
+NVIDIA,GCP,Cloud,22,0.0197,11,0.0233,0.85,False
+NVIDIA,MPI,GPU & HPC,21,0.0188,12,0.0254,0.74,False
+NVIDIA,Static timing analysis,Hardware & Semiconductor,18,0.0161,19,0.0402,0.4,False
+NVIDIA,OSPF,Networking,16,0.0143,5,0.0106,1.36,False
+NVIDIA,Hugging Face,ML Frameworks,15,0.0134,5,0.0106,1.27,False
+NVIDIA,GitHub,DevOps & Infrastructure,15,0.0134,6,0.0127,1.06,False
+NVIDIA,MLOps,ML & AI Concepts,13,0.0116,9,0.019,0.61,False
+NVIDIA,Spark,Data Engineering & Analytics,12,0.0107,5,0.0106,1.02,False
+NVIDIA,Excel,Data Engineering & Analytics,12,0.0107,5,0.0106,1.02,False
+NVIDIA,OpenCL,GPU & HPC,11,0.0098,5,0.0106,0.93,False
+NVIDIA,JavaScript,Programming Languages,9,0.0081,6,0.0127,0.64,False
+NVIDIA,C#,Programming Languages,9,0.0081,4,0.0085,0.95,False
+NVIDIA,NLP,ML & AI Concepts,9,0.0081,6,0.0127,0.64,False
+NVIDIA,Evals,ML & AI Concepts,9,0.0081,1,0.0021,3.81,False
+NVIDIA,Cryptography,Security,9,0.0081,6,0.0127,0.64,False
+NVIDIA,React,Web & APIs,9,0.0081,3,0.0063,1.27,False
+NVIDIA,TypeScript,Programming Languages,8,0.0072,1,0.0021,3.39,False
+NVIDIA,Power BI,Data Engineering & Analytics,8,0.0072,6,0.0127,0.56,False
+NVIDIA,MongoDB,Databases,8,0.0072,2,0.0042,1.69,False
+NVIDIA,Elasticsearch,Databases,8,0.0072,2,0.0042,1.69,False
+NVIDIA,Salesforce,Business & GTM,8,0.0072,3,0.0063,1.13,False
+NVIDIA,AI safety / alignment,ML & AI Concepts,7,0.0063,2,0.0042,1.48,False
+NVIDIA,MySQL,Databases,7,0.0063,2,0.0042,1.48,False
+NVIDIA,cuDNN,GPU & HPC,7,0.0063,5,0.0106,0.59,False
+NVIDIA,Databricks,Data Engineering & Analytics,6,0.0054,1,0.0021,2.54,False
+NVIDIA,Kafka,Data Engineering & Analytics,6,0.0054,0,0.0,,False
+NVIDIA,Tableau,Data Engineering & Analytics,6,0.0054,3,0.0063,0.85,False
+NVIDIA,Threat modelling,Security,6,0.0054,3,0.0063,0.85,False
+NVIDIA,MATLAB,Programming Languages,5,0.0045,9,0.019,0.24,False
+NVIDIA,Recommender systems,ML & AI Concepts,5,0.0045,3,0.0063,0.71,False
+NVIDIA,RLHF,ML & AI Concepts,4,0.0036,1,0.0021,1.69,False
 NVIDIA,Redis,Databases,4,0.0036,0,0.0,,False
-NVIDIA,Node.js,Web & APIs,4,0.0036,2,0.0043,0.83,False
-NVIDIA,gRPC,Web & APIs,4,0.0036,3,0.0065,0.55,False
+NVIDIA,OpenMP,GPU & HPC,4,0.0036,3,0.0063,0.56,False
+NVIDIA,Node.js,Web & APIs,4,0.0036,2,0.0042,0.85,False
+NVIDIA,gRPC,Web & APIs,4,0.0036,3,0.0063,0.56,False
 NVIDIA,R,Programming Languages,3,0.0027,0,0.0,,False
 NVIDIA,Ray,ML Frameworks,3,0.0027,0,0.0,,False
-NVIDIA,Security engineering,Security,3,0.0027,3,0.0065,0.41,False
-NVIDIA,IAM,Security,3,0.0027,2,0.0043,0.62,False
+NVIDIA,Security engineering,Security,3,0.0027,3,0.0063,0.42,False
+NVIDIA,IAM,Security,3,0.0027,2,0.0042,0.64,False
 NVIDIA,OAuth,Security,3,0.0027,0,0.0,,False
-NVIDIA,Enterprise sales,Business & GTM,3,0.0027,1,0.0022,1.24,False
-NVIDIA,Stakeholder management,Business & GTM,3,0.0027,3,0.0065,0.41,False
-NVIDIA,scikit-learn,ML Frameworks,2,0.0018,1,0.0022,0.83,False
-NVIDIA,NumPy,ML Frameworks,2,0.0018,1,0.0022,0.83,False
-NVIDIA,Airflow,Data Engineering & Analytics,2,0.0018,1,0.0022,0.83,False
+NVIDIA,Enterprise sales,Business & GTM,3,0.0027,1,0.0021,1.27,False
+NVIDIA,Stakeholder management,Business & GTM,3,0.0027,3,0.0063,0.42,False
+NVIDIA,scikit-learn,ML Frameworks,2,0.0018,1,0.0021,0.85,False
+NVIDIA,NumPy,ML Frameworks,2,0.0018,1,0.0021,0.85,False
+NVIDIA,Airflow,Data Engineering & Analytics,2,0.0018,1,0.0021,0.85,False
 NVIDIA,Delta Lake,Data Engineering & Analytics,2,0.0018,0,0.0,,False
 NVIDIA,Data warehousing,Data Engineering & Analytics,2,0.0018,0,0.0,,False
 NVIDIA,PostgreSQL,Databases,2,0.0018,0,0.0,,False
 NVIDIA,Cassandra,Databases,2,0.0018,0,0.0,,False
-NVIDIA,HTML / CSS,Web & APIs,2,0.0018,1,0.0022,0.83,False
+NVIDIA,HTML / CSS,Web & APIs,2,0.0018,1,0.0021,0.85,False
 NVIDIA,Ruby,Programming Languages,1,0.0009,0,0.0,,False
 NVIDIA,Julia,Programming Languages,1,0.0009,0,0.0,,False
-NVIDIA,pandas,ML Frameworks,1,0.0009,1,0.0022,0.41,False
+NVIDIA,pandas,ML Frameworks,1,0.0009,1,0.0021,0.42,False
 NVIDIA,Snowflake,Data Engineering & Analytics,1,0.0009,0,0.0,,False
-NVIDIA,"Compliance (SOC 2, FedRAMP, ISO)",Security,1,0.0009,1,0.0022,0.41,False
-NVIDIA,Scala,Programming Languages,0,0.0,2,0.0043,0.0,False
+NVIDIA,"Compliance (SOC 2, FedRAMP, ISO)",Security,1,0.0009,1,0.0021,0.42,False
+NVIDIA,Scala,Programming Languages,0,0.0,2,0.0042,0.0,False
 NVIDIA,Kotlin,Programming Languages,0,0.0,0,0.0,,False
 NVIDIA,Swift,Programming Languages,0,0.0,0,0.0,,False
-NVIDIA,Keras,ML Frameworks,0,0.0,1,0.0022,0.0,False
+NVIDIA,Keras,ML Frameworks,0,0.0,1,0.0021,0.0,False
 NVIDIA,XGBoost,ML Frameworks,0,0.0,0,0.0,,False
 NVIDIA,MLflow,ML Frameworks,0,0.0,0,0.0,,False
 NVIDIA,Interpretability,ML & AI Concepts,0,0.0,0,0.0,,False
@@ -473,141 +473,141 @@ NVIDIA,DynamoDB,Databases,0,0.0,0,0.0,,False
 NVIDIA,OLTP,Databases,0,0.0,0,0.0,,False
 NVIDIA,GraphQL,Web & APIs,0,0.0,0,0.0,,False
 NVIDIA,MEDDPICC / MEDDIC,Business & GTM,0,0.0,0,0.0,,False
-OpenAI,Enterprise sales,Business & GTM,31,0.0449,6,0.0181,2.49,True
-OpenAI,Generative AI,ML & AI Concepts,26,0.0377,6,0.0181,2.09,True
-OpenAI,Stakeholder management,Business & GTM,26,0.0377,8,0.0241,1.56,True
-OpenAI,Data warehousing,Data Engineering & Analytics,11,0.0159,3,0.009,1.76,True
-OpenAI,IAM,Security,11,0.0159,3,0.009,1.76,True
-OpenAI,Go-to-market,Business & GTM,229,0.3319,75,0.2259,1.47,False
-OpenAI,Python,Programming Languages,132,0.1913,114,0.3434,0.56,False
-OpenAI,AI agents,ML & AI Concepts,92,0.1333,58,0.1747,0.76,False
-OpenAI,Observability,DevOps & Infrastructure,71,0.1029,80,0.241,0.43,False
-OpenAI,JavaScript,Programming Languages,65,0.0942,27,0.0813,1.16,False
-OpenAI,Distributed systems,DevOps & Infrastructure,59,0.0855,84,0.253,0.34,False
-OpenAI,LLMs,ML & AI Concepts,53,0.0768,48,0.1446,0.53,False
-OpenAI,SQL,Programming Languages,45,0.0652,22,0.0663,0.98,False
-OpenAI,Evals,ML & AI Concepts,39,0.0565,35,0.1054,0.54,False
-OpenAI,Incident response,Security,37,0.0536,33,0.0994,0.54,False
-OpenAI,Product management,Business & GTM,35,0.0507,21,0.0633,0.8,False
-OpenAI,Inference,ML & AI Concepts,32,0.0464,38,0.1145,0.41,False
-OpenAI,TypeScript,Programming Languages,28,0.0406,22,0.0663,0.61,False
-OpenAI,ETL / ELT,Data Engineering & Analytics,25,0.0362,19,0.0572,0.63,False
-OpenAI,Firmware,Hardware & Semiconductor,25,0.0362,19,0.0572,0.63,False
-OpenAI,Machine learning,ML & AI Concepts,23,0.0333,39,0.1175,0.28,False
-OpenAI,AI safety / alignment,ML & AI Concepts,21,0.0304,19,0.0572,0.53,False
-OpenAI,Rust,Programming Languages,18,0.0261,38,0.1145,0.23,False
-OpenAI,Statistics,ML & AI Concepts,17,0.0246,9,0.0271,0.91,False
-OpenAI,CI/CD,DevOps & Infrastructure,17,0.0246,22,0.0663,0.37,False
-OpenAI,GPU,GPU & HPC,17,0.0246,36,0.1084,0.23,False
-OpenAI,C++,Programming Languages,16,0.0232,35,0.1054,0.22,False
-OpenAI,Kubernetes,DevOps & Infrastructure,14,0.0203,30,0.0904,0.22,False
-OpenAI,HPC,GPU & HPC,14,0.0203,11,0.0331,0.61,False
-OpenAI,Embedded systems,Hardware & Semiconductor,14,0.0203,7,0.0211,0.96,False
-OpenAI,Security engineering,Security,13,0.0188,11,0.0331,0.57,False
-OpenAI,Go,Programming Languages,12,0.0174,29,0.0873,0.2,False
-OpenAI,AWS,Cloud,11,0.0159,17,0.0512,0.31,False
-OpenAI,Azure,Cloud,10,0.0145,22,0.0663,0.22,False
-OpenAI,Ethernet,Networking,10,0.0145,7,0.0211,0.69,False
-OpenAI,Spark,Data Engineering & Analytics,9,0.013,3,0.009,1.44,False
-OpenAI,GCP,Cloud,9,0.013,6,0.0181,0.72,False
-OpenAI,Linux,DevOps & Infrastructure,9,0.013,20,0.0602,0.22,False
-OpenAI,RTL,Hardware & Semiconductor,8,0.0116,3,0.009,1.28,False
-OpenAI,React,Web & APIs,8,0.0116,9,0.0271,0.43,False
-OpenAI,Reinforcement learning,ML & AI Concepts,7,0.0101,17,0.0512,0.2,False
-OpenAI,Distributed training,ML & AI Concepts,7,0.0101,16,0.0482,0.21,False
-OpenAI,Terraform,DevOps & Infrastructure,7,0.0101,20,0.0602,0.17,False
-OpenAI,SRE,DevOps & Infrastructure,7,0.0101,6,0.0181,0.56,False
-OpenAI,MCP,LLM & Inference Tools,6,0.0087,4,0.012,0.72,False
-OpenAI,Kafka,Data Engineering & Analytics,6,0.0087,5,0.0151,0.58,False
-OpenAI,Physical design,Hardware & Semiconductor,6,0.0087,1,0.003,2.89,False
-OpenAI,Kotlin,Programming Languages,5,0.0072,1,0.003,2.41,False
-OpenAI,Bash / Shell,Programming Languages,5,0.0072,3,0.009,0.8,False
-OpenAI,GitHub,DevOps & Infrastructure,5,0.0072,3,0.009,0.8,False
-OpenAI,Verilog / SystemVerilog,Hardware & Semiconductor,5,0.0072,2,0.006,1.2,False
-OpenAI,EDA tools,Hardware & Semiconductor,5,0.0072,1,0.003,2.41,False
-OpenAI,PCB design,Hardware & Semiconductor,5,0.0072,5,0.0151,0.48,False
-OpenAI,Signal integrity,Hardware & Semiconductor,5,0.0072,2,0.006,1.2,False
-OpenAI,DNS,Networking,5,0.0072,1,0.003,2.41,False
-OpenAI,OAuth,Security,5,0.0072,3,0.009,0.8,False
-OpenAI,Threat modelling,Security,5,0.0072,9,0.0271,0.27,False
-OpenAI,"Compliance (SOC 2, FedRAMP, ISO)",Security,5,0.0072,3,0.009,0.8,False
-OpenAI,R,Programming Languages,4,0.0058,1,0.003,1.92,False
-OpenAI,RAG,ML & AI Concepts,4,0.0058,3,0.009,0.64,False
-OpenAI,Airflow,Data Engineering & Analytics,4,0.0058,2,0.006,0.96,False
-OpenAI,PostgreSQL,Databases,4,0.0058,10,0.0301,0.19,False
-OpenAI,Compilers,GPU & HPC,4,0.0058,6,0.0181,0.32,False
-OpenAI,ASIC,Hardware & Semiconductor,4,0.0058,4,0.012,0.48,False
-OpenAI,SoC,Hardware & Semiconductor,4,0.0058,5,0.0151,0.38,False
-OpenAI,TCP/IP,Networking,4,0.0058,1,0.003,1.92,False
-OpenAI,Salesforce,Business & GTM,4,0.0058,3,0.009,0.64,False
-OpenAI,Java,Programming Languages,3,0.0043,8,0.0241,0.18,False
-OpenAI,C,Programming Languages,3,0.0043,9,0.0271,0.16,False
-OpenAI,Deep learning,ML & AI Concepts,3,0.0043,10,0.0301,0.14,False
+OpenAI,Enterprise sales,Business & GTM,31,0.0444,6,0.0177,2.51,True
+OpenAI,Generative AI,ML & AI Concepts,26,0.0372,6,0.0177,2.1,True
+OpenAI,Stakeholder management,Business & GTM,26,0.0372,8,0.0236,1.58,True
+OpenAI,Data warehousing,Data Engineering & Analytics,12,0.0172,3,0.0088,1.94,True
+OpenAI,IAM,Security,11,0.0158,3,0.0088,1.78,True
+OpenAI,Spark,Data Engineering & Analytics,10,0.0143,3,0.0088,1.62,True
+OpenAI,Go-to-market,Business & GTM,230,0.3295,77,0.2271,1.45,False
+OpenAI,Python,Programming Languages,129,0.1848,117,0.3451,0.54,False
+OpenAI,AI agents,ML & AI Concepts,96,0.1375,58,0.1711,0.8,False
+OpenAI,Observability,DevOps & Infrastructure,69,0.0989,83,0.2448,0.4,False
+OpenAI,JavaScript,Programming Languages,65,0.0931,27,0.0796,1.17,False
+OpenAI,Distributed systems,DevOps & Infrastructure,58,0.0831,85,0.2507,0.33,False
+OpenAI,LLMs,ML & AI Concepts,55,0.0788,49,0.1445,0.55,False
+OpenAI,SQL,Programming Languages,47,0.0673,22,0.0649,1.04,False
+OpenAI,Evals,ML & AI Concepts,40,0.0573,35,0.1032,0.56,False
+OpenAI,Incident response,Security,38,0.0544,33,0.0973,0.56,False
+OpenAI,Product management,Business & GTM,34,0.0487,22,0.0649,0.75,False
+OpenAI,Inference,ML & AI Concepts,32,0.0458,39,0.115,0.4,False
+OpenAI,TypeScript,Programming Languages,28,0.0401,22,0.0649,0.62,False
+OpenAI,Machine learning,ML & AI Concepts,28,0.0401,39,0.115,0.35,False
+OpenAI,ETL / ELT,Data Engineering & Analytics,26,0.0372,19,0.056,0.66,False
+OpenAI,AI safety / alignment,ML & AI Concepts,23,0.033,19,0.056,0.59,False
+OpenAI,Firmware,Hardware & Semiconductor,22,0.0315,21,0.0619,0.51,False
+OpenAI,Statistics,ML & AI Concepts,17,0.0244,9,0.0265,0.92,False
+OpenAI,CI/CD,DevOps & Infrastructure,17,0.0244,22,0.0649,0.38,False
+OpenAI,GPU,GPU & HPC,17,0.0244,36,0.1062,0.23,False
+OpenAI,Rust,Programming Languages,15,0.0215,41,0.1209,0.18,False
+OpenAI,Reinforcement learning,ML & AI Concepts,14,0.0201,17,0.0501,0.4,False
+OpenAI,Kubernetes,DevOps & Infrastructure,14,0.0201,30,0.0885,0.23,False
+OpenAI,Embedded systems,Hardware & Semiconductor,14,0.0201,7,0.0206,0.97,False
+OpenAI,C++,Programming Languages,13,0.0186,38,0.1121,0.17,False
+OpenAI,HPC,GPU & HPC,13,0.0186,11,0.0324,0.57,False
+OpenAI,Security engineering,Security,13,0.0186,11,0.0324,0.57,False
+OpenAI,Go,Programming Languages,12,0.0172,29,0.0855,0.2,False
+OpenAI,AWS,Cloud,11,0.0158,17,0.0501,0.31,False
+OpenAI,Azure,Cloud,10,0.0143,22,0.0649,0.22,False
+OpenAI,Ethernet,Networking,10,0.0143,7,0.0206,0.69,False
+OpenAI,Distributed training,ML & AI Concepts,9,0.0129,16,0.0472,0.27,False
+OpenAI,GCP,Cloud,9,0.0129,6,0.0177,0.73,False
+OpenAI,Linux,DevOps & Infrastructure,9,0.0129,20,0.059,0.22,False
+OpenAI,RTL,Hardware & Semiconductor,8,0.0115,3,0.0088,1.3,False
+OpenAI,React,Web & APIs,8,0.0115,9,0.0265,0.43,False
+OpenAI,Terraform,DevOps & Infrastructure,7,0.01,20,0.059,0.17,False
+OpenAI,SRE,DevOps & Infrastructure,7,0.01,6,0.0177,0.57,False
+OpenAI,MCP,LLM & Inference Tools,6,0.0086,4,0.0118,0.73,False
+OpenAI,Kafka,Data Engineering & Analytics,6,0.0086,5,0.0147,0.58,False
+OpenAI,Physical design,Hardware & Semiconductor,6,0.0086,1,0.0029,2.91,False
+OpenAI,Signal integrity,Hardware & Semiconductor,6,0.0086,2,0.0059,1.46,False
+OpenAI,Threat modelling,Security,6,0.0086,9,0.0265,0.32,False
+OpenAI,Kotlin,Programming Languages,5,0.0072,1,0.0029,2.43,False
+OpenAI,Bash / Shell,Programming Languages,5,0.0072,3,0.0088,0.81,False
+OpenAI,GitHub,DevOps & Infrastructure,5,0.0072,3,0.0088,0.81,False
+OpenAI,ASIC,Hardware & Semiconductor,5,0.0072,4,0.0118,0.61,False
+OpenAI,Verilog / SystemVerilog,Hardware & Semiconductor,5,0.0072,2,0.0059,1.21,False
+OpenAI,EDA tools,Hardware & Semiconductor,5,0.0072,1,0.0029,2.43,False
+OpenAI,PCB design,Hardware & Semiconductor,5,0.0072,5,0.0147,0.49,False
+OpenAI,DNS,Networking,5,0.0072,1,0.0029,2.43,False
+OpenAI,OAuth,Security,5,0.0072,3,0.0088,0.81,False
+OpenAI,"Compliance (SOC 2, FedRAMP, ISO)",Security,5,0.0072,3,0.0088,0.81,False
+OpenAI,Salesforce,Business & GTM,5,0.0072,3,0.0088,0.81,False
+OpenAI,RAG,ML & AI Concepts,4,0.0057,3,0.0088,0.65,False
+OpenAI,Airflow,Data Engineering & Analytics,4,0.0057,2,0.0059,0.97,False
+OpenAI,PostgreSQL,Databases,4,0.0057,10,0.0295,0.19,False
+OpenAI,SoC,Hardware & Semiconductor,4,0.0057,5,0.0147,0.39,False
+OpenAI,TCP/IP,Networking,4,0.0057,1,0.0029,1.94,False
+OpenAI,Java,Programming Languages,3,0.0043,8,0.0236,0.18,False
+OpenAI,C,Programming Languages,3,0.0043,9,0.0265,0.16,False
+OpenAI,Scala,Programming Languages,3,0.0043,1,0.0029,1.46,False
+OpenAI,R,Programming Languages,3,0.0043,1,0.0029,1.46,False
+OpenAI,Deep learning,ML & AI Concepts,3,0.0043,10,0.0295,0.15,False
+OpenAI,Fine-tuning,ML & AI Concepts,3,0.0043,9,0.0265,0.16,False
 OpenAI,Databricks,Data Engineering & Analytics,3,0.0043,0,0.0,,False
-OpenAI,MySQL,Databases,3,0.0043,6,0.0181,0.24,False
-OpenAI,Docker,DevOps & Infrastructure,3,0.0043,3,0.009,0.48,False
-OpenAI,Git,DevOps & Infrastructure,3,0.0043,5,0.0151,0.29,False
-OpenAI,PCIe,Hardware & Semiconductor,3,0.0043,8,0.0241,0.18,False
-OpenAI,Cryptography,Security,3,0.0043,1,0.003,1.44,False
-OpenAI,REST APIs,Web & APIs,3,0.0043,1,0.003,1.44,False
-OpenAI,Scala,Programming Languages,2,0.0029,1,0.003,0.96,False
+OpenAI,Excel,Data Engineering & Analytics,3,0.0043,0,0.0,,False
+OpenAI,MySQL,Databases,3,0.0043,6,0.0177,0.24,False
+OpenAI,Docker,DevOps & Infrastructure,3,0.0043,3,0.0088,0.49,False
+OpenAI,Git,DevOps & Infrastructure,3,0.0043,5,0.0147,0.29,False
+OpenAI,PCIe,Hardware & Semiconductor,3,0.0043,8,0.0236,0.18,False
+OpenAI,Cryptography,Security,3,0.0043,1,0.0029,1.46,False
+OpenAI,REST APIs,Web & APIs,3,0.0043,1,0.0029,1.46,False
 OpenAI,MATLAB,Programming Languages,2,0.0029,0,0.0,,False
-OpenAI,PyTorch,ML Frameworks,2,0.0029,9,0.0271,0.11,False
-OpenAI,TensorFlow,ML Frameworks,2,0.0029,4,0.012,0.24,False
-OpenAI,Fine-tuning,ML & AI Concepts,2,0.0029,9,0.0271,0.11,False
-OpenAI,Recommender systems,ML & AI Concepts,2,0.0029,2,0.006,0.48,False
-OpenAI,Interpretability,ML & AI Concepts,2,0.0029,3,0.009,0.32,False
+OpenAI,PyTorch,ML Frameworks,2,0.0029,9,0.0265,0.11,False
+OpenAI,TensorFlow,ML Frameworks,2,0.0029,4,0.0118,0.24,False
+OpenAI,RLHF,ML & AI Concepts,2,0.0029,5,0.0147,0.19,False
+OpenAI,Recommender systems,ML & AI Concepts,2,0.0029,2,0.0059,0.49,False
+OpenAI,Interpretability,ML & AI Concepts,2,0.0029,3,0.0088,0.32,False
 OpenAI,dbt,Data Engineering & Analytics,2,0.0029,0,0.0,,False
-OpenAI,Excel,Data Engineering & Analytics,2,0.0029,0,0.0,,False
-OpenAI,DFT,Hardware & Semiconductor,2,0.0029,2,0.006,0.48,False
-OpenAI,BGP,Networking,2,0.0029,3,0.009,0.32,False
-OpenAI,Swift,Programming Languages,1,0.0014,1,0.003,0.48,False
+OpenAI,Compilers,GPU & HPC,2,0.0029,8,0.0236,0.12,False
+OpenAI,DFT,Hardware & Semiconductor,2,0.0029,2,0.0059,0.49,False
+OpenAI,BGP,Networking,2,0.0029,3,0.0088,0.32,False
+OpenAI,Swift,Programming Languages,1,0.0014,1,0.0029,0.49,False
 OpenAI,Tcl,Programming Languages,1,0.0014,0,0.0,,False
 OpenAI,scikit-learn,ML Frameworks,1,0.0014,0,0.0,,False
-OpenAI,RLHF,ML & AI Concepts,1,0.0014,5,0.0151,0.1,False
-OpenAI,vLLM,LLM & Inference Tools,1,0.0014,2,0.006,0.24,False
-OpenAI,SGLang,LLM & Inference Tools,1,0.0014,2,0.006,0.24,False
 OpenAI,Snowflake,Data Engineering & Analytics,1,0.0014,0,0.0,,False
 OpenAI,BigQuery,Data Engineering & Analytics,1,0.0014,0,0.0,,False
-OpenAI,Hadoop,Data Engineering & Analytics,1,0.0014,1,0.003,0.48,False
+OpenAI,Hadoop,Data Engineering & Analytics,1,0.0014,1,0.0029,0.49,False
 OpenAI,Tableau,Data Engineering & Analytics,1,0.0014,0,0.0,,False
-OpenAI,Redis,Databases,1,0.0014,2,0.006,0.24,False
+OpenAI,Redis,Databases,1,0.0014,2,0.0059,0.24,False
 OpenAI,Elasticsearch,Databases,1,0.0014,0,0.0,,False
-OpenAI,Prometheus,DevOps & Infrastructure,1,0.0014,4,0.012,0.12,False
-OpenAI,Grafana,DevOps & Infrastructure,1,0.0014,5,0.0151,0.1,False
+OpenAI,Prometheus,DevOps & Infrastructure,1,0.0014,4,0.0118,0.12,False
+OpenAI,Grafana,DevOps & Infrastructure,1,0.0014,5,0.0147,0.1,False
 OpenAI,Slurm,DevOps & Infrastructure,1,0.0014,0,0.0,,False
-OpenAI,Ansible,DevOps & Infrastructure,1,0.0014,3,0.009,0.16,False
-OpenAI,Microservices,DevOps & Infrastructure,1,0.0014,1,0.003,0.48,False
-OpenAI,RDMA,GPU & HPC,1,0.0014,6,0.0181,0.08,False
+OpenAI,Ansible,DevOps & Infrastructure,1,0.0014,3,0.0088,0.16,False
+OpenAI,Microservices,DevOps & Infrastructure,1,0.0014,1,0.0029,0.49,False
+OpenAI,RDMA,GPU & HPC,1,0.0014,6,0.0177,0.08,False
 OpenAI,DGX,GPU & HPC,1,0.0014,0,0.0,,False
-OpenAI,Kernel optimisation,GPU & HPC,1,0.0014,4,0.012,0.12,False
-OpenAI,RoCE,Networking,1,0.0014,5,0.0151,0.1,False
-OpenAI,OSPF,Networking,1,0.0014,2,0.006,0.24,False
-OpenAI,Node.js,Web & APIs,1,0.0014,3,0.009,0.16,False
-OpenAI,gRPC,Web & APIs,1,0.0014,1,0.003,0.48,False
+OpenAI,Kernel optimisation,GPU & HPC,1,0.0014,4,0.0118,0.12,False
+OpenAI,RoCE,Networking,1,0.0014,5,0.0147,0.1,False
+OpenAI,OSPF,Networking,1,0.0014,2,0.0059,0.24,False
+OpenAI,Node.js,Web & APIs,1,0.0014,3,0.0088,0.16,False
+OpenAI,gRPC,Web & APIs,1,0.0014,1,0.0029,0.49,False
 OpenAI,HTML / CSS,Web & APIs,1,0.0014,0,0.0,,False
 OpenAI,C#,Programming Languages,0,0.0,0,0.0,,False
 OpenAI,Perl,Programming Languages,0,0.0,0,0.0,,False
 OpenAI,Ruby,Programming Languages,0,0.0,0,0.0,,False
 OpenAI,Julia,Programming Languages,0,0.0,0,0.0,,False
-OpenAI,JAX,ML Frameworks,0,0.0,2,0.006,0.0,False
+OpenAI,JAX,ML Frameworks,0,0.0,2,0.0059,0.0,False
 OpenAI,Keras,ML Frameworks,0,0.0,0,0.0,,False
 OpenAI,XGBoost,ML Frameworks,0,0.0,0,0.0,,False
 OpenAI,Hugging Face,ML Frameworks,0,0.0,0,0.0,,False
 OpenAI,Ray,ML Frameworks,0,0.0,0,0.0,,False
 OpenAI,MLflow,ML Frameworks,0,0.0,0,0.0,,False
-OpenAI,pandas,ML Frameworks,0,0.0,2,0.006,0.0,False
+OpenAI,pandas,ML Frameworks,0,0.0,2,0.0059,0.0,False
 OpenAI,NumPy,ML Frameworks,0,0.0,0,0.0,,False
 OpenAI,NLP,ML & AI Concepts,0,0.0,0,0.0,,False
-OpenAI,Computer vision,ML & AI Concepts,0,0.0,3,0.009,0.0,False
-OpenAI,Transformers,ML & AI Concepts,0,0.0,3,0.009,0.0,False
+OpenAI,Computer vision,ML & AI Concepts,0,0.0,3,0.0088,0.0,False
+OpenAI,Transformers,ML & AI Concepts,0,0.0,3,0.0088,0.0,False
 OpenAI,MLOps,ML & AI Concepts,0,0.0,0,0.0,,False
 OpenAI,LangChain,LLM & Inference Tools,0,0.0,0,0.0,,False
+OpenAI,vLLM,LLM & Inference Tools,0,0.0,3,0.0088,0.0,False
+OpenAI,SGLang,LLM & Inference Tools,0,0.0,3,0.0088,0.0,False
 OpenAI,TensorRT,LLM & Inference Tools,0,0.0,0,0.0,,False
-OpenAI,Triton,LLM & Inference Tools,0,0.0,2,0.006,0.0,False
+OpenAI,Triton,LLM & Inference Tools,0,0.0,2,0.0059,0.0,False
 OpenAI,NeMo,LLM & Inference Tools,0,0.0,0,0.0,,False
 OpenAI,NIM,LLM & Inference Tools,0,0.0,0,0.0,,False
-OpenAI,Vector databases,LLM & Inference Tools,0,0.0,2,0.006,0.0,False
+OpenAI,Vector databases,LLM & Inference Tools,0,0.0,2,0.0059,0.0,False
 OpenAI,Delta Lake,Data Engineering & Analytics,0,0.0,0,0.0,,False
 OpenAI,Looker,Data Engineering & Analytics,0,0.0,0,0.0,,False
 OpenAI,Power BI,Data Engineering & Analytics,0,0.0,0,0.0,,False
@@ -615,19 +615,19 @@ OpenAI,MongoDB,Databases,0,0.0,0,0.0,,False
 OpenAI,Cassandra,Databases,0,0.0,0,0.0,,False
 OpenAI,DynamoDB,Databases,0,0.0,0,0.0,,False
 OpenAI,OLTP,Databases,0,0.0,0,0.0,,False
-OpenAI,CUDA,GPU & HPC,0,0.0,5,0.0151,0.0,False
-OpenAI,NCCL,GPU & HPC,0,0.0,3,0.009,0.0,False
-OpenAI,MPI,GPU & HPC,0,0.0,1,0.003,0.0,False
+OpenAI,CUDA,GPU & HPC,0,0.0,5,0.0147,0.0,False
+OpenAI,NCCL,GPU & HPC,0,0.0,3,0.0088,0.0,False
+OpenAI,MPI,GPU & HPC,0,0.0,1,0.0029,0.0,False
 OpenAI,OpenCL,GPU & HPC,0,0.0,0,0.0,,False
 OpenAI,OpenMP,GPU & HPC,0,0.0,0,0.0,,False
-OpenAI,InfiniBand,GPU & HPC,0,0.0,5,0.0151,0.0,False
-OpenAI,NVLink,GPU & HPC,0,0.0,2,0.006,0.0,False
+OpenAI,InfiniBand,GPU & HPC,0,0.0,5,0.0147,0.0,False
+OpenAI,NVLink,GPU & HPC,0,0.0,2,0.0059,0.0,False
 OpenAI,cuDNN,GPU & HPC,0,0.0,0,0.0,,False
 OpenAI,VLSI,Hardware & Semiconductor,0,0.0,0,0.0,,False
-OpenAI,FPGA,Hardware & Semiconductor,0,0.0,1,0.003,0.0,False
-OpenAI,UVM,Hardware & Semiconductor,0,0.0,1,0.003,0.0,False
-OpenAI,Static timing analysis,Hardware & Semiconductor,0,0.0,1,0.003,0.0,False
-OpenAI,VXLAN / EVPN,Networking,0,0.0,1,0.003,0.0,False
-OpenAI,Network protocols,Networking,0,0.0,4,0.012,0.0,False
-OpenAI,GraphQL,Web & APIs,0,0.0,1,0.003,0.0,False
+OpenAI,FPGA,Hardware & Semiconductor,0,0.0,1,0.0029,0.0,False
+OpenAI,UVM,Hardware & Semiconductor,0,0.0,1,0.0029,0.0,False
+OpenAI,Static timing analysis,Hardware & Semiconductor,0,0.0,1,0.0029,0.0,False
+OpenAI,VXLAN / EVPN,Networking,0,0.0,1,0.0029,0.0,False
+OpenAI,Network protocols,Networking,0,0.0,4,0.0118,0.0,False
+OpenAI,GraphQL,Web & APIs,0,0.0,1,0.0029,0.0,False
 OpenAI,MEDDPICC / MEDDIC,Business & GTM,0,0.0,0,0.0,,False

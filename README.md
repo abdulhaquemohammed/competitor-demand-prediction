@@ -19,6 +19,7 @@ Predicts competitor hiring demand, skill trends and market direction from public
 - `src/preprocess.py` removes boilerplate, flags non-English postings, builds NLP-ready text and seniority levels
 - `src/extract_skills.py` + `src/skill_taxonomy.py` extract skills (shared 158-skill taxonomy), role categories and feature tables
 - `src/trends.py` weekly and monthly new-role series (raw, unique, survivorship-adjusted), snapshot flows, velocity and role growth tables
+- `src/compare.py` shared four-company comparison (skills, role mix, velocity, tech stack, strategic gaps)
 - `scripts/` twice-weekly snapshot schedule (macOS launchd)
 - `notebooks/` analysis
 - `data/raw/`, `data/interim/` raw snapshots and merged table (git-ignored: copyrighted job text, kept local; available to the mentor on request)
@@ -34,7 +35,8 @@ Predicts competitor hiring demand, skill trends and market direction from public
 | 3. NLP Preprocessing | Done ([report](docs/TASK3_preprocessing.md), [notebook](notebooks/03_preprocessing.ipynb)) |
 | 4. Skill Extraction | Done ([report](docs/TASK4_skill_extraction.md), [notebook](notebooks/04_skills.ipynb)) |
 | 5. Hiring Trend Analysis | Done ([report](docs/TASK5_hiring_trends.md), [notebook](notebooks/05_trends.ipynb)); snapshots and trend tables keep refreshing Mon/Thu |
-| 6-10 | Not started |
+| 6. Competitor Comparison | Done ([report](docs/TASK6_competitor_comparison.md), [notebook](notebooks/06_comparison.ipynb)) |
+| 7-10 | Not started |
 
 ## Run
 ```bash
@@ -45,4 +47,5 @@ python src/build_dataset.py    # merge snapshots, print data-quality checks
 python src/preprocess.py       # clean text for NLP (Task 3)
 python src/extract_skills.py   # skills and feature tables (Task 4)
 python src/trends.py           # hiring trend tables (Task 5)
+python src/compare.py          # competitor comparison tables (Task 6)
 ```
