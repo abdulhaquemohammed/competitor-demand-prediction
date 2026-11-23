@@ -10,10 +10,10 @@
 
 | | Skill lane | Hiring mix | Velocity (snapshot flows) |
 |---|---|---|---|
-| OpenAI | ML, go-to-market, security; few named tools | Balanced: Software Eng 27%, Solutions & Field 14%, Sales 12% | Open roles +4.3%, bucket high |
+| OpenAI | Go-to-market (33% of roles) and security (12%), both above peers; infrastructure skills (observability, distributed systems); light on named tools (3.1 skills per role) | Balanced: Software Eng 27%, Solutions & Field 14%, Sales 12% | Open roles +4.3%, bucket high |
 | Anthropic | ML and AI safety; closest to OpenAI | Balanced: Sales 22%, Software Eng 20% | Open roles -6.8%, medium |
 | Databricks | Cloud, data engineering | Concentrated: Solutions & Field 39% | Open roles -3.5%, medium |
-| NVIDIA | GPU, hardware, C++ | Software Eng 40%, Hardware 21% | Open roles -2.4%, low (provisional) |
+| NVIDIA | GPU, hardware, C++ | Software Eng 40%, Hardware 21% | Open roles -2.4%, medium (provisional) |
 
 ## 2. Method
 
@@ -66,7 +66,7 @@ Thresholds are fixed round numbers (constants at the top of `compare.py`), not t
 | Closest peer | Anthropic: skill similarity 0.85, role-mix similarity 0.93 | Databricks 0.56 and NVIDIA 0.54 on skills |
 | Distinctive skills | 3: JavaScript 10%, evals 8%, incident response 8% | Anthropic has 6, Databricks 19, NVIDIA 27. Evals is shared with Anthropic |
 | Role mix | Software Engineering 27%, Solutions & Field 14%, Sales & Partnerships 12%, Research 8% | Most balanced with Anthropic (concentration index 0.13, against 0.22 to 0.25) |
-| Tech stack | DevOps and infrastructure 28% of roles; cloud 5%, data engineering 7%, GPU 6%, ML frameworks 1% | Databricks 45% cloud, NVIDIA 70% GPU and HPC |
+| Tech stack | DevOps and infrastructure 28% of roles (5.5 points below the peer mean); cloud 5%, data engineering 7%, GPU 6%, ML frameworks 1% | Databricks 45% cloud, NVIDIA 70% GPU and HPC |
 | Seniority | 59% of titles carry no level word, 30% manager or lead, 7% director or executive (highest) | Title habits differ, so read only the manager and director rows |
 | Velocity | Open roles 817 to 852 (+4.3%), 82.5 opened and 69.6 closed a week, new roles 9.6% of open roles a week (high) | Only company whose stock grew. Anthropic -6.8%, Databricks -3.5%, NVIDIA -2.4% (provisional) |
 | Role growth (adjusted, 8 vs 8 weeks) | Up: Marketing & Comms +143%, Other +158%, Product & Design +96%, Corporate +94%, Security +59%, Data +56%. Down: Hardware -47%, Solutions & Field -31%, Software Engineering -30%, Research -29%, ML / AI Engineering -28% | The same split as Task 5: commercial and operational functions growing, technical ones not |
@@ -82,7 +82,7 @@ Thresholds are fixed round numbers (constants at the top of `compare.py`), not t
 - **Databricks** is a platform and sales business: Cloud 45%, Data Engineering 55%, Solutions & Field 39% of roles, all three clouds named in 38 to 44% of roles.
 - **NVIDIA** is silicon and systems: GPU & HPC 70%, Hardware 45%, C++ and CUDA. Sales is only 4% of its roles.
 
-**Velocity.** On the unbiased flows OpenAI is the only company growing its open stock and it has the highest new-role rate; Anthropic has the biggest net shrink (about -17 roles a week). Anthropic's adjusted posting-date growth (-34.5%) is low confidence: 9% of its open roles close each week, so the survival correction is large.
+**Velocity.** On the unbiased flows OpenAI is the only company growing its open stock and it has the highest new-role rate; Anthropic has the biggest net shrink of the three companies with full flows (about -17 roles a week). Anthropic's adjusted posting-date growth (-34.5%) is low confidence: 9% of its open roles close each week, so the survival correction is large.
 
 **White space.** Databases, ML Frameworks and Web & APIs are at or below 10% of roles at all four companies, mostly because postings rarely name them. Go-to-market is the only skill whose share is higher in recent postings at all four (x1.3 to x3.9, strongest at NVIDIA from a low base). No role category grows at all four.
 

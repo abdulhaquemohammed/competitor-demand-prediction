@@ -40,14 +40,14 @@ Software Engineering,Databricks,0.2164,0.2888,-7.2,193,2,3.5,-13.6,medium
 Solutions & Field,Databricks,0.3901,0.1075,28.3,348,1,18.75,-8.9,medium
 Corporate,NVIDIA,0.0093,0.041,-3.2,25,12,1.25,,insufficient data
 Data,NVIDIA,0.0119,0.0201,-0.8,32,11,1.38,221.0,high
-Hardware Engineering,NVIDIA,0.2074,0.013,19.4,558,2,21.88,34.2,medium
-ML / AI Engineering,NVIDIA,0.0844,0.0227,6.2,227,4,7.25,28.8,medium
+Hardware Engineering,NVIDIA,0.2074,0.013,19.4,558,2,22.88,43.2,medium
+ML / AI Engineering,NVIDIA,0.0844,0.0227,6.2,227,4,7.88,38.0,medium
 Marketing & Comms,NVIDIA,0.0048,0.025,-2.0,13,13,0.62,68.2,insufficient data
-Other,NVIDIA,0.0528,0.072,-1.9,142,5,7.38,49.1,high
-Product & Design,NVIDIA,0.0193,0.0307,-1.1,52,9,1.88,427.3,high
-Program & Operations,NVIDIA,0.0264,0.0498,-2.3,71,8,3.25,151.8,high
-Research,NVIDIA,0.0439,0.072,-2.8,118,6,3.88,322.1,high
-Sales & Partnerships,NVIDIA,0.0368,0.1807,-14.4,99,7,3.25,75.3,high
+Other,NVIDIA,0.0528,0.072,-1.9,142,5,7.5,71.2,high
+Product & Design,NVIDIA,0.0193,0.0307,-1.1,52,9,1.88,205.1,high
+Program & Operations,NVIDIA,0.0264,0.0498,-2.3,71,8,2.88,126.3,high
+Research,NVIDIA,0.0439,0.072,-2.8,118,6,3.88,175.2,high
+Sales & Partnerships,NVIDIA,0.0368,0.1807,-14.4,99,7,3.25,55.0,high
 Security,NVIDIA,0.019,0.0358,-1.7,51,10,1.12,-27.1,low
-Software Engineering,NVIDIA,0.3967,0.2287,16.8,1067,1,42.38,33.9,medium
-Solutions & Field,NVIDIA,0.0874,0.2085,-12.1,235,3,7.5,-7.1,medium
+Software Engineering,NVIDIA,0.3967,0.2287,16.8,1067,1,44.75,44.0,medium
+Solutions & Field,NVIDIA,0.0874,0.2085,-12.1,235,3,8.0,-3.4,medium

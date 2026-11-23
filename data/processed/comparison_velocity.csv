@@ -2,4 +2,4 @@ company_name,snapshot_span,snapshot_days,flow_intervals,flows_provisional,open_s
 OpenAI,2026-11-04 to 2026-11-23,19,6,False,817,852,4.3,82.5,69.6,12.9,8.5,9.57,high,81.5,43.5,87.4,32.6,normal
 Anthropic,2026-11-04 to 2026-11-23,19,6,False,681,635,-6.8,44.6,61.5,-16.9,9.0,6.61,medium,42.0,42.8,-1.8,-34.5,"low (high churn, large survival correction)"
 Databricks,2026-11-04 to 2026-11-23,19,5,False,925,893,-3.5,50.1,61.9,-11.8,6.7,5.32,medium,47.5,39.8,19.5,-2.7,normal
-NVIDIA,2026-11-04 to 2026-11-16,12,1,True,2755,2690,-2.4,145.8,183.8,-38.0,6.7,4.76,low,128.0,78.0,64.1,36.8,normal
+NVIDIA,2026-11-04 to 2026-11-16,12,1,True,2755,2690,-2.4,145.8,183.8,-38.0,6.7,5.56,medium,149.5,64.8,130.9,88.3,normal

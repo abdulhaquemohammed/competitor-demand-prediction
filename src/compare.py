@@ -273,7 +273,14 @@ def report(n_open, share, cat_share, role_share, common, dist, sg, cv, jobs, wee
         ok &= bool(passed); print(f"  [{'ok' if passed else 'FAIL'}] {name} {detail}")
     check("category shares in [0, 1]", ((cat_share >= 0) & (cat_share <= 1)).all().all())
     check("role shares sum to 1 per company", np.allclose(role_share.sum(), 1))
-    check("same four companies in every table", True)
+    # every company-level output holds exactly the four companies in COMPANIES
+    for name in ("comparison_scorecard", "comparison_skills", "comparison_categories", "comparison_roles",
+                 "comparison_tech_stack", "comparison_velocity", "distinctive_skills", "strategic_gaps"):
+        found = set(pd.read_csv(P / f"{name}.csv")["company_name"]) - {"all four"}    # "all four" labels shared rows
+        check(f"{name}.csv has exactly the four companies", found == set(COMPANIES), "" if found == set(COMPANIES) else f"(found {sorted(found)})")
+    pairs = pd.read_csv(P / "comparison_similarity.csv")
+    check("comparison_similarity.csv covers the four companies",
+          set(pairs.company_a) | set(pairs.company_b) == set(COMPANIES))
     t4 = pd.read_csv(P / "skill_frequency.csv").pivot(index="skill", columns="company_name", values="share").reindex(columns=COMPANIES)
     diff = (share.reindex(t4.index).fillna(0) - t4.fillna(0)).abs() * 100
     check("open-role skill shares within 3 pp of Task 4 (all postings)", diff.max().max() < 3,
