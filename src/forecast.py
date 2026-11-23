@@ -4,8 +4,9 @@ Task 7: demand forecasting.
 Reads  data/processed/weekly_postings.csv, snapshot_flows.csv, velocity_summary.csv
        (Task 5; no scraping, no description text)
 Writes data/processed/ (all committed):
-  forecasts.csv             company_name, step, week_start, model, forecast, lo80, hi80, lo95, hi95
-  backtest_metrics.csv      company x target x model: MAE, MASE, coverage, n_origins, chosen
+  forecasts.csv             company_name, step, week_start, model, forecast, lo80, hi80, lo95, hi95, n_errors
+  backtest_metrics.csv      company x target x model: MAE, relative MAE, per-origin error and SE, interval
+                            coverage (model-based and empirical), n_origins, chosen
   forecast_sensitivity.csv  company x scenario x week: base forecast vs the unique-roles target and
                             vs a refit on August onwards
   forecast_crosscheck.csv   forecast level for the next 2 weeks vs the snapshot opened_per_week
@@ -17,20 +18,27 @@ floors because the survivorship correction is capped at 3x).
 Horizon: 8 steps (weeks) ahead for every company, counted from that company's last complete week.
 NVIDIA's snapshots lag the others, so its last complete week is one week earlier.
 
-Candidate models, identical for every company: naive (last value), 4-week moving average, drift,
-simple exponential smoothing, Holt with damped trend, ARIMA (small order grid chosen by AIC) and
-Prophet (default settings, seasonality off; skipped if it is not installed). No seasonal models and
-no deep learning: 26 weekly points cannot support them.
+Candidate models, identical for every company, in order of simplicity: naive (last value), 4-week
+moving average, simple exponential smoothing, drift, Holt with damped trend, ARIMA (small order grid
+chosen by AIC) and Prophet (default settings, seasonality off; skipped if it is not installed). No
+seasonal models and no deep learning: 26 weekly points cannot support them.
 
 Backtest: rolling origin, expanding window, first origin after 14 weeks, each origin forecasts up
-to 8 weeks ahead (fewer near the end of the data). MAE is pooled over origins and steps. MASE is
-the model's MAE divided by the naive forecast's MAE on the same origins and steps, so naive is 1.0
-and a model below 1.0 beats naive. The chosen model has the lowest MASE, but it only counts as
-beating naive if its MASE is below 0.95 (a 5% margin, because 12 origins cannot separate smaller
-differences, and a smoother that collapses to naive scores about 1.0). Otherwise nothing beat
-naive and naive is used. Prediction intervals are Gaussian around each model's forecast
-(each model's own standard error where it has one) and clipped at 0; coverage is measured in the
-backtest.
+to 8 weeks ahead (fewer near the end of the data). rel_mae is the model's backtest MAE divided by
+the naive forecast's MAE on the same origins and steps (relative MAE, not the classical MASE that
+scales by in-sample errors); naive is 1.0.
+
+Model choice: the one-standard-error rule. Each model's error at an origin is its mean absolute
+error over the steps forecast from that origin; take the mean across origins and its standard
+error. Find the best (lowest mean) model, then choose the simplest model whose mean error is within
+one standard error of the best. Same rule for every company.
+
+Prediction intervals are empirical: the half-width at step h is the conformal-style quantile
+(rank ceil((n+1) x level)) of the chosen model's absolute backtest errors at that step, so the
+interval is symmetric around the forecast. If a step has fewer than 20 errors, neighbouring steps
+are pooled (window widened one step each side) until it has 20. Coverage is validated by
+leave-one-origin-out: each origin's actuals are tested against intervals built from the other
+origins' errors. Intervals are clipped at 0. Model-based Gaussian coverage is kept for comparison.
 
 Run:   python src/forecast.py
 """
@@ -59,12 +67,13 @@ COMPANIES = ["OpenAI", "Anthropic", "Databricks", "NVIDIA"]
 TARGETS = {"adjusted": "new_roles_adjusted", "unique": "new_roles_unique"}
 HORIZON = 8
 FIRST_ORIGIN = 14          # training weeks at the first backtest origin
-NAIVE_MARGIN = 0.95        # a model must have MASE below this to be chosen over naive
+MIN_ERRORS = 20            # backtest errors needed per step for an empirical interval (else pool steps)
 MA_WINDOW = 4
 ARIMA_GRID = list(itertools.product([0, 1, 2], [0, 1], [0, 1, 2]))     # (p, d, q)
 SENSITIVITY_START = "2026-08-03"       # first week of August
 Z = {80: 1.2816, 95: 1.96}
-MODELS = ["naive", "ma4", "drift", "ses", "holt_damped", "arima"] + (["prophet"] if HAVE_PROPHET else [])
+# fixed simplicity order, used by the one-standard-error rule
+MODELS = ["naive", "ma4", "ses", "drift", "holt_damped", "arima"] + (["prophet"] if HAVE_PROPHET else [])
 
 
 # ---------------------------------------------------------------- models: each returns (mean, sd) per step
@@ -166,19 +175,58 @@ def backtest(y):
     return pd.DataFrame(rows)
 
 
+def halfwidth(err, step, level, exclude_origin=None):
+    """Empirical interval half-width at a step: quantile of absolute backtest errors, pooling
+    neighbouring steps until at least MIN_ERRORS errors. err is indexed by (origin, step).
+    Returns (half-width, number of errors used)."""
+    steps, origins = err.index.get_level_values("step"), err.index.get_level_values("origin")
+    counts = steps.value_counts()
+    w = 0
+    while True:
+        lo, hi = max(1, step - w), min(HORIZON, step + w)
+        if sum(counts.get(k, 0) for k in range(lo, hi + 1)) >= MIN_ERRORS or (lo == 1 and hi == HORIZON):
+            break
+        w += 1
+    mask = (steps >= lo) & (steps <= hi)
+    if exclude_origin is not None:
+        mask &= origins != exclude_origin
+    e = np.sort(err.values[mask])
+    k = min(int(np.ceil((len(e) + 1) * level)), len(e))        # conformal rank
+    return e[k - 1], len(e)
+
+
+def loo_coverage(err, level):
+    """Leave-one-origin-out coverage of empirical intervals."""
+    hits = [err.loc[(o, h)] <= halfwidth(err, h, level, exclude_origin=o)[0] for o, h in err.index]
+    return float(np.mean(hits))
+
+
 def score(bt):
-    """MAE, MASE against naive on identical origins and steps, interval coverage."""
+    """MAE, relative MAE against naive on identical origins and steps, per-origin error and its SE,
+    and interval coverage (model-based Gaussian, and empirical leave-one-origin-out)."""
     naive = bt[bt.model == "naive"].set_index(["origin", "step"])
     out = []
     for m, g in bt.groupby("model"):
         g = g.set_index(["origin", "step"])
         err = (g.actual - g["mean"]).abs()
         base = (naive.actual - naive["mean"]).abs().reindex(g.index)
-        out.append(dict(model=m, mae=err.mean(), mase=err.sum() / base.sum(),
-                        coverage80=((g.actual >= g.lo80) & (g.actual <= g.hi80)).mean(),
-                        coverage95=((g.actual >= g.lo95) & (g.actual <= g.hi95)).mean(),
-                        n_origins=g.index.get_level_values("origin").nunique(), n_forecasts=len(g)))
+        per_origin = err.groupby(level="origin").mean()
+        out.append(dict(model=m, mae=err.mean(), rel_mae=err.sum() / base.sum(),
+                        origin_mae=per_origin.mean(), origin_mae_se=per_origin.std(ddof=1) / np.sqrt(len(per_origin)),
+                        coverage80_model=((g.actual >= g.lo80) & (g.actual <= g.hi80)).mean(),
+                        coverage95_model=((g.actual >= g.lo95) & (g.actual <= g.hi95)).mean(),
+                        coverage80_empirical=loo_coverage(err, 0.80), coverage95_empirical=loo_coverage(err, 0.95),
+                        n_origins=len(per_origin), n_forecasts=len(g)))
     return pd.DataFrame(out)
+
+
+def one_se_choice(sc):
+    """Simplest model whose mean per-origin error is within one standard error of the best model."""
+    sc = sc.set_index("model").reindex(MODELS)
+    best = sc.origin_mae.idxmin()
+    threshold = sc.loc[best, "origin_mae"] + sc.loc[best, "origin_mae_se"]
+    within = sc.origin_mae <= threshold
+    return next(m for m in MODELS if within[m]), best, threshold, within
 
 
 # ---------------------------------------------------------------- main
@@ -195,22 +243,26 @@ def load():
 def main():
     series = load()
     metrics, forecasts, sens = [], [], []
-    chosen = {}
+    chosen, best_model, errors = {}, {}, {}
     for c, df in series.items():
         for tname, col in TARGETS.items():
-            y = df[col].values
-            sc = score(backtest(y))
+            bt = backtest(df[col].values)
+            sc = score(bt)
+            pick, best, thr, within = one_se_choice(sc)
             sc.insert(0, "target", tname)
             sc.insert(0, "company_name", c)
-            best = sc.loc[sc.mase.idxmin(), "model"]          # ties go to the earlier (simpler) model
-            if sc.mase.min() >= NAIVE_MARGIN:
-                best = "naive"                                # nothing beat naive by the margin
-            sc["chosen"] = sc.model == best
+            sc["best_model"] = sc.model == best
+            sc["one_se_threshold"] = thr
+            sc["within_1se_of_best"] = sc.model.map(within)
+            sc["chosen"] = sc.model == pick
             metrics.append(sc)
-            chosen[(c, tname)] = best
+            chosen[(c, tname)], best_model[(c, tname)] = pick, best
+            b = bt[bt.model == pick].set_index(["origin", "step"])
+            errors[(c, tname)] = (b.actual - b["mean"]).abs()
     metrics = pd.concat(metrics, ignore_index=True)
-    metrics["beats_naive"] = metrics.mase < NAIVE_MARGIN
-    metrics = metrics.round({"mae": 2, "mase": 3, "coverage80": 3, "coverage95": 3})
+    metrics = metrics.round({"mae": 2, "rel_mae": 3, "origin_mae": 2, "origin_mae_se": 2, "one_se_threshold": 2,
+                             "coverage80_model": 3, "coverage95_model": 3, "coverage80_empirical": 3,
+                             "coverage95_empirical": 3})
 
     for c, df in series.items():
         y, weeks = df["new_roles_adjusted"].values, df.index
@@ -218,9 +270,12 @@ def main():
         future = [weeks[-1] + pd.Timedelta(weeks=k) for k in range(1, HORIZON + 1)]
         f = run_model(model, y, HORIZON)
         for k in range(HORIZON):
-            forecasts.append(dict(company_name=c, step=k + 1, week_start=future[k].date(), model=model,
-                                  forecast=f["mean"][k], lo80=f["lo80"][k], hi80=f["hi80"][k],
-                                  lo95=f["lo95"][k], hi95=f["hi95"][k]))
+            hw80, n = halfwidth(errors[(c, "adjusted")], k + 1, 0.80)
+            hw95, _ = halfwidth(errors[(c, "adjusted")], k + 1, 0.95)
+            fk = f["mean"][k]
+            forecasts.append(dict(company_name=c, step=k + 1, week_start=future[k].date(), model=model, forecast=fk,
+                                  lo80=max(fk - hw80, 0), hi80=fk + hw80, lo95=max(fk - hw95, 0), hi95=fk + hw95,
+                                  n_errors=n))
         # sensitivity: unique-roles target, and a refit on August onwards (same model family)
         scenarios = {"base": y, "unique_target": df["new_roles_unique"].values,
                      "from_august": df.loc[df.index >= SENSITIVITY_START, "new_roles_adjusted"].values}
@@ -261,9 +316,13 @@ def report(series, metrics, forecasts, sens, cc):
     print("Weeks per company:", {c: len(d) for c, d in series.items()})
     for tname in TARGETS:
         m = metrics[metrics.target == tname]
-        print(f"\nBacktest MASE vs naive (target {tname}):")
-        print(m.pivot(index="model", columns="company_name", values="mase")[COMPANIES].reindex(MODELS).to_string())
-        print("chosen:", m[m.chosen].set_index("company_name").model.reindex(COMPANIES).to_dict())
+        print(f"\nBacktest relative MAE vs naive (target {tname}):")
+        print(m.pivot(index="model", columns="company_name", values="rel_mae")[COMPANIES].reindex(MODELS).to_string())
+        print("best:  ", m[m.best_model].set_index("company_name").model.reindex(COMPANIES).to_dict())
+        print("chosen (one-SE):", m[m.chosen].set_index("company_name").model.reindex(COMPANIES).to_dict())
+        cov = m[m.chosen].set_index("company_name").reindex(COMPANIES)[
+            ["coverage80_model", "coverage80_empirical", "coverage95_model", "coverage95_empirical"]]
+        print("coverage of the chosen model:\n" + cov.to_string())
     print("\nForecast cross-check:\n", cc.to_string(index=False))
 
 
@@ -302,6 +361,8 @@ def checks(series, metrics, forecasts):
                 leak.append((c, m))
     check("backtest never uses data after its origin", not leak, f"(forecasts changed for {leak})" if leak else "(all models, all companies)")
     n_fc = metrics[metrics.target == "adjusted"].pivot(index="model", columns="company_name", values="n_forecasts")
+    check("every interval built from at least 20 backtest errors", (forecasts.n_errors >= MIN_ERRORS).all(),
+          f"(min {forecasts.n_errors.min()})")
     check("every model produced forecasts at every origin", (n_fc.eq(n_fc.loc["naive"], axis=1)).all().all(),
           "" if (n_fc.eq(n_fc.loc["naive"], axis=1)).all().all() else f"\n{n_fc.to_string()}")
     if not ok:
