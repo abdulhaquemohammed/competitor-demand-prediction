@@ -21,7 +21,9 @@ Two views, with opposite weaknesses:
   snapshot flows       unbiased (we watch jobs open and close) but short (since 4 Nov 2026).
 Headline unit is the unique role: identical descriptions within a company and week (one role posted
 per city) count once. Postings flagged bulk_repost (build_dataset.py) are left out of new-posting
-counts. The current incomplete week and month are dropped.
+counts. The current incomplete week and month are dropped. A week is complete for a company only
+if that company's latest snapshot is after the week's Sunday, so a company whose snapshots lag
+behind the others (NVIDIA) gets blank metrics for the weeks its data does not yet cover.
 
 Run:   python src/trends.py
 """
@@ -127,7 +129,7 @@ def spike_flags(values):
     return flags
 
 
-def series(posts, key, periods, roll, spikes):
+def series(posts, key, periods, roll, spikes, last_ok=None):
     """One row per company and period (zero-filled so every company has the same range)."""
     rows = []
     for company, g in posts.groupby("company_name"):
@@ -139,9 +141,16 @@ def series(posts, key, periods, roll, spikes):
         adj = per_role.reindex(periods, fill_value=0.0)
         d = pd.DataFrame({"company_name": company, key: periods, "new_postings_raw": raw.values,
                           "new_roles_unique": uniq.values, "new_roles_adjusted": adj.round(1).values})
+        n_ok = len(d) if last_ok is None else int((d[key] <= last_ok[company]).sum())   # complete periods are a prefix
+        metrics = ["new_postings_raw", "new_roles_unique", "new_roles_adjusted"]
+        d[metrics] = d[metrics].astype(float)
+        d.loc[n_ok:, metrics] = np.nan
         d[roll[0]] = d["new_roles_unique"].rolling(roll[1], min_periods=roll[1]).mean().round(2)
-        d[roll[2]] = (d["new_roles_unique"].pct_change().replace([np.inf, -np.inf], np.nan) * 100).round(1)
-        d["spike_flag"] = spike_flags(d["new_roles_adjusted"].values.astype(float)) if spikes else ""
+        d[roll[2]] = (d["new_roles_unique"].pct_change(fill_method=None).replace([np.inf, -np.inf], np.nan) * 100).round(1)
+        flags = spike_flags(d["new_roles_adjusted"].values[:n_ok].astype(float)) if spikes else [""] * n_ok
+        d["spike_flag"] = flags + [""] * (len(d) - n_ok)
+        for col in ("new_postings_raw", "new_roles_unique"):
+            d[col] = d[col].astype("Int64")
         rows.append(d)
     return pd.concat(rows, ignore_index=True)
 
@@ -176,7 +185,7 @@ def growth(new, old):
 def summary(weekly, fl):
     rows = []
     for company, w in weekly.groupby("company_name"):
-        w = w.sort_values("week_start")
+        w = w.sort_values("week_start").dropna(subset=["new_roles_unique"])     # complete weeks only
         last, prev = w.tail(4), w.iloc[-8:-4]
         f = fl[(fl.company_name == company)].sort_values("snapshot_date")
         iv = f[~f.is_baseline.astype(bool)]
@@ -200,12 +209,13 @@ def summary(weekly, fl):
     return pd.DataFrame(rows)
 
 
-def role_velocity(posts, weeks, as_adjusted_by):
-    """company x role_category: unique new roles per week, last 8 weeks vs the 8 before."""
-    recent, older = weeks[-ROLE_WEEKS:], weeks[-2 * ROLE_WEEKS:-ROLE_WEEKS]
+def role_velocity(posts, weeks, last_ok):
+    """company x role_category: unique new roles per week, last 8 complete weeks vs the 8 before."""
     rows = []
-    for (company, cat), g in posts[posts.week_start.isin(weeks[-2 * ROLE_WEEKS:])].groupby(
-            ["company_name", "role_category"]):
+    for (company, cat), g in posts.groupby(["company_name", "role_category"]):
+        end = list(weeks).index(last_ok[company]) + 1
+        recent, older = weeks[end - ROLE_WEEKS:end], weeks[end - 2 * ROLE_WEEKS:end - ROLE_WEEKS]
+        g = g[g.week_start.isin(list(recent) + list(older))]
         u = g.drop_duplicates(["week_start", "description_hash"])
         adj = g.groupby(["week_start", "description_hash"])["factor"].mean().reset_index()
         n_new, n_old = u.week_start.isin(recent).sum(), u.week_start.isin(older).sum()
@@ -249,6 +259,12 @@ def main():
     last_month = as_of.to_period("M").to_timestamp() - pd.offsets.MonthBegin(1)
     months = pd.date_range(first_month, last_month, freq="MS")
 
+    # a company's weeks are complete only up to its own latest snapshot
+    last_ok = {}
+    for company, by_date in snaps.items():
+        covered = pd.Timestamp(max(by_date))
+        last_ok[display[company]] = weeks[weeks + pd.Timedelta(days=6) < covered].max()
+
     curves, band_info = survival_curves(jobs, snaps)
     jobs["age_days"] = (as_of - jobs.posting_date).dt.days.clip(lower=0)
     jobs["factor"] = 1.0
@@ -258,14 +274,14 @@ def main():
         jobs.loc[m, "factor"] = np.minimum(1 / s, SURVIVAL_CAP)
 
     posts = jobs[jobs.posting_date_source != "bulk_repost"]       # new-posting counts leave bulk rows out
-    in_weeks = posts[posts.week_start.isin(weeks)]
-    weekly = series(in_weeks, "week_start", weeks, ("rolling_4w", 4, "wow_change_pct"), True)
+    in_weeks = posts[posts.week_start.isin(weeks) & (posts.week_start <= posts.company_name.map(last_ok))]
+    weekly = series(in_weeks, "week_start", weeks, ("rolling_4w", 4, "wow_change_pct"), True, last_ok)
     in_months = posts[posts.month_start.isin(months)]
     monthly = series(in_months, "month_start", months, ("rolling_3m", 3, "mom_change_pct"), False)
 
     fl = flows(snaps, display)
     summ = summary(weekly, fl)
-    rv = role_velocity(in_weeks, list(weeks), None)
+    rv = role_velocity(in_weeks, weeks, last_ok)
     wd = weekday_table(in_weeks)
 
     OUT.mkdir(parents=True, exist_ok=True)
@@ -282,10 +298,10 @@ def main():
     print("\nClosure rate by age band (per week):\n", band_info.to_string(index=False))
     print("\nVelocity summary:\n", summ.to_string(index=False))
     print("\nSnapshot flows:\n", fl.to_string(index=False))
-    checks(jobs, posts, in_weeks, in_months, weekly, monthly, as_of, weeks)
+    checks(jobs, posts, in_weeks, in_months, weekly, monthly, as_of, weeks, last_ok)
 
 
-def checks(jobs, posts, in_weeks, in_months, weekly, monthly, as_of, weeks):
+def checks(jobs, posts, in_weeks, in_months, weekly, monthly, as_of, weeks, last_ok):
     print("\nSanity checks")
     ok = True
     def report(name, passed, detail=""):
@@ -302,7 +318,9 @@ def checks(jobs, posts, in_weeks, in_months, weekly, monthly, as_of, weeks):
     late = jobs[jobs.posting_date > as_of]
     report("no posting dates after the latest snapshot", late.empty, f"({len(late)} found)" if len(late) else "")
     report("same weeks for every company", weekly.groupby("company_name").week_start.apply(tuple).nunique() == 1)
-    report("no incomplete week", pd.Timestamp(weekly.week_start.max()) + pd.Timedelta(days=6) < as_of)
+    report("no incomplete week (per company coverage)",
+           all(weekly[(weekly.company_name == c) & weekly.new_roles_unique.notna()].week_start.map(pd.Timestamp).max()
+               == last_ok[c] for c in last_ok), str({c: str(v.date()) for c, v in last_ok.items()}))
     bulk = jobs[jobs.posting_date_source == "bulk_repost"]
     report("bulk-repost rows excluded from new-posting counts", not posts.posting_date_source.eq("bulk_repost").any(),
            f"({len(bulk)} rows left out)")
